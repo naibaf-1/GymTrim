@@ -84,7 +84,7 @@
     <!-- Navigation bar -->
     <string name="navigationButton_plans">Plans</string>
     <string name="navigationButton_exercises">Exercises</string>
-    <string name="navigationButton_data">Trainings data</string>
+    <string name="navigationButton_data">Training data</string>
 
     <!-- Menu: Headers of information and settings activity -->
 
