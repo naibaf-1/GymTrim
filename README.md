@@ -1,26 +1,26 @@
-Update or add a README.md to explain the project and contribution guidelines.
+# GymTrim
 
-Zweck & Nutzen:
+## Purpose & Benefits
+GymTrim is a fitness app designed to help you document your weights, times, distances, and repetitions during training. Built-in calculators, such as a BMI calculator, provide quick insights. Your training data is calculated and stored locally on your device, allowing you to review your progress over time. **Your data remains private and is never shared.**
 
-Bei dieser App handelt es sich um eine Fitness App, die dafür gedacht ist währrend des Trainings seine Gewichte, Zeiten, Distance und auch Wiederholungen dokumentieren zu können.
-Zusätzlich gibt es integrierte Rechner, mit denen man etwa seinen BMI ausrechnen kann. Währrend des Trainings werden Daten ausgerechnet und gespeichert. Diese Daten kann sich der Nutzer dann nach dem Training im vergleich zu früher erhobenen Daten 		anschauen.
-Jegliche gesamelten Daten bleiben auf dem Gerät des Nutzers gespeichert und werden in keinster Weise weitergegeben.
+## Installation
 
-Installation:
+### Installation via F-Droid
+1. Install [F-Droid](https://f-droid.org/) on your device.
+2. Search for **GymTrim** in F-Droid.
+3. Tap **Install**.
 
-Installation über F-Droid:
-1) Installieren sie F-Droid auf ihrem Gerät.
-2) Suchen Sie nach "GymTrim"
-3) Klicken Sie auf "Installieren"
+### Installation from the APK file
+1. Visit [F-Droid.org](https://f-droid.org/).
+2. Search for **GymTrim**.
+3. Select the app version you want.
+4. Click **Download APK**.
+5. Save the file, then open your file manager and navigate to the downloaded `.apk` file.
+6. Tap the file and follow the on-screen instructions to install.
 
-Installation Über die .apk Datei:
-1) Gehen Sie auf https://f-droid.org/
-2) Suchen Sie dort nach "GymTrim"
-3) Suchen Sie sich die gewünschte Version der App heraus
-4) Klicken Sie auf "APK herunterladen"
-5) Speichern Sie die Datei und navigieren sie über ihren File-Manager zu dem Ort wo Sie die .apk Datei gespeichert haben
-6) Klicken Se auf die Datei und wählen anschließend bei Nachfrage des Systems "Installieren" aus.
+## Contribution Guidelines
+Everyone is welcome to participate in and adapt this project.  
+All contributions and usage are governed by the [Apache 2.0 License](LICENSE).
 
-Bestimmungen zum Beitragen:
-
-Jeder ist befugt an diesem Projekt teilzuhaben un es anzupassen. Allerdings unterliegen all diese Handlungen sowie dieses Projekt der Apache 2.0 license.
+## License
+This project is licensed under the [Apache License 2.0](LICENSE).
