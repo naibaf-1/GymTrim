@@ -1,0 +1,47 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+    <string-array name="selectableLanguagesFullName">
+        <item>@string/settings_language_selector_default_language</item>
+        <item>@string/settings_language_selector_english</item>
+        <item>@string/settings_language_selector_german</item>
+    </string-array>
+
+    <string-array name="selectableLanguagesShortNames">
+        <item>sys</item>
+        <item>en</item>
+        <item>de</item>
+    </string-array>
+
+    <string-array name="selectableSoundsForReminder">
+        <item>@string/array_translated_notification_beep</item>
+        <item>@string/array_translated_message</item>
+        <item>@string/array_translated_confirm_notification_choice_or_pop_up_sound_effect</item>
+        <item>@string/array_translated_notification_sound_3</item>
+        <item>@string/array_translated_error_call_to_attention</item>
+        <item>@string/array_translated_new_message_31</item>
+        <item>@string/array_translated_notification_4</item>
+    </string-array>
+
+    <string-array name="selectableSoundsForReminderValues">
+        <item>notification_beep</item>
+        <item>message</item>
+        <item>confirm_notification_choice_or_pop_up_sound_effect</item>
+        <item>notification_sound_3</item>
+        <item>error_call_to_attention</item>
+        <item>new_message_31</item>
+        <item>notification_4</item>
+    </string-array>
+
+    <attr name="iconColor" format="color" />
+    <!-- https://codelabs.developers.google.com/codelabs/apply-dynamic-color?hl=de -->
+</resources>

@@ -1,0 +1,9 @@
+- Code 1: An insert function in ExerciseDB returns false
+- Code -1: - Column Index is smaller than 0
+           - In ExerciseActivity line 145 is a NullPointerException
+- Code 2: An update function in ExerciseDB returns false
+- Code -2: The getExtra of an Intent returns null
+- Code 3: The if condition in line 450 of SettingsActivity returns true
+- Code -3: The plansId in TrainingsActivity is smaller then 0 (line: 106) => Probably its default value => Check the Intent
+- Code 4: Exception by exporting database in line 473 of SettingsActivity
+- Code -4: Exception by importing database in line 497 of SettingsActivity

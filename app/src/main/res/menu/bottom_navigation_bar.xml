@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/NavigationBarItem_Plans"
+        android:icon="@drawable/plans_icon"
+        android:title="@string/navigationButton_plans" />
+    <item
+        android:id="@+id/NavigationBarItem_Exercises"
+        android:icon="@drawable/exercises_icon"
+        android:title="@string/navigationButton_exercises" />
+    <item
+        android:id="@+id/NavigationBarItem_Data"
+        android:icon="@drawable/data_icon"
+        android:title="@string/navigationButton_data" />
+</menu>

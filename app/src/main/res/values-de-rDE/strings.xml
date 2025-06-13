@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Einstellungen</string>
+    <string name="first_fragment_label">Erstes Fragment</string>
+    <string name="second_fragment_label">Zweites Fragment</string>
+    <string name="next">Weiter</string>
+    <string name="previous">Zurück</string>
+
+    <!-- Used in app-->
+    <!-- Plan -->
+    <string name="fragment_plans_header">Trainingspläne</string>
+    <string name="search_plans">Nach einem Plan suchen</string>
+    <!-- AddPlan & EditPlan-->
+    <string name="add_plan_header">Neuen Plan erstellen</string>
+    <string name="get_plan_name">Namen eingeben</string>
+    <string name="get_reminder_time">Erinnerung</string>
+    <string name="edit_plan_header">Trainingsplan bearbeiten</string>
+    <!-- Training: None -->
+    <!-- Exercise selector bottom sheet dialog -->
+    <string name="header_exercise_selector">Übung auswählen</string>
+    <!-- Display exercise values bottom sheet dialog -->
+    <string name="table_repetitions_title">Wiederholungen:</string>
+    <string name="table_weight_title">Gewicht:</string>
+    <string name="table_time_title">Dauer:</string>
+    <string name="table_distance_title">Distanz:</string>
+    <string name="add_another_repetition">Satz hinzufügen</string>
+
+    <!-- Exercise -->
+    <string name="error_missing_name">Bitte geben Sie einen Namen ein.</string>
+    <string name="fragment_exercises_header">Übungen</string>
+    <!-- AddExercise & EditExercise -->
+    <string name="add_new_exercise_header">Neue Übung hinzufügen</string>
+    <string name="get_exercise_name">Gib einen Namen mit Zahl ein</string>
+    <string name="checkBox_note_weight">Gewicht Dokumentieren</string>
+    <string name="checkBox_note_distance">Distanz dokumentieren</string>
+    <string name="checkBox_note_time">Zeit dokumentieren</string>
+    <string name="checkBox_note_repetitions">Sätze dokumentieren</string>
+    <string name="edit_exercise_header">Übung bearbeiten</string>
+
+    <!-- Data -->
+    <string name="fragment_data_header">Trainingsdaten</string>
+    <string name="calculate_BMI">Body-Mass-Index (BMI) berechnen</string>
+    <string name="calculate_WHtR">Taille-Größe-Verhältnis berechnen (TGV)</string>
+    <string name="calculate_WHR">Taille-Hüft-Verhältnis (THV) berechnen</string>
+    <string name="data_section_training_data">Trainingsdaten:</string>
+    <string name="nothing_calculated_yet">Bisher noch nichts berechnet.</string>
+    <string name="no_warranty_note">Diese Werte dienen nur zu Zwecken der Orientierung. Es gibt keinen Gewär für ihre Korrektheit.</string>
+    <string name="get_waist_girth">Taillienumfang in cm</string>
+    <string name="error_missing_data">Bitte geben Sie alle erforderten Daten an.</string>
+    <!-- BMI -->
+    <string name="get_size">Größe in m:</string>
+    <string name="get_weight">Gewicht in kg:</string>
+    <string name="calculated_BMI">Ihr BMI:</string>
+    <!-- WHtR -->
+    <string name="get_age">Alter</string>
+    <string name="get_height">Größe in cm:</string>
+    <string name="table_underweight">Untergewicht:</string>
+    <string name="table_normal_weigt">Normalgewicht:</string>
+    <string name="table_overweight">Übergewicht:</string>
+    <string name="table_adiposity">Adipositas:</string>
+    <string name="table_heavy_adiposity">Schwere Adipositas:</string>
+    <string name="calculated_WHtR">Ihr WHtR:</string>
+    <!-- WHR -->
+    <string name="gender_male">Männlich</string>
+    <string name="gender_female">Weiblich</string>
+    <string name="get_hip_girth">Hüftumfang in cm</string>
+    <string name="WHR_informations_female">Bei Frauen: Der THV sollte kleinergleich 0,85 sein</string>
+    <string name="WHR_informations_male">Bei Männern: Der THV sollte kleiner gleich 1,0 sein</string>
+    <string name="calculated_WHR">"Ihr WHR: "</string>
+    <!-- Training data -->
+    <string name="training_data_last_trained">Zuletzt trainiert:</string>
+    <string name="training_data_label_weight_average">Durchschnittliches Gewicht pro x-tem Training</string>
+    <string name="training_data_average_weight_header">Durchschnittliches Gewicht:</string>
+    <string name="training_data_average_time_header">Durchschnittliche Dauer:</string>
+    <string name="training_data_average_distance_header">Durchschnittliche Distanz:</string>
+    <string name="training_data_volume_header">Volumen:</string>
+    <string name="training_data_label_time_average">Durchschnittliche Dauer pro x-tem Training</string>
+    <string name="training_data_label_distance_average">Durchschnittliche Distanz pro x-tem Training</string>
+    <string name="training_data_label_volume">Durchschnittliches Volumen pro x-tem Training</string>
+
+    <!-- Navigation bar -->
+    <string name="navigationButton_plans">Pläne</string>
+    <string name="navigationButton_exercises">Übungen</string>
+    <string name="navigationButton_data">Trainingsdaten</string>
+
+    <!-- Menu -->
+
+    <!-- Settings -->
+    <string name="settings_header">Einstellungen</string>
+    <string name="settings_category_surface_and_appearance">Oberfläche und Erscheinungbild</string>
+    <string name="settings_category_experience">Verhalten</string>
+    <string name="settings_category_experience_enable_reminder">Erinnerungen Ein-/Ausschalten</string>
+    <string name="settings_toggle_light_dark_mode">Modus wechseln</string>
+    <string name="settings_category_data">Daten</string>
+    <string name="settings_export_data">Trainingsdaten exportieren</string>
+    <string name="settings_import_data">Trainingsdaten importieren</string>
+    <string name="settings_delete_data">Daten löschen</string>
+    <string name="reset_all_settings_callback">Wollen sie wirklich alle Einstellungen zurücksetzen?</string>
+    <string name="delete_all_data_callback">Wollen Sie wirklich alle Daten löschen?</string>
+    <string name="alertdialog_export_header">Was wollen sie exportieren?</string>
+    <string name="alertdialog_import_header">Was wollen sie importieren?</string>
+    <string name="settings_exporting_successful">Erfolgrecih exportiert</string>
+    <string name="settings_importing_successful">Erfolgreich importiert</string>
+    <!-- Arrays -->
+    <string name="settings_language_selector_default_language">System Sprache</string>
+    <string name="settings_language_selector_english">Englisch</string>
+    <string name="settings_language_selector_german">Deutsch</string>
+    <string name="array_translated_notification_beep">notification beep von Universfield</string>
+    <string name="array_translated_message">message von supremetylewiss</string>
+    <string name="array_translated_confirm_notification_choice_or_pop_up_sound_effect">confirm notification choice or pop up sound effect von Lesiakower</string>
+    <string name="array_translated_notification_sound_3">notification sound 3 von BenKirb</string>
+    <string name="array_translated_error_call_to_attention">error call to attention von Universfield</string>
+    <string name="array_translated_new_message_31">new message 31 von Tuomas_Data</string>
+    <string name="array_translated_notification_4">notification 4 von Universfield</string>
+
+    <!-- Information -->
+    <string name="informations_header">Über</string>
+    <string name="developer_name">von Fabian Roland</string>
+    <string name="informations_app_version">Version:</string>
+
+    <!-- PlansRecyclerView: None -->
+    <!-- ExerciseRecyclerView -->
+    <string name="placeholder_missing_note">Keine Notizen.</string>
+    <string name="display_volume_of_exercise">Volumen:</string>
+    <!-- ExerciseTableRecyclerView -->
+    <string name="column_repetition">Sätze:</string>
+    <string name="column_weight">Gewicht:</string>
+    <string name="column_time">Zeit:</string>
+    <string name="column_distance">Distanz:</string>
+
+    <!-- Custom alert dialogs -->
+    <string name="alertdialog_export_plans">Pläne exportieren</string>
+    <string name="alertdialog_export_exercises">Übungen exportieren</string>
+    <string name="alertdialog_import_plans">Pläne importieren</string>
+    <string name="alertdialog_import_exercises">Übungen importieren</string>
+
+    <!-- Often used -->
+    <string name="edit_notes">Füge Notizen hinzu...</string>
+    <string name="search_exercises">Nach einer Übung suchen</string>
+    <string name="delete_item_callback">Wollen sie wirklich diesen Item löschen?</string>
+    <string name="button_apply">Ja</string>
+    <string name="button_cancel">Abbruch</string>
+    <string name="notification_empty">Bisher noch keine Einträge.</string>
+
+    <!-- Error messages -->
+    <string name="error_notification_not_inserted">Eintrag konnte nicht hinzugefügt werden (Code: 1)</string>
+    <string name="error_missing_column">Error: Fehlende Spalte (Code: -1)</string>
+    <string name="error_updating_entry">Eintrag konnte nicht aktualisiert werden (Code: 2)</string>
+    <string name="error_exercise_not_found">Übung konnte nicht gefunden werden (Code: -2)</string>
+    <string name="error_no_write_permission">Fehler: Keine Schreibrechte (Code: 3)</string>
+    <string name="error_missing_plan">Plandaten konnten nicht geladen werden (Code: -3)</string>
+    <string name="error_exporting_failed">Fehler: Exportieren fehlgeeschlagen (Code: 4)</string>
+    <string name="error_importing_failed">Fehler: Importieren fehlgeschlagen (Code: -4)</string>
+
+    <!-- Todo: Filter strings -->
+    <string name="setting_style">Stil:</string>
+    <string name="notification_succesful_inserted">Eintrag hinzugefügt.</string>
+    <string name="notification_position">Sie sind bereits hier!</string>
+    <string name="notification_succesful_updated">Eintrag aktualisiert</string>
+<!--    <string name="leave_editor_callback">Sind sie sicher das Sie gehen wollen? - Alle Veränderunge gehen dadurch verloren.</string>-->
+<!--    <string name="confirm_to_leave_bottom_save">Speichern und verlassen</string>-->
+<!--    <string name="confirm_to_leave_bottom_ignore">Verwerfe diese Veränderungen</string>-->
+<!--    <string name="leave_training_callback">Wollen sie wirklich gehen? - Alle Trainingsdaten gehen so verloren.</string>-->
+<!--    <string name="header_history">Historie:</string>-->
+    <string name="error_no_valid_data">Bitte tragen sie alle Daten korrekt ein.</string>
+    <string name="preferences_language_selector">Sprache auswählen</string>
+    <string name="preferences_language_selector_summary">Bevorzugte Sprache auswählen</string>
+    <string name="notification_reminder_for_training">Vergessen sie nicht weiterzumachen.</string>
+</resources>
