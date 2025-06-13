@@ -1,7 +1,12 @@
 # GymTrim
 
 ## Purpose & Benefits
-GymTrim is a fitness app designed to help you document your weights, times, distances, and repetitions during training. Built-in calculators, such as a BMI calculator, provide quick insights. Your training data is calculated and stored locally on your device, allowing you to review your progress over time. **Your data remains private and is never shared.**
+GymTrim is a fitness app designed to help you document your training data, but there is **no guarantee that it will improve your athleticism or health**. Your training data is recorded and stored locally on your device, allowing you to review your progress over time. **Your data remains private and is never shared.**
+
+## Features
+### Store Plans & Exercises
+### Catch your training progress
+### Different Calculators
 
 ## Installation
 
