@@ -10,7 +10,7 @@ GymTrim is a fitness app designed to help you document your weights, times, dist
 2. Search for **GymTrim** in F-Droid.
 3. Tap **Install**.
 
-### Installation from the APK file
+### Installation via .apk file
 1. Visit [F-Droid.org](https://f-droid.org/).
 2. Search for **GymTrim**.
 3. Select the app version you want.
