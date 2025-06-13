@@ -78,6 +78,3 @@ This project is licensed under the [Apache License 2.0](LICENSE).
 
 This app was developed to improve and simplify my own training data tracking. It is **not intended to improve athleticism or health**.  
 **No warranty is provided.**
-
-## Disclaimer
-This app was developed in order to improve my training and make it easier for me to track my training data. Its not aimed and it never was to improve athleticism or health. There is no warranty for those.
