@@ -57,5 +57,6 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation (libs.material.v190) // Update if necessary
+    implementation (libs.picasso)
 
 }

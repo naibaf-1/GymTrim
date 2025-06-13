@@ -15,6 +15,7 @@ mpandroidchartVersion = "v3.1.0"
 navigationFragment = "2.6.0"
 navigationUi = "2.8.7"
 activity = "1.10.0"
+picasso = "2.8"
 preference = "1.2.1"
 legacySupportV4 = "1.0.0"
 lifecycleLivedataKtx = "2.8.7"
@@ -42,6 +43,7 @@ mpandroidchart-vv310 = { module = "com.github.PhilJay:MPAndroidChart", version.r
 navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
 preference = { group = "androidx.preference", name = "preference", version.ref = "preference" }
 legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
 lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }

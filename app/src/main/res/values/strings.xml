@@ -33,7 +33,7 @@
     <string name="error_missing_name">Please enter a name.</string>
     <!-- AddExercise & EditExercise -->
     <string name="add_new_exercise_header">Add new Exercise</string>
-    <string name="get_exercise_name">Enter name with number</string>
+    <string name="get_exercise_name">Enter name</string>
     <string name="checkBox_note_weight">Note weight</string>
     <string name="checkBox_note_distance">Note distance</string>
     <string name="checkBox_note_time">Note time</string>
