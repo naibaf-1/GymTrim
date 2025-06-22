@@ -33,14 +33,13 @@ GymTrim is a fitness app designed to help you document your training data. While
 - Import and export data
 
 ## Screenshots
-
-![Screenshot_GymTrim_Plans](https://github.com/user-attachments/assets/92a7947a-f620-4c73-b0dd-78189a1a5e48) 
-![Screenshot_GymTrim_EditPlan](https://github.com/user-attachments/assets/e7e714ea-53a9-4468-8844-73ffad8d14d3) 
-![Screenshot_GymTrim_Training](https://github.com/user-attachments/assets/d4c47e10-d7de-4df8-9367-b1b61087840e) 
-![Screenshot_GymTrim_Exercises](https://github.com/user-attachments/assets/d51c0b74-e4cb-4cc8-933e-67043453376e) 
-![Screenshot_GymTrim_AddExercise](https://github.com/user-attachments/assets/36b6db7b-0259-43eb-9762-d58e50d03e6c)
-![Screenshot_GymTrim_EditExercise](https://github.com/user-attachments/assets/34e8c80d-1ffc-432d-94c2-7a0593cb55eb) 
-![Screenshot_GymTrim_Data](https://github.com/user-attachments/assets/7b32434a-8e1e-416b-99c6-534a082c45a6) 
+![Plans](assets/Screenshot_GymTrim_Plans.png)
+![Edit an plan](assets/Screenshot_GymTrim_EditPlan.png)
+![Training mode](assets/Screenshot_GymTrim_Training.png)
+![Exercises](assets/Screenshot_GymTrim_Exercises.png)
+![Add an exercise](assets/Screenshot_GymTrim_AddExercise.png)
+![Edit an exercise](assets/Screenshot_GymTrim_EditExercise.png)
+![Data section](assets/Screenshot_GymTrim_Data.png)
 
 *(Not default theme shown)*
 
