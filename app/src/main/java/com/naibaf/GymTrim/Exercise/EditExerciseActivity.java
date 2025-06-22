@@ -233,7 +233,7 @@ public class EditExerciseActivity extends AppCompatActivity {
             int columnIndexOfName = exercise_data.getColumnIndex("NameOfExercise");
             int columnIndexOfRecordWeight = exercise_data.getColumnIndex("RecordWeight");
             int columnIndexOfRecordDistance = exercise_data.getColumnIndex("RecordDistance");
-            int columnIndexOfRecordSentences = exercise_data.getColumnIndex("RecordSentences");
+            int columnIndexOfRecordSentences = exercise_data.getColumnIndex("RecordRepetitions");
             int columnIndexOfRecordTime = exercise_data.getColumnIndex("RecordTime");
             int columnIndexOfImage = exercise_data.getColumnIndex("ImageOfExercise");
             int columnIndexOfNotes = exercise_data.getColumnIndex("NotesForExercise");

@@ -188,7 +188,7 @@ public class EditPlanActivity extends AppCompatActivity implements ExerciseCusto
 
         //Get ColumnIndexes
         int ColumnIndexOfNotes = specificPlanData.getColumnIndex("NotesForPlan");
-        int ColumnIndexOfVibrator = specificPlanData.getColumnIndex("VibratorTime");
+        int ColumnIndexOfVibrator = specificPlanData.getColumnIndex("ReminderTime");
 
         //Get missing values of the plan
         specificPlanData.moveToFirst();

@@ -48,6 +48,7 @@ import com.naibaf.GymTrim.SQLiteDatabases.ExercisesDB;
 import java.util.ArrayList;
 
 public class TrainingDataOfExerciseActivity extends AppCompatActivity {
+    Cursor wishedGraphs;
 
     ExercisesDB DB;
     @SuppressLint("SetTextI18n")
@@ -114,12 +115,12 @@ public class TrainingDataOfExerciseActivity extends AppCompatActivity {
         DisplayName.setText(nameOfSelected);
 
         //Check which graphs should be drawn & hide unnecessary
-        Cursor wishedGraphs = DB.getExerciseData(idOfSelected);
+        wishedGraphs = DB.getExerciseData(idOfSelected);
         wishedGraphs.moveToFirst();
         int columnIndexOfWeightBoolean = wishedGraphs.getColumnIndex("RecordWeight");
         int columnIndexOfDistanceBoolean = wishedGraphs.getColumnIndex("RecordDistance");
         int columnIndexOfTimeBoolean = wishedGraphs.getColumnIndex("RecordTime");
-        int columnIndexOfRepetitionsBoolean = wishedGraphs.getColumnIndex("RecordSentences");
+        int columnIndexOfRepetitionsBoolean = wishedGraphs.getColumnIndex("RecordRepetitions");
 
         Boolean weightAverageShouldBeDrawn = CommonFunctions.getBooleanValueOfInteger(wishedGraphs.getInt(columnIndexOfWeightBoolean));
         Boolean distanceAverageShouldBeDrawn = CommonFunctions.getBooleanValueOfInteger(wishedGraphs.getInt(columnIndexOfDistanceBoolean));
@@ -180,6 +181,12 @@ public class TrainingDataOfExerciseActivity extends AppCompatActivity {
         TextView DateOfLastTraining = findViewById(R.id.textView_DateOfLastTrainingOfExercise);
         String lastTrained = getString(R.string.training_data_last_trained);
         DateOfLastTraining.setText(lastTrained + " " + wishedGraphs.getString(columnIndexOfLastTraining));
+    }
+
+    @Override
+    protected void onDestroy() {
+        wishedGraphs.close();
+        super.onDestroy();
     }
 
     public void buildChart(LineChart chart, Cursor data, String label){

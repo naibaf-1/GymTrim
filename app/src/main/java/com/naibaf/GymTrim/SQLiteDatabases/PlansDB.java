@@ -29,7 +29,7 @@ public class PlansDB extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "GymTrim-Plans.db";
 
     // Database Version => increase after changes of tables!
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     public PlansDB(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -39,7 +39,7 @@ public class PlansDB extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase DB) {
         try {
             DB.execSQL("PRAGMA foreign_keys = ON;");
-            DB.execSQL("CREATE TABLE PlansDetails (" + "plansId INTEGER PRIMARY KEY AUTOINCREMENT, " + "NameOfPlan TEXT, " + "ColorOfPlan INTEGER, " + "NotesForPlan TEXT, " + "VibratorTime FLOAT, " + "DateOfLastTraining TEXT, " + "TimerDurationWhenTrainingLeft TEXT" + ");");
+            DB.execSQL("CREATE TABLE PlansDetails (" + "plansId INTEGER PRIMARY KEY AUTOINCREMENT, " + "NameOfPlan TEXT, " + "ColorOfPlan INTEGER, " + "NotesForPlan TEXT, " + "ReminderTime FLOAT, " + "DateOfLastTraining TEXT, " + "TimerDurationWhenTrainingLeft TEXT" + ");");
             DB.execSQL("CREATE TABLE Exercise (" + "exerciseMainId INTEGER PRIMARY KEY AUTOINCREMENT, " + "DateOfLastTraining TEXT, " + "NameOfExercise TEXT, " + "ImageOfExercise BLOB, " + "NotesForExercise TEXT, " + "RecordWeight INTEGER, " + "RecordTime INTEGER, " + "RecordDistance INTEGER, " + "RecordRepetitions INTEGER, " + "ExerciseID INTEGER, " + "ExerciseIdInEDB INTEGER, " + "ExerciseOrder INTEGER, " + "FOREIGN KEY (ExerciseID) REFERENCES PlansDetails(plansId) ON DELETE CASCADE" + ");");
             DB.execSQL("CREATE TABLE ExerciseTable (" + "tableMainId INTEGER PRIMARY KEY AUTOINCREMENT, " + "RecordWeight REAL, " + "RecordDistance REAL, " + "RecordSentences INTEGER, " + "RecordTime NUMERIC, " + "RowNumber INTEGER, " + "RowIsDone INTEGER, " + "TableId INTEGER, " + "FOREIGN KEY (TableId) REFERENCES Exercise(exerciseMainId) ON DELETE CASCADE" + ");");
         } catch (SQLException e){
@@ -53,7 +53,7 @@ public class PlansDB extends SQLiteOpenHelper {
         DB.execSQL("drop Table if exists Exercise");
         DB.execSQL("drop Table if exists ExerciseTable ");
 
-        DB.execSQL(" create Table PlansDetails (plansId INTEGER primary key autoincrement, NameOfPlan TEXT,  ColorOfPlan INTEGER, NotesForPlan TEXT, VibratorTime FLOAT, DateOfLastTraining TEXT, TimerDurationWhenTrainingLeft TEXT) ");
+        DB.execSQL(" create Table PlansDetails (plansId INTEGER primary key autoincrement, NameOfPlan TEXT,  ColorOfPlan INTEGER, NotesForPlan TEXT, ReminderTime FLOAT, DateOfLastTraining TEXT, TimerDurationWhenTrainingLeft TEXT) ");
         DB.execSQL(" create Table Exercise (exerciseMainId INTEGER primary key autoincrement, DateOfLastTraining TEXT, NameOfExercise TEXT, ImageOfExercise BLOB, NotesForExercise TEXT, RecordWeight INTEGER, RecordTime INTEGER, RecordDistance INTEGER, RecordRepetitions INTEGER, ExerciseID INTEGER, ExerciseIdInEDB INTEGER, ExerciseOrder INTEGER, FOREIGN KEY (ExerciseID) REFERENCES PlansDetails(plansId) ON DELETE CASCADE) ");
         DB.execSQL(" create Table ExerciseTable (tableMainId INTEGER primary key autoincrement, RecordWeight REAL, RecordDistance REAL, RecordSentences INTEGER, RecordTime NUMERIC, RowNumber INTEGER, RowIsDone INTEGER, TableId INTEGER, FOREIGN KEY (TableId) REFERENCES Exercise(exerciseMainId) ON DELETE CASCADE ) ");
     }
@@ -62,15 +62,7 @@ public class PlansDB extends SQLiteOpenHelper {
     public void deletePlanData(int plansId) {
         SQLiteDatabase DB = this.getWritableDatabase();
 
-        //Select the row => delete it
-//        Cursor rowId = DB.rawQuery("Select exerciseMainId From Exercise Where ExerciseID = ?", new String[]{String.valueOf(plansId)});
-//        int ColumnIndexOfRowId = rowId.getColumnIndex("exerciseMainId");
-//        int idForRow = rowId.getInt(ColumnIndexOfRowId);
-//        DB.delete("ExerciseTable", "TableId = ?", new String[]{String.valueOf(idForRow)});
-//        //Delete the exercise
-//        DB.delete("Exercise", "ExerciseID = ?", new String[]{String.valueOf(plansId)});
-
-        //Lastly delete the plan itself
+        //Delete the plan itself
         Cursor cursor = DB.rawQuery(" Select * From PlansDetails Where plansId = ? ", new String[]{String.valueOf(plansId)});
         DB.delete("PlansDetails", "plansId = ?", new String[]{String.valueOf(plansId)});
 
@@ -269,7 +261,7 @@ public class PlansDB extends SQLiteOpenHelper {
     public void editPlanReminder(float duration, int plansId){
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues(1);
-        contentValues.put("VibratorTime", duration);
+        contentValues.put("ReminderTime", duration);
         DB.update("PlansDetails", contentValues, "plansId = ?", new String[]{String.valueOf(plansId)});
         DB.close();
     }

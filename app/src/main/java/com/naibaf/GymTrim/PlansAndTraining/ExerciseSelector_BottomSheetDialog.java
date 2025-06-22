@@ -115,7 +115,7 @@ public class ExerciseSelector_BottomSheetDialog extends BottomSheetDialogFragmen
         final ExerciseCustomRecyclerViewAdapter.CustomExerciseList item = selectableExerciseListAdapter.getData().get(position);
         exerciseData.moveToPosition(position);
 
-        int columnIndexOfRepetitions = exerciseData.getColumnIndex("RecordSentences");
+        int columnIndexOfRepetitions = exerciseData.getColumnIndex("RecordRepetitions");
         int columnIndexOfWeight = exerciseData.getColumnIndex("RecordWeight");
         int columnIndexOfTime = exerciseData.getColumnIndex("RecordTime");
         int columnIndexOfDistance = exerciseData.getColumnIndex("RecordDistance");

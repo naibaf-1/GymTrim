@@ -29,7 +29,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "GymTrim-Exercises.db";
 
     // Database Version => increase after changes of tables!
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     public ExercisesDB(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -41,8 +41,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
             // Enable foreign key support in SQLite
             DB.execSQL("PRAGMA foreign_keys = ON;");
             // Proceed to create tables with foreign key constraints
-            DB.execSQL(" create Table ExerciseDetails (Id INTEGER primary key autoincrement, NameOfExercise TEXT, RecordWeight INTEGER, RecordDistance INTEGER, RecordSentences INTEGER, RecordTime INTEGER, ImageOfExercise BLOB, NotesForExercise TEXT, LastlyTrained TEXT) ");
-            DB.execSQL(" create Table TrainingData (trainingdataMainId INTEGER primary key autoincrement, Volume INTEGER, AverangeWeight FLOAT, AverangeTime FLOAT, AverangeDistance FLOAT, Date TEXT, ExerciseId INTEGER, FOREIGN KEY (ExerciseId) REFERENCES ExerciseDetails(Id) ON DELETE CASCADE) ");
+            DB.execSQL(" create Table ExerciseDetails (Id INTEGER primary key autoincrement, NameOfExercise TEXT, RecordWeight INTEGER, RecordDistance INTEGER, RecordRepetitions INTEGER, RecordTime INTEGER, ImageOfExercise BLOB, NotesForExercise TEXT, LastlyTrained TEXT) ");
+            DB.execSQL(" create Table TrainingData (trainingdataMainId INTEGER primary key autoincrement, Volume INTEGER, AverageWeight FLOAT, AverageTime FLOAT, AverageDistance FLOAT, Date TEXT, ExerciseId INTEGER, FOREIGN KEY (ExerciseId) REFERENCES ExerciseDetails(Id) ON DELETE CASCADE) ");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -52,8 +52,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase DB, int oldVersion, int newVersion) {
         DB.execSQL(" drop Table if exists ExerciseDetails ");
         DB.execSQL(" drop Table if exists TrainingData ");
-        DB.execSQL(" create Table ExerciseDetails (Id INTEGER primary key autoincrement, NameOfExercise TEXT, RecordWeight INTEGER, RecordDistance INTEGER, RecordSentences INTEGER, RecordTime INTEGER, ImageOfExercise BLOB, NotesForExercise TEXT, LastlyTrained TEXT) ");
-        DB.execSQL(" create Table TrainingData (trainingdataMainId INTEGER primary key autoincrement, Volume INTEGER, AverangeWeight FLOAT, AverangeTime FLOAT, AverangeDistance FLOAT, Date TEXT, ExerciseId INTEGER, FOREIGN KEY (ExerciseId) REFERENCES ExerciseDetails(Id) ON DELETE CASCADE) ");
+        DB.execSQL(" create Table ExerciseDetails (Id INTEGER primary key autoincrement, NameOfExercise TEXT, RecordWeight INTEGER, RecordDistance INTEGER, RecordRepetitions INTEGER, RecordTime INTEGER, ImageOfExercise BLOB, NotesForExercise TEXT, LastlyTrained TEXT) ");
+        DB.execSQL(" create Table TrainingData (trainingdataMainId INTEGER primary key autoincrement, Volume INTEGER, AverageWeight FLOAT, AverageTime FLOAT, AverageDistance FLOAT, Date TEXT, ExerciseId INTEGER, FOREIGN KEY (ExerciseId) REFERENCES ExerciseDetails(Id) ON DELETE CASCADE) ");
     }
 
     public int createNewExercise(){
@@ -118,7 +118,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
         SQLiteDatabase DB = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues(1);
-        contentValues.put("RecordSentences", repetitions);
+        contentValues.put("RecordRepetitions", repetitions);
         DB.update("ExerciseDetails", contentValues, "Id = ?", new String[]{String.valueOf(Id)});
         DB.close();
     }
@@ -178,14 +178,15 @@ public class ExercisesDB extends SQLiteOpenHelper {
         DB.close();
     }
 
+    //Insert calculated training data
     public void insertNewTrainingsData(int exerciseId, int volume, float averageOfWeight, float averageOfTime, float averageOfDistance, String date){
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("Volume", volume);
         contentValues.put("ExerciseId", exerciseId);
-        contentValues.put("AverangeWeight", averageOfWeight);
-        contentValues.put("AverangeTime", averageOfTime);
-        contentValues.put("AverangeDistance", averageOfDistance);
+        contentValues.put("AverageWeight", averageOfWeight);
+        contentValues.put("AverageTime", averageOfTime);
+        contentValues.put("AverageDistance", averageOfDistance);
         contentValues.put("Date", date);
 
         DB.insert("TrainingData", null, contentValues);
@@ -198,15 +199,15 @@ public class ExercisesDB extends SQLiteOpenHelper {
     }
     public Cursor getAllWeightAverageForExercise(int exerciseId){
         SQLiteDatabase DB = this.getReadableDatabase();
-        return DB.rawQuery("SELECT AverangeWeight FROM ExerciseDetails e INNER JOIN TrainingData t ON e.Id = t.ExerciseId WHERE t.ExerciseId = ? ORDER BY t.Date", new String[]{String.valueOf(exerciseId)});
+        return DB.rawQuery("SELECT AverageWeight FROM ExerciseDetails e INNER JOIN TrainingData t ON e.Id = t.ExerciseId WHERE t.ExerciseId = ? ORDER BY t.Date", new String[]{String.valueOf(exerciseId)});
     }
     public Cursor getAllTimeAverageForExercise(int exerciseId){
         SQLiteDatabase DB = this.getReadableDatabase();
-        return DB.rawQuery("SELECT AverangeTime FROM ExerciseDetails e INNER JOIN TrainingData t ON e.Id = t.ExerciseId WHERE t.ExerciseId = ? ORDER BY t.Date", new String[]{String.valueOf(exerciseId)});
+        return DB.rawQuery("SELECT AverageTime FROM ExerciseDetails e INNER JOIN TrainingData t ON e.Id = t.ExerciseId WHERE t.ExerciseId = ? ORDER BY t.Date", new String[]{String.valueOf(exerciseId)});
     }
     public Cursor getAllDistanceAverageForExercise(int exerciseId){
         SQLiteDatabase DB = this.getReadableDatabase();
-        return DB.rawQuery("SELECT AverangeDistance FROM ExerciseDetails e INNER JOIN TrainingData t ON e.Id = t.ExerciseId WHERE t.ExerciseId = ? ORDER BY t.Date", new String[]{String.valueOf(exerciseId)});
+        return DB.rawQuery("SELECT AverageDistance FROM ExerciseDetails e INNER JOIN TrainingData t ON e.Id = t.ExerciseId WHERE t.ExerciseId = ? ORDER BY t.Date", new String[]{String.valueOf(exerciseId)});
     }
 
 }
