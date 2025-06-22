@@ -158,6 +158,7 @@
 
     <!-- for Light Mode -->
     <color name="backgroundColor">#FCFCFC</color>
+    <color name="colorDelete">#FFB4AB</color>
     <!-- for Settings Button -->
     <color name="settingsButton">#BFBFBF</color>
     <color name="red">#DC4217</color>
