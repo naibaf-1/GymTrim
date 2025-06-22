@@ -1,4 +1,7 @@
-# GymTrim: Version 1.0 "halcyon"
+# GymTrim: Version 1.0 "halcyon" 
+<p align="left">
+  <img src="assets/app_icon.png" alt="GymTrim Logo" width="100" height="100"/>
+</p>
 
 [![License](https://img.shields.io/github/license/naibaf-1/GymTrim)](LICENSE)
 [![Build Status](https://github.com/naibaf-1/GymTrim/actions/workflows/main.yml/badge.svg)](https://github.com/naibaf-1/GymTrim/actions)
@@ -97,6 +100,16 @@ You can contact me through GitHub—open an [issue](../../issues) or submit a pu
 ## License
 
 This project is licensed under the [Apache License 2.0](LICENSE).
+
+## Third-Party Libraries
+
+This app uses the following open-source libraries:
+
+- [AmbilWarna](https://github.com/yukuku/ambilwarna) by yukuku – [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart) by PhilJay – [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [Picasso](https://github.com/square/picasso) by Square – [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+
+This app also uses standard AndroidX and Google libraries as provided by the Android SDK.
 
 ## Disclaimer
 
