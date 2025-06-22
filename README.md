@@ -1,4 +1,7 @@
-# GymTrim: Version 1.0 "halcyon"
+# GymTrim: Version 1.0 "halcyon" 
+<p align="left">
+  <img src="assets/app_icon.png" alt="GymTrim Logo" width="100" height="100"/>
+</p>
 
 [![License](https://img.shields.io/github/license/naibaf-1/GymTrim)](LICENSE)
 [![Build Status](https://github.com/naibaf-1/GymTrim/actions/workflows/main.yml/badge.svg)](https://github.com/naibaf-1/GymTrim/actions)
