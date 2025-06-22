@@ -1,5 +1,9 @@
 # GymTrim: Version 1.0 "halcyon"
 
+[![License](https://img.shields.io/github/license/naibaf-1/GymTrim)](LICENSE)
+[![Build Status](https://github.com/naibaf-1/GymTrim/actions/workflows/main.yml/badge.svg)](https://github.com/naibaf-1/GymTrim/actions)
+[![Last Commit](https://img.shields.io/github/last-commit/naibaf-1/GymTrim)](https://github.com/naibaf-1/GymTrim/commits)
+
 ## Purpose & Benefits
 GymTrim is a fitness app designed to help you document your training data. While it can help you track your progress, **there is no guarantee that it will improve your athleticism or health**. All training data is recorded and stored locally on your device—**your data remains private and is never shared**.
 
@@ -33,14 +37,13 @@ GymTrim is a fitness app designed to help you document your training data. While
 - Import and export data
 
 ## Screenshots
-
-![Screenshot_GymTrim_Plans](https://github.com/user-attachments/assets/92a7947a-f620-4c73-b0dd-78189a1a5e48) 
-![Screenshot_GymTrim_EditPlan](https://github.com/user-attachments/assets/e7e714ea-53a9-4468-8844-73ffad8d14d3) 
-![Screenshot_GymTrim_Training](https://github.com/user-attachments/assets/d4c47e10-d7de-4df8-9367-b1b61087840e) 
-![Screenshot_GymTrim_Exercises](https://github.com/user-attachments/assets/d51c0b74-e4cb-4cc8-933e-67043453376e) 
-![Screenshot_GymTrim_AddExercise](https://github.com/user-attachments/assets/36b6db7b-0259-43eb-9762-d58e50d03e6c)
-![Screenshot_GymTrim_EditExercise](https://github.com/user-attachments/assets/34e8c80d-1ffc-432d-94c2-7a0593cb55eb) 
-![Screenshot_GymTrim_Data](https://github.com/user-attachments/assets/7b32434a-8e1e-416b-99c6-534a082c45a6) 
+![Plans](assets/Screenshot_GymTrim_Plans.png)
+![Edit a plan](assets/Screenshot_GymTrim_EditPlan.png)
+![Training mode](assets/Screenshot_GymTrim_Training.png)
+![Exercises](assets/Screenshot_GymTrim_Exercises.png)
+![Add an exercise](assets/Screenshot_GymTrim_AddExercise.png)
+![Edit an exercise](assets/Screenshot_GymTrim_EditExercise.png)
+![Data section](assets/Screenshot_GymTrim_Data.png)
 
 *(Not default theme shown)*
 
@@ -61,10 +64,31 @@ GymTrim is a fitness app designed to help you document your training data. While
 5. Save the file, then use your file manager to find the `.apk`.
 6. Tap the file and follow the on-screen instructions to install.
 
+_You can also download the latest APK from the [Releases page](../../releases)._
+
 ## Contribution Guidelines
 
 Everyone is welcome to participate in and adapt this project.  
 All contributions and usage are governed by the [Apache 2.0 License](LICENSE).
+Please see also [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+### Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/naibaf-1/GymTrim.git
+```
+### Code of Conduct
+
+Please note that this project adheres to a [Code of Conduct](CODE_OF_CONDUCT.md).  
+By participating, you are expected to uphold this code.
+
+### Attribution
+
+If you fork and redistribute GymTrim, please include the following attribution in your documentation:
+
+> Based on GymTrim by Fabian Bain (naibaf-1)
 
 ## Contact
 
