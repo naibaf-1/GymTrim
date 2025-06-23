@@ -142,5 +142,5 @@ public class InformationsActivity extends AppCompatActivity {
 
     }
 
-    //Todo: Add Github link(s) => Open repository !Prove Licenses of imported libraries and mention autors of reminder sounds!!!! => Make it public => Upload to F-Droid
+    //Todo: Upload to F-Droid
 }
