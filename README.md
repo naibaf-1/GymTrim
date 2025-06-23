@@ -111,6 +111,18 @@ This app uses the following open-source libraries:
 
 This app also uses standard AndroidX and Google libraries as provided by the Android SDK.
 
+## Third-Party Sounds
+
+This app uses the following sounds:
+
+- [notification beep](https://pixabay.com/de/sound-effects/notification-beep-229154/) by Universfield
+- [notification #4](https://pixabay.com/de/sound-effects/notification-4-126507/) by Universfield
+- [error call to attention](https://pixabay.com/de/sound-effects/error-call-to-attention-129258/) by Universfield
+- [message](https://pixabay.com/de/sound-effects/message-13716/) by supremetylewiss
+- [Confirm, Notification, Choice or Pop-up Sound Effect](https://pixabay.com/de/sound-effects/confirm-notification-choice-or-pop-up-sound-effect-221449/) by Lesiakower
+- [Notification Sound 3](https://pixabay.com/de/sound-effects/notification-sound-3-262896/) by BenKirb
+- [New Message 31](https://pixabay.com/de/sound-effects/new-message-31-183617/) by Tuomas_Data
+
 ## Disclaimer
 
 This app was developed to improve and simplify my own training data tracking. It is **not intended to improve athleticism or health**.  
