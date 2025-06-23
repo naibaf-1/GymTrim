@@ -4,7 +4,6 @@
 </p>
 
 [![License](https://img.shields.io/github/license/naibaf-1/GymTrim)](LICENSE)
-[![Build Status](https://github.com/naibaf-1/GymTrim/actions/workflows/main.yml/badge.svg)](https://github.com/naibaf-1/GymTrim/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/naibaf-1/GymTrim)](https://github.com/naibaf-1/GymTrim/commits)
 
 ## Purpose & Benefits
