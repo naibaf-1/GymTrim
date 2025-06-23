@@ -12,14 +12,16 @@
     <TextView
         android:id="@+id/textView_LinkToSourceCode"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Source Code: http://stackoverflow.com/questions/2734270/ddg#2746708"
+        android:layout_marginEnd="40dp"
+        android:gravity="center_vertical"
+        android:text="@string/informations_link_to_source_code"
         android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -28,15 +30,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/informations_app_version"
-        android:textColor="?android:attr/textColorPrimary"
-        android:textSize="14sp"
+        android:textColor="?android:attr/textColorTertiary"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_LinkToSourceCode" />
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/textView_DeveloperName" />
 
     <TextView
         android:id="@+id/textView_DeveloperName"
@@ -151,5 +155,107 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:srcCompat="@drawable/custom_divider" />
+
+    <TextView
+        android:id="@+id/textView_ReportABug"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center_vertical"
+        android:text="@string/informations_link_to_bug_report"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_LinkToSourceCode" />
+
+    <TextView
+        android:id="@+id/textView_FeatureRequest"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center_vertical"
+        android:text="@string/informations_link_to_feature_request"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ReportABug" />
+
+    <TextView
+        android:id="@+id/textView_License"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center_vertical"
+        android:text="@string/informations_link_to_license"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_FeatureRequest" />
+
+    <ImageView
+        android:id="@+id/imageView_openLinkSource"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Open link"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_LinkToSourceCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/textView_LinkToSourceCode"
+        app:layout_constraintTop_toTopOf="@+id/textView_LinkToSourceCode"
+        app:srcCompat="@drawable/icon_open_link"
+        app:tint="?android:attr/textColorPrimary" />
+
+    <ImageView
+        android:id="@+id/imageView_OpenLinkBugReport"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Open link"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_ReportABug"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_ReportABug"
+        app:layout_constraintTop_toTopOf="@+id/textView_ReportABug"
+        app:srcCompat="@drawable/icon_open_link"
+        app:tint="?android:attr/textColorPrimary" />
+
+    <ImageView
+        android:id="@+id/imageView_OpenLinkFeatureRequest"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Open link"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_FeatureRequest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_FeatureRequest"
+        app:layout_constraintTop_toTopOf="@+id/textView_FeatureRequest"
+        app:srcCompat="@drawable/icon_open_link"
+        app:tint="?android:attr/textColorPrimary" />
+
+    <ImageView
+        android:id="@+id/imageView_OpenLinkLicense"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Open link"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_License"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_License"
+        app:layout_constraintTop_toTopOf="@+id/textView_License"
+        app:srcCompat="@drawable/icon_open_link"
+        app:tint="?android:attr/textColorPrimary" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

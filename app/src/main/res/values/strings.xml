@@ -110,16 +110,20 @@
     <string name="settings_language_selector_german">German</string>
     <string name="array_translated_notification_beep">notification beep by Universfield</string>
     <string name="array_translated_message">message by supremetylewiss</string>
-    <string name="array_translated_confirm_notification_choice_or_pop_up_sound_effect">confirm notification choice or pop up sound effect by Lesiakower</string>
-    <string name="array_translated_notification_sound_3">notification sound 3 by BenKirb</string>
+    <string name="array_translated_confirm_notification_choice_or_pop_up_sound_effect">Confirm, Notification, Choice or Pop-up Sound Effect by Lesiakower</string>
+    <string name="array_translated_notification_sound_3">Notification Sound 3 by BenKirb</string>
     <string name="array_translated_error_call_to_attention">error call to attention by Universfield</string>
-    <string name="array_translated_new_message_31">new message 31 by Tuomas_Data</string>
-    <string name="array_translated_notification_4">notification 4 by Universfield</string>
+    <string name="array_translated_new_message_31">New Message 31 by Tuomas_Data</string>
+    <string name="array_translated_notification_4">notification #4 by Universfield</string>
 
     <!-- Information -->
     <string name="informations_header">About</string>
     <string name="developer_name">by Fabian Roland</string>
     <string name="informations_app_version">Version:</string>
+    <string name="informations_link_to_source_code">Source code</string>
+    <string name="informations_link_to_bug_report">Report a bug</string>
+    <string name="informations_link_to_license">License</string>
+    <string name="informations_link_to_feature_request">Request a feature</string>
 
     <!-- PlansRecyclerView: None -->
     <!-- ExerciseRecyclerView -->

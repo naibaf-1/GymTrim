@@ -15,8 +15,10 @@
 package com.naibaf.GymTrim.SettingsAndInformations;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +34,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.color.MaterialColors;
 import com.naibaf.GymTrim.R;
+
+import org.w3c.dom.Text;
 
 public class InformationsActivity extends AppCompatActivity {
 
@@ -89,6 +93,53 @@ public class InformationsActivity extends AppCompatActivity {
         } catch (PackageManager.NameNotFoundException e) {
             throw new RuntimeException(e);
         }
+
+        //Links
+        //Link to the repository/https://github.com/naibaf-1/GymTrim
+        TextView RepositoryLink = findViewById(R.id.textView_LinkToSourceCode);
+        RepositoryLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://github.com/naibaf-1/GymTrim";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+        //Link to  report a bug/https://github.com/naibaf-1/GymTrim/issues/new?template=bug_report.md
+        TextView BugReportLink = findViewById(R.id.textView_ReportABug);
+        BugReportLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://github.com/naibaf-1/GymTrim/issues/new?template=bug_report.md";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+        //Link to feature request/https://github.com/naibaf-1/GymTrim/issues/new?template=feature_request.md
+        TextView FeatureRequestLink = findViewById(R.id.textView_FeatureRequest);
+        FeatureRequestLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://github.com/naibaf-1/GymTrim/issues/new?template=feature_request.md";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+        //Link to license
+        TextView LicenseLink = findViewById(R.id.textView_License);
+        LicenseLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://github.com/naibaf-1/GymTrim?tab=License-1-ov-file";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+
     }
 
     //Todo: Add Github link(s) => Open repository !Prove Licenses of imported libraries and mention autors of reminder sounds!!!! => Make it public => Upload to F-Droid
