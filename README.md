@@ -51,7 +51,7 @@ GymTrim is a fitness app designed to help you document your training data. While
 
 ## Installation
 
-**This app requires Android 8.0+**
+**This app requires Android 7.0+**
 
 ### Installation via F-Droid
 1. Install [F-Droid](https://f-droid.org/) on your device.
