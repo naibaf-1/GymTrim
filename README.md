@@ -4,7 +4,6 @@
 </p>
 
 [![License](https://img.shields.io/github/license/naibaf-1/GymTrim)](LICENSE)
-[![Build Status](https://github.com/naibaf-1/GymTrim/actions/workflows/main.yml/badge.svg)](https://github.com/naibaf-1/GymTrim/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/naibaf-1/GymTrim)](https://github.com/naibaf-1/GymTrim/commits)
 
 ## Purpose & Benefits
@@ -52,7 +51,7 @@ GymTrim is a fitness app designed to help you document your training data. While
 
 ## Installation
 
-**This app requires Android 8.0+**
+**This app requires Android 7.0+**
 
 ### Installation via F-Droid
 1. Install [F-Droid](https://f-droid.org/) on your device.
