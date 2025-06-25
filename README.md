@@ -90,7 +90,7 @@ By participating, you are expected to uphold this code.
 
 If you fork and redistribute GymTrim, please include the following attribution in your documentation:
 
-> Based on GymTrim by Fabian Bain (naibaf-1)
+> Based on GymTrim by Fabian Roland (naibaf-1)
 
 ## Contact
 
