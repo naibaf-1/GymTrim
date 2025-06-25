@@ -1,0 +1,51 @@
+Categories:
+  - Sports & Health
+License: Apache-2.0
+SourceCode: https://github.com/naibaf-1/GymTrim
+IssueTracker: https://github.com/naibaf-1/GymTrim/issues
+Changelog: https://github.com/naibaf-1/GymTrim/releases
+Summary: Simple fitness tracker with Material You design support
+Description: |-
+  This app is a small fitness tracker. It's supposed to help track training data and see your progress, but there is no warranty that it will improve your athleticism or health.
+
+  Features:
+  - Store Plans & Exercises:
+    - Easily add and edit exercises and plans directly in the app.
+    - Add images to exercises and colors to plans for easier recognition.
+    - Add notes to plans and exercises; all will be displayed during training.
+  - Training Mode:
+    - Tick off completed repetitions during your workout.
+    - Get reminders for the next repetition (if activated in settings).
+    - Exercises are automatically marked as completed once finished.
+  - Track Your Progress:
+    - During training, data such as average weight and exercise volume is automatically calculated and saved.
+    - After training, you can compare new data to previous training sessions.
+  - Calculators:
+    - Built-in calculators, such as a BMI calculator, are available in the data section.
+  - Further Features:
+    - Material You design (and default theme)
+    - Auto-save for all data
+    - Search for exercises and plans
+    - Different sounds for reminders
+    - Swipe-to-delete functionality
+    - English and German translations
+    - Light and dark mode
+    - Import and export data
+
+  Feel free to contribute and report bugs. Feature requests are welcome too.
+
+RepoType: git
+Repo: https://github.com/naibaf-1/GymTrim.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: v.1.0-halcyon
+    subdir: .
+    gradle:
+      - assemble
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.0
+CurrentVersionCode: 1
