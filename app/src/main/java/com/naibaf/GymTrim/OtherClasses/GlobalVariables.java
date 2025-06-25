@@ -45,7 +45,7 @@ public class GlobalVariables {
 
 
     //Tell DisplayExerciseValues_BottomSheetDialog the duration of the Vibrator (Directly from EditPlanActivity)
-    public static float selectedPlanVibrator = 0;
+    public static float selectedPlanVibrator;
 
 
     private static final GlobalVariables ourInstance = new GlobalVariables();
@@ -89,7 +89,7 @@ public class GlobalVariables {
 
     //Tell DisplayExerciseValues_BottomSheetDialog the duration of the Vibrator
     public float getReminderDuration(){
-        if (selectedPlanVibrator != 0){
+        if (selectedPlanVibrator > 0){
             return selectedPlanVibrator;
         } else {
             return 0;

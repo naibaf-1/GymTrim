@@ -125,7 +125,7 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
         nameOfSelected = getPlan.getStringExtra("name");
         plansId = getPlan.getIntExtra("plansId", -1);
         notesOfSelected = getPlan.getStringExtra("notes");
-        vibratorOfSelected = getPlan.getIntExtra("vibrator", 0);
+        vibratorOfSelected = getPlan.getFloatExtra("vibrator", 0);
         planColor = getPlan.getIntExtra("color", 0);
         timerInLastTraining = getPlan.getStringExtra("lastTrainingDurationOfTimer");
         dateOfLastTraining = getPlan.getStringExtra("lastTrainingDate");
@@ -362,7 +362,7 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
         int columnIndex = exerciseId.getColumnIndex("exerciseMainId");
         GlobalVariables.exerciseID = exerciseId.getInt(columnIndex);
         GlobalVariables.userIsTraining = true;
-        //GlobalVariables.selectedPlanVibrator = vibratorOfSelected;
+        GlobalVariables.selectedPlanVibrator = vibratorOfSelected;
         GlobalVariables.trainingSelectedExercise = position;
         DisplayExerciseValues_BottomSheetDialog DisplayExerciseValuesDialog = new DisplayExerciseValues_BottomSheetDialog();
         DisplayExerciseValuesDialog.show(getSupportFragmentManager(), "ExerciseValues_BottomSheet");

@@ -262,6 +262,7 @@ public class EditPlanActivity extends AppCompatActivity implements ExerciseCusto
                     //Save changes
                     if (s.length() > 0 && !s.equals(" ")) {
                         DB.editPlanReminder(Float.parseFloat(VibratorTime.getText().toString()), plansId);
+                        vibratorOfSelected = VibratorTime.getText().toString();
                     }
                 }
             });
@@ -306,7 +307,7 @@ public class EditPlanActivity extends AppCompatActivity implements ExerciseCusto
                 launchTrainingsActivity.putExtra("plansId", plansId);
                 launchTrainingsActivity.putExtra("name", nameOfSelected);
                 launchTrainingsActivity.putExtra("notes", notesOfSelected);
-                launchTrainingsActivity.putExtra("vibrator", vibratorOfSelected);
+                launchTrainingsActivity.putExtra("vibrator", Float.valueOf(vibratorOfSelected));
                 launchTrainingsActivity.putExtra("color", picked_Color);
                 launchTrainingsActivity.putExtra("lastTrainingDate", dateOfLastTraining);
                 if (timerDurationByLastTraining != null){

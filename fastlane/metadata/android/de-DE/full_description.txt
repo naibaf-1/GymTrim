@@ -1,0 +1,14 @@
+Bei dieser App handelt es sich um einen einfachen Fitness Tracker. Sie soll dabei helfen Trainingsdaten & den Fortschritt des Nutzers zu erfassen, aber es gibt keine Garantie dafür, dass es die Fitness oder Gesundheit des Nutzers verbessert.
+
+Funktionen:
+	- Übungen & Trainingspläne speichern
+	- Trainingsmodus
+	- Verfolgen des persönlichen Fortschritts
+	- Verschiedene Rechner
+	- Material You Design
+	- Auto-save, Suche & Swipe-To-Delete
+	- Deutsche & Englische Übersetzung
+	- Light- & Darkmode
+	- Importieren & Exportieren der Daten
+
+Gerne können Sie zu diesem Projekt beitragen oder auch Fehler melden. Desweiteren sind Vorschläge für weitere Funktionen jederzeit willkommen.
