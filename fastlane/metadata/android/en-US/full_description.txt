@@ -1,0 +1,16 @@
+This app is a small fitness tracker. It's supposed to help track training data
+  and see your progress, but there is no warranty that it will improve your
+  athleticism or health.
+
+  Features:
+    - Store Plans & Exercises
+    - Training Mode
+    - Track Your Progress
+    - Different calculators
+    - Material You design
+    - Auto-save, search, swipe-to-delete
+    - English and German translations
+    - Light and dark mode
+    - Import and export data
+
+  Feel free to contribute and report bugs. Feature requests are welcome too.
