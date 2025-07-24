@@ -189,7 +189,7 @@ public class DisplayExerciseValues_BottomSheetDialog extends BottomSheetDialogFr
         ColumnIndexOfDone = rowData.getColumnIndex("RowIsDone");
 
         if (newTraining){
-            for (int row = 0; row < rowCount -1; row++){
+            for (int row = 0; row < rowCount; row++){
                 rowData.moveToPosition(row);
 
                 weight = Float.parseFloat(rowData.getString(ColumnIndexOfWeight));
@@ -201,7 +201,7 @@ public class DisplayExerciseValues_BottomSheetDialog extends BottomSheetDialogFr
                 PDB.updateRowDone(rowId, false);
             }
         } else {
-            for (int row = 0; row < rowCount -1; row++){
+            for (int row = 0; row < rowCount; row++){
                 rowData.moveToPosition(row);
 
                 weight = Float.parseFloat(rowData.getString(ColumnIndexOfWeight));
@@ -223,7 +223,6 @@ public class DisplayExerciseValues_BottomSheetDialog extends BottomSheetDialogFr
             @Override
             public void onClick(View v) {
                 int order = ExerciseDataArraylist.size() +1;
-
                 int rowId = PDB.addExerciseTableRow(exerciseId, weight, repetitions, time, distance, order);
                 ExerciseDataArraylist.add(new ExerciseDataTableCustomRecyclerViewAdapter.CustomChildList(repetitions, weight, time, distance, recordRepetitions, recordWeight, recordTime, recordDistance, userIsTraining, reminderDuration, false, rowId));
                 ExerciseDataAdapter.notifyDataSetChanged();
