@@ -111,7 +111,7 @@ public class InformationsActivity extends AppCompatActivity {
         BugReportLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://github.com/naibaf-1/GymTrim/issues/new?template=bug_report.md";
+                String url = "https://github.com/naibaf-1/GymTrim/issues/new?template=bug-report-for-gymtrim.md";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
@@ -122,7 +122,7 @@ public class InformationsActivity extends AppCompatActivity {
         FeatureRequestLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://github.com/naibaf-1/GymTrim/issues/new?template=feature_request.md";
+                String url = "https://github.com/naibaf-1/GymTrim/issues/new?template=feature-request-for-gymtrim.md";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
