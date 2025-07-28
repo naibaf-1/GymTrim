@@ -10,7 +10,7 @@
 - [Purpose & Benefits](#Purpose-&-Benefits)
 - [Features](#Features)
 - [Installation](#Installation)
-- [Contribution-Guidlines](#Contribution-Guidlines)
+- [Contribution-Guidlines](#Contribution-Guidelines)
 - [Contact](#Contact)
 - [License](#License)
 - [Third-Party Libraries](#Third-Party-Libraries)
