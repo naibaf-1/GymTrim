@@ -47,7 +47,7 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.material)
     implementation(libs.google.material)
-    implementation(libs.core)
+//    implementation(libs.core) => Not FOSS => Error with F-droid => If causing problems replace with FOSS alternative
     implementation (libs.mpandroidchart)
     implementation(libs.preference.ktx)
     implementation (libs.mpandroidchart.vv310)
