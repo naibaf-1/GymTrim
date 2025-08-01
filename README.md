@@ -12,10 +12,15 @@
 - [Installation](#Installation)
 - [Contribution-Guidlines](#Contribution-Guidelines)
 - [Contact](#Contact)
-- [License](#License)
-- [Third-Party Libraries](#Third-Party-Libraries)
-- [Third-Party Sounds](#Third-Party-Sounds)
-- [Disclaimer](#Disclaimer)
+- [Legal & Privacy](#Legal-&-Privacy)
+  - *[License](#License)*
+  - *[Legal & Transparency Statement](#Legal-&-Transparency-Statement)*
+  - *[Third-Party Libraries](#Third-Party-Libraries)*
+  - *[Third-Party Sounds](#Third-Party-Sounds)*
+  - *[Third-Party Assets](#Third-Party-Assets)*
+  - *[Data Usage Notice](#Data-Usage-Notice)*
+  - *[Security Notice](#Security-Notice)*
+  - *[Disclaimer](#Disclaimer)*
 - [Screenshots](#Screenshots)
 
 ## Purpose & Benefits
@@ -93,10 +98,18 @@ If you fork and redistribute GymTrim, please include the following attribution i
 ## Contact
 You can contact me through GitHub—open an [issue](../../issues) or submit a pull request.
 
-## License
+## Legal & Privacy
+
+### License
 This project is licensed under the [Apache License 2.0](LICENSE).
 
-## Third-Party Libraries
+### Legal & Transparency Statement
+For details regarding data usage, third-party content, and security practices, please refer to this README.  
+This document is intended to provide full transparency for users and complies with the requirements of the Apache License 2.0 and relevant privacy standards.
+
+If this app is distributed via an app store, the store description may refer to this README for further information.
+
+### Third-Party Libraries
 This app uses the following open-source libraries:
 
 - [AmbilWarna](https://github.com/yukuku/ambilwarna) by yukuku – [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
@@ -105,7 +118,7 @@ This app uses the following open-source libraries:
 
 This app also uses standard AndroidX and Google libraries as provided by the Android SDK.
 
-## Third-Party Sounds
+### Third-Party Sounds
 This app uses the following sounds:
 
 - [notification beep](https://pixabay.com/de/sound-effects/notification-beep-229154/) by Universfield
@@ -116,7 +129,21 @@ This app uses the following sounds:
 - [Notification Sound 3](https://pixabay.com/de/sound-effects/notification-sound-3-262896/) by BenKirb
 - [New Message 31](https://pixabay.com/de/sound-effects/new-message-31-183617/) by Tuomas_Data
 
-## Disclaimer
+### Third-Party Assets
+This app uses icons from the [Material Icons Library](https://fonts.google.com/icons) by Google, licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+© Google. Licensed under the Apache License, Version 2.0.
+
+### Data Usage Notice
+This app stores training-related data locally on the device to track progress and visualize workout history.
+No personal data (such as name, email, location, or device identifiers) is collected, stored, or transmitted. All stored data is anonymous and used solely for functionality within the app.
+Users can delete all stored data at any time via the app settings.
+
+### Security Notice
+This app stores training data locally on the device. While no personal data is collected or transmitted, users should be aware that unencrypted data may be accessible to other apps on the same device.
+To mitigate this risk, we recommend using devices with secure storage and keeping your system up to date. Future versions may include optional encryption features.
+All data remains local and anonymous. Users can delete all stored data at any time via the app settings.
+
+### Disclaimer
 This app was developed to improve and simplify my own training data tracking. It is **not intended to improve athleticism or health**.  
 **No warranty for anything is provided.**
 
