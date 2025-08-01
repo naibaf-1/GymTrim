@@ -118,7 +118,7 @@ This app uses the following sounds:
 
 ## Disclaimer
 This app was developed to improve and simplify my own training data tracking. It is **not intended to improve athleticism or health**.  
-**No warranty is provided.**
+**No warranty for anything is provided.**
 
 ## Screenshots
 ![Plans](assets/Screenshot_GymTrim_Plans.png)
