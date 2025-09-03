@@ -57,7 +57,7 @@ By contributing, you agree that your contributions will be licensed under the Ap
 
 If you fork and redistribute GymTrim, please include the following attribution in your README or documentation:
 
-> Based on GymTrim by Fabian Bain (naibaf-1)
+> Based on GymTrim by Fabian Roland (naibaf-1)
 
 ---
 
