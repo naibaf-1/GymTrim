@@ -1,12 +1,11 @@
 GymTrim
+Copyright 2025 Fabian Roland (naibaf-1)
 
-Copyright 2025 Fabian Bain (naibaf-1)
-
-This product includes software developed by Fabian Bain (naibaf-1).
+This product includes software developed by Fabian Roland (naibaf-1).
 
 If you fork, redistribute, or modify GymTrim, please retain this notice and attribute the original author in your documentation or README as follows:
 
-Based on GymTrim by Fabian Bain (naibaf-1)
+Based on GymTrim by Fabian Roland (naibaf-1)
 
 This project is licensed under the Apache License, Version 2.0.  
 You may obtain a copy of the License at
