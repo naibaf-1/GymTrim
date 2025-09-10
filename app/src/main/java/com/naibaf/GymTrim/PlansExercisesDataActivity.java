@@ -276,11 +276,6 @@ public class PlansExercisesDataActivity extends AppCompatActivity {
             int latestNum = i < latestParts.length ? Integer.parseInt(latestParts[i]) : 0;
             int currentNum = i < currentParts.length ? Integer.parseInt(currentParts[i]) : 0;
 
-            Log.d("UpdateCheck", "latestVersion raw: " + latestNum);
-            Log.d("UpdateCheck", "currentVersion raw: " + currentNum);
-            Log.d("UpdateCheck", "latestClean: " + latestClean);
-            Log.d("UpdateCheck", "currentClean: " + currentClean);
-
             // Quit as early as possible, but if they are the same digits move forward
             if (latestNum > currentNum) return true;
             if (latestNum < currentNum) return false;
