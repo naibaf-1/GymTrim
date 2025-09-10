@@ -17,7 +17,7 @@ android {
         // Minor: Compatible with previous version
         // => Both for new features
         // Patch: Bug-fixes, etc.
-        versionName = "v.2.0.0-halcyon"
+        versionName = "v.2.0.0-rose-breasted_flycatcher"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
