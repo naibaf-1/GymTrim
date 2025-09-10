@@ -16,7 +16,6 @@ package com.naibaf.GymTrim;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Build;
@@ -44,7 +43,6 @@ import com.naibaf.GymTrim.Exercise.ExercisesFragment;
 import com.naibaf.GymTrim.OtherClasses.PopUpMenuInflater;
 import com.naibaf.GymTrim.PlansAndTraining.PlansFragment;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;

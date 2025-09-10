@@ -31,7 +31,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
     // Database Version => increase after changes of tables!
     private static final int DATABASE_VERSION = 2;
 
-    private SQLiteDatabase DB;
+    private final SQLiteDatabase DB;
 
     public ExercisesDB(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -112,16 +112,10 @@ public class ExercisesDB extends SQLiteOpenHelper {
         DB.update("ExerciseDetails", contentValues, "Id = ?", new String[]{String.valueOf(Id)});
     }
 
-    public Boolean deleteExerciseData(int exerciseId) {
+    public void deleteExerciseData(int exerciseId) {
         //Select the row
         Cursor cursor = DB.rawQuery(" Select * From ExerciseDetails Where Id = ? ", new String[]{String.valueOf(exerciseId)});
         long result = DB.delete("ExerciseDetails", "Id = ?", new String[]{String.valueOf(exerciseId)});
-        if (cursor.getCount() > 0) {
-            //If Failed: false
-            return result != -1;
-        } else {
-            return false;
-        }
     }
 
     //Get a specific exercise and its data
