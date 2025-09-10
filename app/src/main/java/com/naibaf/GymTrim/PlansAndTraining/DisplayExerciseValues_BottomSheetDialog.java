@@ -78,9 +78,7 @@ public class DisplayExerciseValues_BottomSheetDialog extends BottomSheetDialogFr
     Boolean newTraining;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable
-    ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.display_exercise_values_bottom_sheet_dialog,
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {View v = inflater.inflate(R.layout.display_exercise_values_bottom_sheet_dialog,
                 container, false);
 
         //Get data of pressed item
@@ -314,6 +312,7 @@ public class DisplayExerciseValues_BottomSheetDialog extends BottomSheetDialogFr
         if (rowIds != null) {
             rowIds.close();
         }
+        PDB.closePlansDB();
         PDB.close();
 
     }

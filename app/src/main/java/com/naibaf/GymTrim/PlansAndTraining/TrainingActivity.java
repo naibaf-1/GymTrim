@@ -68,7 +68,7 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
     TextView Name;
     String nameOfSelected;
     String notesOfSelected;
-    PlansDB PDB;
+    PlansDB DB;
     TextView Notes;
     Cursor specificPlanData;
     float vibratorOfSelected;
@@ -167,14 +167,14 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
         });
 
         //Fill everything with data from PlansDB & write it into history
-        PDB = new PlansDB(com.naibaf.GymTrim.PlansAndTraining.TrainingActivity.this);
+        DB = new PlansDB(com.naibaf.GymTrim.PlansAndTraining.TrainingActivity.this);
 
         //Get exerciseMainId => Pass it
-        exerciseId = PDB.getExerciseId(plansId);
+        exerciseId = DB.getExerciseId(plansId);
         exerciseId.moveToFirst();
 
         if (plansId >= 0){
-            specificPlanData = PDB.getBasicPlanData(plansId);
+            specificPlanData = DB.getBasicPlanData(plansId);
             //Get ColumnIndexes
 
             //Get missing values of the plan
@@ -191,7 +191,7 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
             WorkoutList = findViewById(R.id.recyclerView_Training);
 
             WorkoutArrayList = new ArrayList<>();
-            specificPlanData = PDB.getAllPlanExercises(plansId);
+            specificPlanData = DB.getAllPlanExercises(plansId);
             WorkoutListAdapter = new ExerciseCustomRecyclerViewAdapter(this, WorkoutArrayList);
 
             int columnIndexOfId = specificPlanData.getColumnIndex("exerciseMainId");
@@ -209,7 +209,7 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
         SwipeToDeleteCallback swipeToDeleteCallback = new SwipeToDeleteCallback(this) {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
-                CommonFunctions.applySwipeToDeleteForExercises(viewHolder, WorkoutListAdapter, TrainingActivity.this, PDB, plansId);
+                CommonFunctions.applySwipeToDeleteForExercises(viewHolder, WorkoutListAdapter, TrainingActivity.this, DB, plansId);
             }
         };
         ItemTouchHelper itemTouchhelper = new ItemTouchHelper(swipeToDeleteCallback);
@@ -264,7 +264,7 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
         //Update Data
         Boolean checkUpdate = false;
         if (!name.isEmpty()){
-            checkUpdate = PDB.updateTrainingData(plansId, name, notes, currentDate, timer);
+            checkUpdate = DB.updateTrainingData(plansId, name, notes, currentDate, timer);
         }
 
         if (checkUpdate){
@@ -273,7 +273,8 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
             Toast.makeText(com.naibaf.GymTrim.PlansAndTraining.TrainingActivity.this, R.string.error_notification_not_inserted, Toast.LENGTH_SHORT).show();
         }
 
-        PDB.close();
+        DB.closePlansDB();
+        DB.close();
         specificPlanData.close();
     }
 
@@ -356,7 +357,7 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
     @Override
     public void onItemClick(View view, int position) {
         //Get exerciseMainId => Pass it
-        exerciseId = PDB.getExerciseId(plansId);
+        exerciseId = DB.getExerciseId(plansId);
         exerciseId.moveToPosition(position);
 
         int columnIndex = exerciseId.getColumnIndex("exerciseMainId");
@@ -388,7 +389,7 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
 
             @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
             String currentDate = sdf.format(dateFromCalender);
-            int id = PDB.addSingleExercise(plansId, name, notes, selectedImage, repetitions, weight, time, distance, countOfExercises, currentDate, idInEDB);
+            int id = DB.addSingleExercise(plansId, notes, name, selectedImage, repetitions, weight, time, distance, countOfExercises, currentDate, idInEDB);
 
             WorkoutArrayList.add(new ExerciseCustomRecyclerViewAdapter.CustomExerciseList(name, notes, selectedImage, false, true, id, this));
             WorkoutListAdapter.notifyDataSetChanged();

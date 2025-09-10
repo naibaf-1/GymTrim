@@ -97,8 +97,7 @@ public class PlansFragment extends Fragment implements PlansCustomRecyclerViewAd
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         v = inflater.inflate(R.layout.fragment_plans, container, false);
 
@@ -223,8 +222,9 @@ public class PlansFragment extends Fragment implements PlansCustomRecyclerViewAd
     @Override
     public void onDestroy() {
         super.onDestroy();
-        DB.close();
         planValues.close();
+        DB.closePlansDB();
+        DB.close();
     }
 
     @Override

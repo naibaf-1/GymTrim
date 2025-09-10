@@ -336,6 +336,7 @@ public class EditPlanActivity extends AppCompatActivity implements ExerciseCusto
     protected void onDestroy() {
         super.onDestroy();
 
+        DB.closePlansDB();
         DB.close();
         specificPlanData.close();
 

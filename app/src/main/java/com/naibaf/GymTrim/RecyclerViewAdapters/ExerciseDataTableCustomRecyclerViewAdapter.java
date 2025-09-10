@@ -191,7 +191,7 @@ public class ExerciseDataTableCustomRecyclerViewAdapter extends RecyclerView.Ada
                         SharedPreferences sharedPreferences = context.getSharedPreferences("sharedPrefs", MODE_PRIVATE);
                         Boolean reminderEnabled = sharedPreferences.getBoolean("IsReminderEnabled", false);
                         if (reminderEnabled){
-                            notifyByDuration((long) mData.get(position).duration);
+                            notifyByDuration(mData.get(position).duration);
                         }
                     } else {
                         holder.CheckSentence.setBackgroundColor(Color.GRAY);
@@ -272,7 +272,7 @@ public class ExerciseDataTableCustomRecyclerViewAdapter extends RecyclerView.Ada
         return mData;
     }
 
-    private void notifyByDuration(long duration){
+    private void notifyByDuration(double duration){
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -282,7 +282,7 @@ public class ExerciseDataTableCustomRecyclerViewAdapter extends RecyclerView.Ada
                     context.startService(new Intent(context, AudioServiceForBackgroundProcess.class));
                 }
             }
-        }, duration * 1000 * 60); // 5000 milliseconds = 5 seconds => Convert into minutes
+        }, (long) (duration * 1000 * 60)); // 5000 milliseconds = 5 seconds => Convert into minutes
     }
 
 }

@@ -293,6 +293,7 @@ public class AddPlanActivity extends AppCompatActivity implements  ExerciseCusto
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        DB.closePlansDB();
         DB.close();
     }
 

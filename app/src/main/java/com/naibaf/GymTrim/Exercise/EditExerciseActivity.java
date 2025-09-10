@@ -63,7 +63,7 @@ public class EditExerciseActivity extends AppCompatActivity {
     Boolean record_sentences = false;
     Boolean record_time = false;
     int id;
-    byte[] imageofexercise;
+    byte[] imageOfExercise;
     Cursor exercise_data;
     CheckBox RecordWeight;
     CheckBox RecordDistance;
@@ -71,7 +71,10 @@ public class EditExerciseActivity extends AppCompatActivity {
     CheckBox RecordTime;
     EditText Name;
     EditText Notes;
+    String name;
+    String notes;
     Boolean exerciseIsPartOfAPlan;
+    int positionInRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,6 +115,7 @@ public class EditExerciseActivity extends AppCompatActivity {
         PDB = new PlansDB(this);
         Intent getDataSentViaIntent = getIntent();
         id = getDataSentViaIntent.getIntExtra("id", -1);
+        positionInRecyclerView = getDataSentViaIntent.getIntExtra("position", -1);
         exerciseIsPartOfAPlan = PDB.checkIfEditedExerciseExistsInPDB(id);
 
         //Get Checkboxes
@@ -175,7 +179,7 @@ public class EditExerciseActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                String name = Name.getText().toString();
+                name = Name.getText().toString();
                 EDB.updateName(id, name);
                 if (exerciseIsPartOfAPlan) {
                     PDB.updateNameOfEditedExercise(id, name);
@@ -200,7 +204,7 @@ public class EditExerciseActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                String notes = Notes.getText().toString();
+                notes = Notes.getText().toString();
                 EDB.updateNotes(id, notes);
                 if (exerciseIsPartOfAPlan) {
                     PDB.updateNotesOfEditedExercise(id, notes);
@@ -260,7 +264,7 @@ public class EditExerciseActivity extends AppCompatActivity {
                 Notes.setText(exercise_data.getString(columnIndexOfNotes));
                 Bitmap exerciseImage = CommonFunctions.getArrayAsBitmap(exercise_data.getBlob(columnIndexOfImage));
                 ImageOfExercise.setImageBitmap(exerciseImage);
-                imageofexercise = exercise_data.getBlob(columnIndexOfImage);
+                imageOfExercise = exercise_data.getBlob(columnIndexOfImage);
             }
 
             //Get an other image => https://www.geeksforgeeks.org/how-to-select-an-image-from-gallery-in-android/
@@ -281,10 +285,10 @@ public class EditExerciseActivity extends AppCompatActivity {
 
                         //Get image as ByteArray => Store it in Database (vgl. https://stackoverflow.com/questions/9357668/how-to-store-image-in-sqlite-database)
                         if (selectedImageBitmap != null) {
-                            imageofexercise = CommonFunctions.getBitmapAsArray(selectedImageBitmap);
-                            EDB.updateImage(id, imageofexercise);
+                            imageOfExercise = CommonFunctions.getBitmapAsArray(selectedImageBitmap);
+                            EDB.updateImage(id, imageOfExercise);
                             if (exerciseIsPartOfAPlan) {
-                                PDB.updateImageOfEditedExercise(id, imageofexercise);
+                                PDB.updateImageOfEditedExercise(id, imageOfExercise);
                             }
                         }
 
@@ -320,8 +324,12 @@ public class EditExerciseActivity extends AppCompatActivity {
     @Override
     public void finish() {
         Intent returnIntent = new Intent();
-        returnIntent.putExtra("isItemAdded", true);
-        // setResult(RESULT_OK);
+        returnIntent.putExtra("isItemAdded", false);
+        returnIntent.putExtra("name", name);
+        returnIntent.putExtra("notes", notes);
+        returnIntent.putExtra("image", imageOfExercise);
+        returnIntent.putExtra("id", id);
+        returnIntent.putExtra("position", positionInRecyclerView);
         setResult(RESULT_OK, returnIntent); //By not passing the intent in the result, the calling activity will get null data.
         super.finish();
     }
@@ -334,8 +342,11 @@ public class EditExerciseActivity extends AppCompatActivity {
         } else {
             Toast.makeText(EditExerciseActivity.this, R.string.error_missing_name, Toast.LENGTH_SHORT).show();
         }
+        EDB.closeExerciseDB();
+        PDB.closePlansDB();
 
         EDB.close();
+        PDB.close();
         exercise_data.close();
     }
 }

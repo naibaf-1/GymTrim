@@ -475,6 +475,9 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        EDB.closeExerciseDB();
+        PDB.closePlansDB();
+
         EDB.close();
         PDB.close();
 

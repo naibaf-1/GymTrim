@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -37,6 +38,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.OtherClasses.RecyclerViewInflater;
 import com.naibaf.GymTrim.OtherClasses.SwipeToDeleteCallback;
 import com.naibaf.GymTrim.R;
@@ -99,8 +101,7 @@ public class ExercisesFragment extends Fragment implements ExerciseCustomRecycle
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_exercises, container, false);
 
@@ -132,6 +133,7 @@ public class ExercisesFragment extends Fragment implements ExerciseCustomRecycle
         exerciseData = DB.getAllExerciseData();
         columnIndexOfId = exerciseData.getColumnIndex("Id");
         exerciseListAdapter = RecyclerViewInflater.buildExerciseRecyclerView(context, v, exerciseList, this, exerciseListAdapter, exerciseData, false, columnIndexOfId);
+        ArrayListOfExercises = RecyclerViewInflater.ExerciseArrayList;
 
         //Search through exercises
         SearchView Search = v.findViewById(R.id.searchView_SearchForExercise);
@@ -213,12 +215,29 @@ public class ExercisesFragment extends Fragment implements ExerciseCustomRecycle
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1 && resultCode == RESULT_OK) {
             if (data != null) {
-                Boolean wasItemAdded = (Boolean) data.getExtras().get("isItemAdded");
+                Boolean wasItemAdded = data.getBooleanExtra("isItemAdded", true);
+                String name = data.getStringExtra("name");
+                String notes = data.getStringExtra("notes");
+                Bitmap image = CommonFunctions.getArrayAsBitmap(data.getByteArrayExtra("image"));
+                int id = data.getIntExtra("id", -1);
+                int position = data.getIntExtra("position", -1);
+
+                if(wasItemAdded){
+                    // Add a new item to the RecyclerView
+                    ExerciseCustomRecyclerViewAdapter.CustomExerciseList newItem = new ExerciseCustomRecyclerViewAdapter.CustomExerciseList(name, notes, image, false, false, id, getContext());
+                    ArrayListOfExercises.add(newItem);
+                    exerciseListAdapter.notifyItemInserted(ArrayListOfExercises.size() - 1);
+                } else {
+                    // Change an item in the RecyclerView
+                    ExerciseCustomRecyclerViewAdapter.CustomExerciseList updatedItem = new ExerciseCustomRecyclerViewAdapter.CustomExerciseList(name, notes, image, false, false, id, getContext());
+                    ArrayListOfExercises.set(position, updatedItem);
+                    exerciseListAdapter.notifyItemChanged(position);
+                }
             }
-            Cursor newExercisesValues = DB.getAllExerciseData();
-            exerciseListAdapter = RecyclerViewInflater.buildExerciseRecyclerView(context, v, exerciseList, this, exerciseListAdapter, newExercisesValues, false, columnIndexOfId);
-            ArrayListOfExercises = RecyclerViewInflater.ExerciseArrayList;
-            exerciseListAdapter.notifyDataSetChanged();
+//            Cursor newExercisesValues = DB.getAllExerciseData();
+//            exerciseListAdapter = RecyclerViewInflater.buildExerciseRecyclerView(context, v, exerciseList, this, exerciseListAdapter, newExercisesValues, false, columnIndexOfId);
+//            ArrayListOfExercises = RecyclerViewInflater.ExerciseArrayList;
+//            exerciseListAdapter.notifyDataSetChanged();
         }
     }
 
@@ -226,6 +245,7 @@ public class ExercisesFragment extends Fragment implements ExerciseCustomRecycle
     public void onDestroy() {
         super.onDestroy();
         exerciseData.close();
+        DB.closeExerciseDB();
         DB.close();
     }
 
@@ -238,6 +258,7 @@ public class ExercisesFragment extends Fragment implements ExerciseCustomRecycle
         EditExercise.putExtra("Selected", selectedFromList);
         EditExercise.putExtra("position", position);
         EditExercise.putExtra("id", idOfSelected);
+        EditExercise.putExtra("position", position);
         startActivityForResult(EditExercise, 1);
     }
 

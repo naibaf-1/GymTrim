@@ -45,8 +45,8 @@
                 android:layout_margin="4dp"
                 android:text="Notes"
                 android:textAlignment="textStart"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="12sp"
+                android:textStyle="italic" />
         </LinearLayout>
 
     </LinearLayout>

@@ -10,8 +10,14 @@ android {
         applicationId = "com.naibaf.GymTrim"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0 - halcyon"
+        versionCode = 2
+        // How it works:
+        // v.MAJOR.MINOR.PATCH[-optionalSuffix]
+        // Major: Incompatible with previous version
+        // Minor: Compatible with previous version
+        // => Both for new features
+        // Patch: Bug-fixes, etc.
+        versionName = "v.2.0.0-halcyon"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

@@ -90,8 +90,9 @@ public class ExerciseSelector_BottomSheetDialog extends BottomSheetDialogFragmen
     @Override
     public void onDestroy() {
         super.onDestroy();
-        DB.close();
         exerciseData.close();
+        DB.closeExerciseDB();
+        DB.close();
 
         //Update correct RecyclerView
         String Sender = GlobalVariables.senderActivity;

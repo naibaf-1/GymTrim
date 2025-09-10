@@ -58,9 +58,7 @@ public class RecyclerViewInflater {
         list.addItemDecoration(dividerItemDecoration);
 
         //Fill RecyclerView
-        if(data.getCount() == 0) {
-            Toast.makeText(context, R.string.notification_empty, Toast.LENGTH_SHORT).show();
-        } else if (data != null) {
+        if (data != null && data.getCount() > 0) {
             data.moveToFirst();
             //Get column index once
             int columnIndexOfName = data.getColumnIndex("NameOfExercise");
@@ -69,28 +67,29 @@ public class RecyclerViewInflater {
             String name;
             String notes;
 
-            if (data.moveToFirst()) {
+            // Check if all columns off the database are correct
+            if (columnIndexOfName >= 0 && columnIndexOfImage >= 0 && columnIndexOfNotes >= 0 && columnIndexOfId >= 0) {
                 do {
                     image = CommonFunctions.getArrayAsBitmap(data.getBlob(columnIndexOfImage));
-                    //Insert if possible, else Toast makes an error
-                    if (columnIndexOfName >= 0 && columnIndexOfImage >= 0 && columnIndexOfNotes >= 0 && columnIndexOfId >= 0 && image != null) {
-                        //Store exercises => https://www.geeksforgeeks.org/how-to-dynamically-add-elements-to-a-listview-in-android
-                        name = data.getString(columnIndexOfName);
-                        if (name == null){
-                            name = "null";
-                        }
-                        notes = data.getString(columnIndexOfNotes);
-                        if (notes == null){
-                            notes = "null";
-                        }
-
-                        ExerciseArrayList.add(new ExerciseCustomRecyclerViewAdapter.CustomExerciseList(name, notes, image, false, userIsTraining, data.getInt(columnIndexOfId), context));
-                    } else {
-                        Toast.makeText(context, R.string.error_missing_column, Toast.LENGTH_SHORT).show();
+                    //Store exercises => https://www.geeksforgeeks.org/how-to-dynamically-add-elements-to-a-listview-in-android
+                    name = data.getString(columnIndexOfName);
+                    if (name == null){
+                        name = "null";
                     }
+                    notes = data.getString(columnIndexOfNotes);
+                    if (notes == null){
+                        notes = "null";
+                    }
+
+                    ExerciseArrayList.add(new ExerciseCustomRecyclerViewAdapter.CustomExerciseList(name, notes, image, false, userIsTraining, data.getInt(columnIndexOfId), context));
+
                 } while (data.moveToNext());
                 Adapter.notifyDataSetChanged();
+            } else {
+                Toast.makeText(context, R.string.error_missing_column, Toast.LENGTH_SHORT).show();
             }
+        } else {
+            Toast.makeText(context, R.string.notification_empty, Toast.LENGTH_SHORT).show();
         }
         return Adapter;
     }
@@ -119,7 +118,7 @@ public class RecyclerViewInflater {
 
         int countOfPlans = data2.getCount();
 
-        if (countOfPlans > 0) {
+        if (countOfPlans > 0 && data2 != null) {
             data2.moveToFirst();
             for (int item = 0; item < countOfPlans; item++) {
                 String name = data2.getString(columnIndexOfName);
@@ -127,9 +126,8 @@ public class RecyclerViewInflater {
                 int id = data2.getInt(columnIndexOfId);
                 String date = data2.getString(columnIndexOfDate);
 
-                if (data2 != null) {
-                    PlanArrayList.add(new PlansCustomRecyclerViewAdapter.CustomList(name, color, date, id));
-                }
+                PlanArrayList.add(new PlansCustomRecyclerViewAdapter.CustomList(name, color, date, id));
+
                 data2.moveToNext();
             }
         } else {

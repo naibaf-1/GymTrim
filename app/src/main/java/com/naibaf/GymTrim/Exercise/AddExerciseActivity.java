@@ -62,8 +62,20 @@ public class AddExerciseActivity extends AppCompatActivity {
     CheckBox RecordTime;
     EditText Name;
     EditText Notes;
+    String name;
+    String notes;
     int id;
     Boolean nameIsEmpty = true;
+    Boolean userAddedImage = false;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        //Start here
+        DB = new ExercisesDB(this);
+        id  =  DB.createNewExercise();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,12 +113,6 @@ public class AddExerciseActivity extends AppCompatActivity {
         getWindow().setNavigationBarColor(Color.TRANSPARENT);
 
         //Start here
-        DB = new ExercisesDB(this);
-        id  =  DB.createNewExercise();
-
-        imageOfExercise = CommonFunctions.getBitmapAsArray(BitmapFactory.decodeResource(getResources(), R.drawable.new_icon_no_background_gray));
-        DB.updateImage(id, imageOfExercise);
-
         //Get ImageView
         ImageView ImageOfExercise = findViewById(R.id.imageView_AddImage);
 
@@ -144,7 +150,6 @@ public class AddExerciseActivity extends AppCompatActivity {
             }
         });
 
-
         //Get the Name
         Name = findViewById(R.id.editText_Name);
         Name.addTextChangedListener(new TextWatcher() {
@@ -160,7 +165,7 @@ public class AddExerciseActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                String name = Name.getText().toString();
+                name = Name.getText().toString();
                 DB.updateName(id, name);
                 if (!name.isEmpty()){
                     nameIsEmpty = false;
@@ -182,7 +187,8 @@ public class AddExerciseActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                DB.updateNotes(id, Notes.getText().toString());
+                notes = Notes.getText().toString();
+                DB.updateNotes(id, notes);
             }
         });
 
@@ -229,6 +235,7 @@ public class AddExerciseActivity extends AppCompatActivity {
                     imagePath.setAction(Intent.ACTION_GET_CONTENT);
 
                     launchImagePicker.launch(imagePath);
+                    userAddedImage = true;
                 }
             });
 
@@ -244,9 +251,19 @@ public class AddExerciseActivity extends AppCompatActivity {
     //Notify Fragment to update its recyclerView => vgl.: https://stackoverflow.com/questions/30502515/refresh-recyclerview-from-another-activity
     @Override
     public void finish() {
+        // Added default image if user didn't select one
+        if(!userAddedImage){
+            imageOfExercise = CommonFunctions.getBitmapAsArray(BitmapFactory.decodeResource(getResources(), R.drawable.new_icon_no_background_gray));
+            DB.updateImage(id, imageOfExercise);
+        }
+
         Intent returnIntent = new Intent();
         returnIntent.putExtra("isItemAdded", true);
-        // setResult(RESULT_OK);
+        returnIntent.putExtra("name", name);
+        returnIntent.putExtra("notes", notes);
+        returnIntent.putExtra("image", imageOfExercise);
+        returnIntent.putExtra("id", id);
+        returnIntent.putExtra("position", 0);
         setResult(RESULT_OK, returnIntent); //By not passing the intent in the result, the calling activity will get null data.
         super.finish();
     }
@@ -261,7 +278,7 @@ public class AddExerciseActivity extends AppCompatActivity {
         } else {
             Toast.makeText(AddExerciseActivity.this, R.string.error_missing_name, Toast.LENGTH_SHORT).show();
         }
-
+        DB.closeExerciseDB();
         DB.close();
     }
 }
