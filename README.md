@@ -53,6 +53,7 @@ GymTrim is a fitness app designed to help you document your training data. While
 - English and German translations
 - Light and dark mode
 - Import and export data
+- Update notifier
 
 ## Installation
 **This app requires Android 7.0+**
