@@ -18,16 +18,19 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.android.material.search.SearchBar;
 import com.naibaf.GymTrim.Exercise.AddExerciseActivity;
 import com.naibaf.GymTrim.OtherClasses.GlobalVariables;
 import com.naibaf.GymTrim.OtherClasses.RecyclerViewInflater;
@@ -84,6 +87,26 @@ public class ExerciseSelector_BottomSheetDialog extends BottomSheetDialogFragmen
             int columnIndexOfId = exerciseData.getColumnIndex("Id");
             selectableExerciseListAdapter = RecyclerViewInflater.buildExerciseRecyclerView(getContext(), v, exerciseList, this, selectableExerciseListAdapter, exerciseData, false, columnIndexOfId);
         }
+
+        // Search for a specific exercise
+        SearchView Search = v.findViewById(R.id.searchView_SearchForExerciseToSelect);
+        Search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if ( TextUtils.isEmpty ( newText ) ) {
+                    selectableExerciseListAdapter.getFilter().filter("");
+                } else {
+                    selectableExerciseListAdapter.getFilter().filter(newText);
+                }
+                return true;
+            }
+        });
+
         return v;
     }
 
