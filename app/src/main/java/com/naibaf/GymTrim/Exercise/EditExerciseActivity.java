@@ -276,7 +276,7 @@ public class EditExerciseActivity extends AppCompatActivity {
                         Uri selectedImageUri = data.getData();
                         Bitmap selectedImageBitmap = null;
                         try {
-                            selectedImageBitmap = Bitmap.createScaledBitmap(MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri), 500, 500, false);
+                            selectedImageBitmap = Bitmap.createScaledBitmap(MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri), 100, 100, false);
                         } catch (IOException e) {
                             e.printStackTrace();
                         }

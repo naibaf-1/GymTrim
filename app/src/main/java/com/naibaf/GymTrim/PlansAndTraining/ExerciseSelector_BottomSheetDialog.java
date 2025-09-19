@@ -30,7 +30,6 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.google.android.material.search.SearchBar;
 import com.naibaf.GymTrim.Exercise.AddExerciseActivity;
 import com.naibaf.GymTrim.OtherClasses.GlobalVariables;
 import com.naibaf.GymTrim.OtherClasses.RecyclerViewInflater;
@@ -44,7 +43,6 @@ import java.util.List;
 public class ExerciseSelector_BottomSheetDialog extends BottomSheetDialogFragment implements  ExerciseCustomRecyclerViewAdapter.ItemClickListener {
 
     Cursor exerciseData;
-    Bitmap exerciseImageBitmap;
     ExerciseCustomRecyclerViewAdapter selectableExerciseListAdapter;
 
     //Get Database => Fill ListView & Delete Data
