@@ -187,7 +187,7 @@ public class PlansExercisesDataActivity extends AppCompatActivity {
 
                 //Set correct Name in Toolbar
                 TextView Name = findViewById(R.id.textViewNameOfCurrentFragment);
-                Name.setText(R.string.fragment_data_header);
+                Name.setText(R.string.data_section_training_data);
 
             } else {
                 Log.d("Debug", "Unknown item ID");
