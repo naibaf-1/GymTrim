@@ -23,6 +23,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -34,8 +35,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.color.MaterialColors;
 import com.naibaf.GymTrim.R;
-
-import org.w3c.dom.Text;
 
 public class InformationsActivity extends AppCompatActivity {
 
@@ -100,47 +99,111 @@ public class InformationsActivity extends AppCompatActivity {
         RepositoryLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://github.com/naibaf-1/GymTrim";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim");
             }
         });
+        ImageView LinkToRepository = findViewById(R.id.imageView_OpenLinkSource);
+        LinkToRepository.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim");
+            }
+        });
+
         //Link to  report a bug/https://github.com/naibaf-1/GymTrim/issues/new?template=bug_report.md
         TextView BugReportLink = findViewById(R.id.textView_ReportABug);
         BugReportLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://github.com/naibaf-1/GymTrim/issues/new?template=bug-report-for-gymtrim.md";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim/issues/new?template=bug-report-for-gymtrim.md");
             }
         });
+        ImageView LinkForBugReport = findViewById(R.id.imageView_OpenLinkBugReport);
+        LinkForBugReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim/issues/new?template=bug-report-for-gymtrim.md");
+            }
+        });
+
         //Link to feature request/https://github.com/naibaf-1/GymTrim/issues/new?template=feature_request.md
         TextView FeatureRequestLink = findViewById(R.id.textView_FeatureRequest);
         FeatureRequestLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://github.com/naibaf-1/GymTrim/issues/new?template=feature-request-for-gymtrim.md";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim/issues/new?template=feature-request-for-gymtrim.md");
             }
         });
+        ImageView LinkForFeatureRequest = findViewById(R.id.imageView_OpenLinkFeatureRequest);
+        LinkForFeatureRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim/issues/new?template=feature-request-for-gymtrim.md");
+            }
+        });
+
         //Link to license
         TextView LicenseLink = findViewById(R.id.textView_License);
         LicenseLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://github.com/naibaf-1/GymTrim?tab=License-1-ov-file";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim?tab=License-1-ov-file");
+            }
+        });
+        ImageView LinkToLicense = findViewById(R.id.imageView_OpenLinkLicense);
+        LinkToLicense.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim?tab=License-1-ov-file");
+            }
+        });
+
+        //Link to the latest release
+        TextView LatestRelease = findViewById(R.id.textView_LinkToLatestRelease);
+        LatestRelease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim/releases/latest");
+            }
+        });
+        ImageView LatestReleaseOnGithub = findViewById(R.id.imageView_OpenLinkToLatestRelease);
+        LatestReleaseOnGithub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim/releases/latest");
+            }
+        });
+
+        //Link to the release Page
+        TextView ReleasePage = findViewById(R.id.textView_LinkToReleasePage);
+        ReleasePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim/releases");
+            }
+        });
+        ImageView LinkToReleasePage = findViewById(R.id.imageView_OpenLinkToReleasePage);
+        LinkToReleasePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim/releases");
             }
         });
 
     }
 
+    //Function to open a Link
+    public void openLinkInBrowser(String url){
+        Intent openLink = new Intent(Intent.ACTION_VIEW);
+        openLink.setData(Uri.parse(url));
+        startActivity(openLink);
+    }
+
     //Todo: Upload to F-Droid
+    //For searching exercise: Make one global function & use this instead
+    //Add Link to latest release
+    //One function for opening links
+    //UI improvements
+    //Make TextView in data_fragment clickable too
+    //Fix the issue of the plans not being sorted as expected
 }
