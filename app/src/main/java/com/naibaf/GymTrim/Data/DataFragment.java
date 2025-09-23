@@ -22,11 +22,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.OtherClasses.RecyclerViewInflater;
 import com.naibaf.GymTrim.R;
 import com.naibaf.GymTrim.RecyclerViewAdapters.ExerciseCustomRecyclerViewAdapter;
@@ -92,8 +94,15 @@ public class DataFragment extends Fragment implements ExerciseCustomRecyclerView
             @Override
             public void onClick(View v) {
                 //Open BMI Overlay
-                BMI_BottomSheetDialog BMI_BottomSheetDialog = new BMI_BottomSheetDialog();
-                BMI_BottomSheetDialog.show(getActivity().getSupportFragmentManager(), "BMIBottomSheet");
+                openBMICalculator();
+            }
+        });
+        TextView BMICalculator = v.findViewById(R.id.textView_CalculateBMI);
+        BMICalculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Open BMI Overlay
+                openBMICalculator();
             }
         });
 
@@ -103,8 +112,15 @@ public class DataFragment extends Fragment implements ExerciseCustomRecyclerView
             @Override
             public void onClick(View v) {
                 //Open WHR Overlay
-                WHR_BottomSheetDialog WHR_BottomSheetDialog = new WHR_BottomSheetDialog();
-                WHR_BottomSheetDialog.show(getActivity().getSupportFragmentManager(), "WHRBottomSheet");
+                openWHRCalculator();
+            }
+        });
+        TextView WHRCalculator = v.findViewById(R.id.textView_CalculateWHR);
+        WHRCalculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Open WHR Overlay
+                openWHRCalculator();
             }
         });
 
@@ -114,8 +130,15 @@ public class DataFragment extends Fragment implements ExerciseCustomRecyclerView
             @Override
             public void onClick(View v) {
                 //Open WHtR Overlay
-                WHtR_BottomSheetDialog WHtR_BottomSheetDialog = new WHtR_BottomSheetDialog();
-                WHtR_BottomSheetDialog.show(getActivity().getSupportFragmentManager(), "WHtRBottomSheet");
+                openWHtRCalculator();
+            }
+        });
+        TextView WHtRCalculator = v.findViewById(R.id.textView_CalculateWHtR);
+        WHtRCalculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Open WHtR Overlay
+                openWHtRCalculator();
             }
         });
 
@@ -143,11 +166,7 @@ public class DataFragment extends Fragment implements ExerciseCustomRecyclerView
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                if ( TextUtils.isEmpty ( newText ) ) {
-                    trainingListAdapter.getFilter().filter("");
-                } else {
-                    trainingListAdapter.getFilter().filter(newText);
-                }
+                CommonFunctions.searchExerciseInExerciseRecyclerView(newText, trainingListAdapter);
                 return true;
             }
         });
@@ -165,6 +184,22 @@ public class DataFragment extends Fragment implements ExerciseCustomRecyclerView
         ShowTrainingData.putExtra("id", idOfSelected);
         startActivity(ShowTrainingData);
     }
+
+    private void openWHtRCalculator(){
+        WHtR_BottomSheetDialog WHtR_BottomSheetDialog = new WHtR_BottomSheetDialog();
+        WHtR_BottomSheetDialog.show(getActivity().getSupportFragmentManager(), "WHtRBottomSheet");
+    }
+
+    private void openWHRCalculator(){
+        WHR_BottomSheetDialog WHR_BottomSheetDialog = new WHR_BottomSheetDialog();
+        WHR_BottomSheetDialog.show(getActivity().getSupportFragmentManager(), "WHRBottomSheet");
+    }
+
+    private void openBMICalculator(){
+        BMI_BottomSheetDialog BMI_BottomSheetDialog = new BMI_BottomSheetDialog();
+        BMI_BottomSheetDialog.show(getActivity().getSupportFragmentManager(), "BMIBottomSheet");
+    }
+
 }
 
 //Draw Diagrams of the Using Data

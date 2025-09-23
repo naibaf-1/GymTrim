@@ -28,7 +28,7 @@
                 android:layout_weight="0" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textView_CalculateBMI"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
@@ -171,7 +171,9 @@
             android:id="@+id/recyclerView_TrainingdataForExercises"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="4dp"
+            android:contentDescription="List of all exercises"
+            android:scrollbars="vertical" />
 
     </LinearLayout>
 
