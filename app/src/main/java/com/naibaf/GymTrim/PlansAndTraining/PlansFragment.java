@@ -243,5 +243,3 @@ public class PlansFragment extends Fragment implements PlansCustomRecyclerViewAd
     }
 
 }
-
-//Todo: Implement wipe gestures using ViewPager (If possible with SwipeToDelete)

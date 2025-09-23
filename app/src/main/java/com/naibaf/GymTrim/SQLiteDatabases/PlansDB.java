@@ -72,7 +72,8 @@ public class PlansDB extends SQLiteOpenHelper {
 
     //Get all plans and their data from PlansDetails
     public Cursor getAllPlans(){
-        Cursor planData = DB.rawQuery(" Select * From PlansDetails Order By DateOfLastTraining DESC", null);
+        // Convert dd-mm-yyyy to yyyy-mm-dd so that the plans will be sorted correctly
+        Cursor planData = DB.rawQuery(" Select * From PlansDetails Order By substr(DateOfLastTraining, 7, 4) || '-' || substr(DateOfLastTraining, 4, 2) || '-' || substr(DateOfLastTraining, 1, 2) DESC", null);
         return planData;
     }
 
