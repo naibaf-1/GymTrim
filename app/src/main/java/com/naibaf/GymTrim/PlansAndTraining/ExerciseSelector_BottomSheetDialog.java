@@ -31,6 +31,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.naibaf.GymTrim.Exercise.AddExerciseActivity;
+import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.OtherClasses.GlobalVariables;
 import com.naibaf.GymTrim.OtherClasses.RecyclerViewInflater;
 import com.naibaf.GymTrim.R;
@@ -96,11 +97,7 @@ public class ExerciseSelector_BottomSheetDialog extends BottomSheetDialogFragmen
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                if ( TextUtils.isEmpty ( newText ) ) {
-                    selectableExerciseListAdapter.getFilter().filter("");
-                } else {
-                    selectableExerciseListAdapter.getFilter().filter(newText);
-                }
+                CommonFunctions.searchExerciseInExerciseRecyclerView(newText, selectableExerciseListAdapter);
                 return true;
             }
         });

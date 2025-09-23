@@ -19,6 +19,7 @@ import android.content.DialogInterface;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.text.TextUtils;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -122,4 +123,12 @@ public class CommonFunctions {
         }
     }
 
+    //Search for exercises matching to the text, which is entered into a search box
+    public static void searchExerciseInExerciseRecyclerView(String text, ExerciseCustomRecyclerViewAdapter Adapter){
+        if (TextUtils.isEmpty(text)){
+            Adapter.getFilter().filter("");
+        } else {
+            Adapter.getFilter().filter(text);
+        }
+    }
 }

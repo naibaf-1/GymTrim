@@ -145,11 +145,7 @@ public class ExercisesFragment extends Fragment implements ExerciseCustomRecycle
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                if ( TextUtils.isEmpty ( newText ) ) {
-                    exerciseListAdapter.getFilter().filter("");
-                } else {
-                    exerciseListAdapter.getFilter().filter(newText);
-                }
+                CommonFunctions.searchExerciseInExerciseRecyclerView(newText, exerciseListAdapter);
                 return true;
             }
         });
