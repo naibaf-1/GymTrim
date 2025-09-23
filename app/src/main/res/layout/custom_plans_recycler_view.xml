@@ -5,21 +5,27 @@
     android:id="@+id/item_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
     android:orientation="horizontal"
     tools:ignore="UselessParent">
 
     <!-- Rounded, vgl.: https://stackoverflow.com/a/41479670 -->
+
     <androidx.cardview.widget.CardView
         android:id="@+id/CardViewRounded"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="2dp"
         app:cardCornerRadius="50dp">
 
         <View
             android:id="@+id/view_Color"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_weight="0"
+            android:layout_weight="1"
             android:background="#BAB8B8" />
 
     </androidx.cardview.widget.CardView>
@@ -35,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center|start"
+            android:gravity="bottom|start"
             android:text="Name"
             android:textColor="?android:attr/textColorPrimary"
             android:textSize="20sp"
@@ -48,7 +54,8 @@
             android:layout_weight="0"
             android:text="Date"
             android:textAlignment="textEnd"
-            android:textSize="10sp" />
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="9sp" />
     </LinearLayout>
 
 </LinearLayout>

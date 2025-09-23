@@ -50,6 +50,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerView_ListOfSelectableExercises"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:contentDescription="List of all exercises"
+        android:scrollbars="vertical" />
 
 </LinearLayout>

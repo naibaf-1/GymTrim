@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="UselessParent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
+    android:orientation="horizontal"
+    tools:ignore="UselessParent">
 
     <ImageView
         android:id="@+id/imageView_ExerciseImage"
@@ -44,11 +45,11 @@
                 android:layout_height="20dp"
                 android:layout_weight="100"
                 android:ellipsize="end"
-                android:gravity="left|center_vertical"
+                android:gravity="top|left"
                 android:singleLine="true"
                 android:text="@string/placeholder_missing_note"
                 android:textColor="?android:attr/textColorSecondary"
-                android:textSize="18sp"
+                android:textSize="12sp"
                 android:textStyle="italic"
                 tools:ignore="RtlHardcoded" />
 
@@ -57,9 +58,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="0"
+                android:ellipsize="end"
+                android:gravity="top|left"
+                android:singleLine="true"
                 android:text="Volume"
-                android:textAlignment="viewEnd"
-                android:textStyle="italic" />
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                tools:ignore="RtlHardcoded" />
         </LinearLayout>
 
     </LinearLayout>

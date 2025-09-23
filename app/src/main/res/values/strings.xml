@@ -41,7 +41,6 @@
     <string name="edit_exercise_header">Edit exercise</string>
 
     <!-- Data -->
-    <string name="fragment_data_header">Trainings data</string>
     <string name="calculate_BMI">Calculate body mass index (BMI)</string>
     <string name="calculate_WHtR">Calculate waist to height ratio (WHtR)</string>
     <string name="calculate_WHR">Calculate waist to hip ratio (WHR)</string>
@@ -120,10 +119,15 @@
     <string name="informations_header">About</string>
     <string name="developer_name">by Fabian Roland</string>
     <string name="informations_app_version">Version:</string>
-    <string name="informations_link_to_source_code">Source code</string>
+    <string name="informations_link_to_source_code">Source code and README</string>
     <string name="informations_link_to_bug_report">Report a bug</string>
     <string name="informations_link_to_license">License</string>
     <string name="informations_link_to_feature_request">Request a feature</string>
+    <string name="informations_category_app_informations">App informations</string>
+    <string name="informations_category_contributing">Contributing</string>
+    <string name="informations_link_to_latest_release">Latest release</string>
+    <string name="informations_category_releases">Releases</string>
+    <string name="informations_link_to_release_page">All releases</string>
 
     <!-- PlansRecyclerView: None -->
     <!-- ExerciseRecyclerView -->

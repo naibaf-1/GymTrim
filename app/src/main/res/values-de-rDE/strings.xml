@@ -38,7 +38,6 @@
     <string name="edit_exercise_header">Übung bearbeiten</string>
 
     <!-- Data -->
-    <string name="fragment_data_header">Trainingsdaten</string>
     <string name="calculate_BMI">Body-Mass-Index (BMI) berechnen</string>
     <string name="calculate_WHtR">Taille-Größe-Verhältnis berechnen (TGV)</string>
     <string name="calculate_WHR">Taille-Hüft-Verhältnis (THV) berechnen</string>
@@ -117,10 +116,15 @@
     <string name="informations_header">Über</string>
     <string name="developer_name">von Fabian Roland</string>
     <string name="informations_app_version">Version:</string>
-    <string name="informations_link_to_source_code">Quellcode</string>
+    <string name="informations_link_to_source_code">Quellcode und README</string>
     <string name="informations_link_to_bug_report">Einen Bug melden</string>
     <string name="informations_link_to_license">Lizenz</string>
     <string name="informations_link_to_feature_request">Feature anfragen</string>
+    <string name="informations_category_app_informations">App Informationen</string>
+    <string name="informations_category_contributing">Beitragen</string>
+    <string name="informations_link_to_latest_release">Neuste Version</string>
+    <string name="informations_category_releases">Versionen</string>
+    <string name="informations_link_to_release_page">Alle Versionen</string>
 
     <!-- PlansRecyclerView: None -->
     <!-- ExerciseRecyclerView -->

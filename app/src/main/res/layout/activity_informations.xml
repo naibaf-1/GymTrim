@@ -9,21 +9,108 @@
     tools:context=".SettingsAndInformations.InformationsActivity">
 
 
+    <ImageView
+        android:id="@+id/imageView_OpenLinkToReleasePage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Open link"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_LinkToReleasePage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_LinkToReleasePage"
+        app:layout_constraintTop_toTopOf="@+id/textView_LinkToReleasePage"
+        app:srcCompat="@drawable/icon_open_link"
+        app:tint="?android:attr/textColorPrimary" />
+
+    <TextView
+        android:id="@+id/textView_LinkToReleasePage"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center_vertical"
+        android:text="@string/informations_link_to_release_page"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_LinkToLatestRelease" />
+
+    <TextView
+        android:id="@+id/textView_CategoryReleases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/informations_category_releases"
+        android:textColor="?attr/colorOutline"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_FeatureRequest" />
+
+    <ImageView
+        android:id="@+id/imageView_OpenLinkToLatestRelease"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Open link"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_LinkToLatestRelease"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_LinkToLatestRelease"
+        app:layout_constraintTop_toTopOf="@+id/textView_LinkToLatestRelease"
+        app:srcCompat="@drawable/icon_open_link"
+        app:tint="?android:attr/textColorPrimary" />
+
+    <TextView
+        android:id="@+id/textView_CategoryContributing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/informations_category_app_informations"
+        android:textColor="?attr/colorOutline"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/textView_CategoryAppInformations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/informations_category_contributing"
+        android:textColor="?attr/colorOutline"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_License" />
+
     <TextView
         android:id="@+id/textView_LinkToSourceCode"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="40dp"
         android:gravity="center_vertical"
         android:text="@string/informations_link_to_source_code"
         android:textColor="?android:attr/textColorPrimary"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_CategoryContributing" />
 
     <TextView
         android:id="@+id/textView_Version"
@@ -31,12 +118,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="@string/informations_app_version"
         android:textColor="?android:attr/textColorTertiary"
         android:textSize="10sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/cardView"
@@ -145,17 +230,6 @@
             app:srcCompat="@drawable/ic_launcher_playstore" />
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:srcCompat="@drawable/custom_divider" />
-
     <TextView
         android:id="@+id/textView_ReportABug"
         android:layout_width="0dp"
@@ -168,8 +242,9 @@
         android:textColor="?android:attr/textColorPrimary"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_LinkToSourceCode" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_CategoryAppInformations" />
 
     <TextView
         android:id="@+id/textView_FeatureRequest"
@@ -199,10 +274,10 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_FeatureRequest" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_LinkToSourceCode" />
 
     <ImageView
-        android:id="@+id/imageView_openLinkSource"
+        android:id="@+id/imageView_OpenLinkSource"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
@@ -257,5 +332,21 @@
         app:layout_constraintTop_toTopOf="@+id/textView_License"
         app:srcCompat="@drawable/icon_open_link"
         app:tint="?android:attr/textColorPrimary" />
+
+    <TextView
+        android:id="@+id/textView_LinkToLatestRelease"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center_vertical"
+        android:text="@string/informations_link_to_latest_release"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_CategoryReleases" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
