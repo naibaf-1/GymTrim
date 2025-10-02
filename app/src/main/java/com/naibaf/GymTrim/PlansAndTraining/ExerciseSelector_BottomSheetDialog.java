@@ -153,6 +153,7 @@ public class ExerciseSelector_BottomSheetDialog extends BottomSheetDialogFragmen
         //Update correct RecyclerView
         String Sender = GlobalVariables.senderActivity;
         if (getActivity() != null) {
+            Toast.makeText(getContext(), R.string.notification_exercise_added_to_plan, Toast.LENGTH_SHORT).show();
             switch (Sender) {
                 case "EditPlanActivity":
                     ((EditPlanActivity) getActivity()).getSelectedInEditor();

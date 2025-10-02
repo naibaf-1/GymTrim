@@ -175,4 +175,5 @@
     <string name="preferences_language_selector_summary">Bevorzugte Sprache auswählen</string>
     <string name="notification_reminder_for_training">Vergessen sie nicht weiterzumachen.</string>
     <string name="update_available_notification">Es gibt ein neues Update für GymTrim!</string>
+    <string name="notification_exercise_added_to_plan">Hinzugefügt.</string>
 </resources>
