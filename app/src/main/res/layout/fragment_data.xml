@@ -16,16 +16,13 @@
             android:id="@+id/linearLayout_BMI"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
-
-            <Space
-                android:layout_width="5dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0" />
 
             <TextView
                 android:id="@+id/textView_CalculateBMI"
@@ -48,26 +45,19 @@
                 app:maxImageSize="30dp"
                 app:srcCompat="@drawable/bmi_icon" />
 
-            <Space
-                android:layout_width="5dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/LinearLayout_WHtR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/LinearLayout_WHR">
-
-            <Space
-                android:layout_width="5dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0" />
 
             <TextView
                 android:id="@+id/textView_CalculateWHtR"
@@ -89,27 +79,19 @@
                 app:maxImageSize="30dp"
                 app:srcCompat="@drawable/bmi_icon" />
 
-            <Space
-                android:layout_width="5dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0" />
-
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/LinearLayout_WHR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout_BMI">
-
-            <Space
-                android:layout_width="5dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0" />
 
             <TextView
                 android:id="@+id/textView_CalculateWHR"
@@ -131,23 +113,28 @@
                 app:maxImageSize="30dp"
                 app:srcCompat="@drawable/bmi_icon" />
 
-            <Space
-                android:layout_width="5dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0" />
-
         </LinearLayout>
 
-        <Space
+        <View
             android:layout_width="match_parent"
-            android:layout_height="16dp" />
+            android:layout_height="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="?attr/colorOutlineVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchView_SearchForExercise" />
 
         <TextView
             android:id="@+id/textView_TrainingDataHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:text="@string/data_section_training_data"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -171,7 +158,9 @@
             android:id="@+id/recyclerView_TrainingdataForExercises"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
             android:contentDescription="List of all exercises"
             android:scrollbars="vertical" />
 

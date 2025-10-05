@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/colorBackground"
+    android:background="@drawable/material_you_bottom_sheet_background"
     android:orientation="vertical">
 
     <LinearLayout
@@ -11,20 +12,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Space
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
             android:layout_weight="2"
             android:gravity="center_vertical"
             android:text="@string/header_exercise_selector"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
 
         <ImageButton
             android:id="@+id/imageButton_AddFromSelector"
@@ -41,16 +39,27 @@
         android:layout_height="60dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/rounded_square_for_background"
         android:iconifiedByDefault="false"
         android:queryBackground="@null"
         android:queryHint="@string/search_exercises" />
 
+    <View
+        android:id="@+id/view_HorizontalSeparator2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:background="?attr/colorOutlineVariant" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerView_ListOfSelectableExercises"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
         android:contentDescription="List of all exercises"
         android:scrollbars="vertical" />
 
