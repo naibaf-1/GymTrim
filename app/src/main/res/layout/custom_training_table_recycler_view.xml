@@ -5,71 +5,134 @@
     android:id="@+id/item_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     card_view:visibility="visible">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText_Repetition"
-        style="@style/AppTheme"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center"
-        android:hint="@string/column_repetition"
-        android:inputType="number|numberDecimal"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:textAlignment="center"
-        android:textSize="14sp" />
+        android:orientation="horizontal">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText_Weight"
-        style="@style/AppTheme"
+        <View
+            android:id="@+id/view_VerticalSeparator"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:background="?attr/colorOutlineVariant" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_Repetition"
+            style="@style/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:hint="@string/column_repetition"
+            android:inputType="number|numberDecimal"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view_VerticalSeparator1"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:background="?attr/colorOutlineVariant" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_Weight"
+            style="@style/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:hint="@string/column_weight"
+            android:inputType="number|numberDecimal"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view_VerticalSeparator2"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:background="?attr/colorOutlineVariant" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_Time"
+            style="@style/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:hint="@string/column_time"
+            android:inputType="datetime|time"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view_VerticalSeparator3"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:background="?attr/colorOutlineVariant" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_Distance"
+            style="@style/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:hint="@string/column_distance"
+            android:inputType="number|numberDecimal"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view_VerticalSeparator4"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:background="?attr/colorOutlineVariant" />
+
+        <ImageButton
+            android:id="@+id/imageButton_Tick"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0"
+            android:contentDescription="Tick"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/check_icon" />
+
+        <View
+            android:id="@+id/view_VerticalSeparator7"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:background="?attr/colorOutlineVariant" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_HorizontalSeparator3"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
         android:layout_weight="1"
-        android:gravity="center"
-        android:hint="@string/column_weight"
-        android:inputType="number|numberDecimal"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:textAlignment="center"
-        android:textSize="14sp" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText_Time"
-        style="@style/AppTheme"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:hint="@string/column_time"
-        android:inputType="datetime|time"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:textAlignment="center"
-        android:textSize="14sp" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editText_Distance"
-        style="@style/AppTheme"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:hint="@string/column_distance"
-        android:inputType="number|numberDecimal"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:textAlignment="center"
-        android:textSize="14sp" />
-
-    <ImageButton
-        android:id="@+id/imageButton_Tick"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_weight="0"
-        android:contentDescription="Tick"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/check_icon" />
+        android:background="?attr/colorOutlineVariant" />
 
 </LinearLayout>

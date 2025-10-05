@@ -28,6 +28,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Space;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -125,26 +126,63 @@ public class DisplayExerciseValues_BottomSheetDialog extends BottomSheetDialogFr
         TextView ColumnWeight = v.findViewById(R.id.textView_column_weight);
         TextView ColumnTime = v.findViewById(R.id.textView_column_time);
         TextView ColumnDistance = v.findViewById(R.id.textView_column_distance);
-        Space PlaceHolder = v.findViewById(R.id.Space_placeholder_for_button);
+        View Separator1 = v.findViewById(R.id.view_VerticalSeparator1);
+        View Separator2 = v.findViewById(R.id.view_VerticalSeparator2);
+        View Separator3 = v.findViewById(R.id.view_VerticalSeparator3);
+        View Separator4 = v.findViewById(R.id.view_VerticalSeparator4);
         if (!recordRepetitions){
+            TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(0,0);
             ColumnRepetitions.setVisibility(GONE);
+            ColumnRepetitions.setLayoutParams(layoutParams);
+            Separator1.setVisibility(GONE);
+            Separator1.setLayoutParams(layoutParams);
         } else {
             ColumnRepetitions.setVisibility(VISIBLE);
+            Separator1.setVisibility(VISIBLE);
         }
         if (!recordWeight){
+            TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(0,0);
             ColumnWeight.setVisibility(GONE);
+            ColumnWeight.setLayoutParams(layoutParams);
+            Separator2.setVisibility(GONE);
+            Separator2.setLayoutParams(layoutParams);
         } else {
             ColumnWeight.setVisibility(VISIBLE);
+            Separator2.setVisibility(VISIBLE);
         }
         if (!recordTime){
+            TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(0,0);
             ColumnTime.setVisibility(GONE);
+            ColumnTime.setLayoutParams(layoutParams);
+            Separator3.setVisibility(GONE);
+            Separator3.setLayoutParams(layoutParams);
         } else {
             ColumnTime.setVisibility(VISIBLE);
+            Separator3.setVisibility(VISIBLE);
         }
         if (!recordDistance){
+            TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(0,0);
             ColumnDistance.setVisibility(GONE);
+            ColumnDistance.setLayoutParams(layoutParams);
+            Separator4.setVisibility(GONE);
+            Separator4.setLayoutParams(layoutParams);
         } else {
             ColumnDistance.setVisibility(VISIBLE);
+            Separator4.setVisibility(VISIBLE);
+        }
+
+        //If user is training show a placeholder for the button
+        Space PlaceHolder = v.findViewById(R.id.Space_placeholder_for_button);
+        View Separator5 = v.findViewById(R.id.view_VerticalSeparator5);
+        if (userIsTraining){
+            PlaceHolder.setVisibility(VISIBLE);
+            Separator5.setVisibility(VISIBLE);
+        } else {
+            TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(0,0);
+            PlaceHolder.setVisibility(GONE);
+            PlaceHolder.setLayoutParams(layoutParams);
+            Separator5.setVisibility(GONE);
+            Separator5.setLayoutParams(layoutParams);
         }
 
         //Get missing values from DB

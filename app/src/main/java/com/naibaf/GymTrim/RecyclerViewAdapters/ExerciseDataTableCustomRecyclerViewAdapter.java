@@ -72,6 +72,7 @@ public class ExerciseDataTableCustomRecyclerViewAdapter extends RecyclerView.Ada
 
         //Show just necessary columns & Buttons
         if (mData.get(position).RecordRepetitions) {
+            holder.Separator1.setVisibility(View.VISIBLE);
             holder.Repetition.setVisibility(View.VISIBLE);
             holder.Repetition.setText(Repetitions);
             holder.Repetition.addTextChangedListener(new TextWatcher() {
@@ -90,10 +91,14 @@ public class ExerciseDataTableCustomRecyclerViewAdapter extends RecyclerView.Ada
                 }
             });
         } else {
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(0,0);
+            holder.Separator1.setVisibility(View.GONE);
+            holder.Separator1.setLayoutParams(layoutParams);
             holder.Repetition.setVisibility(View.GONE);
-            holder.Repetition.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+            holder.Repetition.setLayoutParams(layoutParams);
         }
         if (mData.get(position).RecordWeight) {
+            holder.Separator2.setVisibility(View.VISIBLE);
             holder.Weight.setVisibility(View.VISIBLE);
             holder.Weight.setText(Weight);
             holder.Weight.addTextChangedListener(new TextWatcher() {
@@ -113,10 +118,14 @@ public class ExerciseDataTableCustomRecyclerViewAdapter extends RecyclerView.Ada
                 }
             });
         } else {
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(0,0);
+            holder.Separator2.setVisibility(View.GONE);
+            holder.Separator2.setVisibility(View.GONE);
             holder.Weight.setVisibility(View.GONE);
-            holder.Weight.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+            holder.Weight.setLayoutParams(layoutParams);
             }
         if (mData.get(position).RecordTime) {
+            holder.Separator3.setVisibility(View.VISIBLE);
             holder.Time.setVisibility(View.VISIBLE);
             holder.Time.setText(Time);
             holder.Time.addTextChangedListener(new TextWatcher() {
@@ -136,10 +145,14 @@ public class ExerciseDataTableCustomRecyclerViewAdapter extends RecyclerView.Ada
                 }
             });
         } else {
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(0,0);
+            holder.Separator3.setVisibility(View.GONE);
+            holder.Separator3.setVisibility(View.GONE);
             holder.Time.setVisibility(View.GONE);
-            holder.Time.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+            holder.Time.setLayoutParams(layoutParams);
         }
         if (mData.get(position).RecordDistance) {
+            holder.Separator4.setVisibility(View.VISIBLE);
             holder.Distance.setVisibility(View.VISIBLE);
             holder.Distance.setText(Distance);
             holder.Distance.addTextChangedListener(new TextWatcher() {
@@ -161,13 +174,20 @@ public class ExerciseDataTableCustomRecyclerViewAdapter extends RecyclerView.Ada
                 }
             });
         } else {
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(0,0);
+            holder.Separator4.setVisibility(View.GONE);
+            holder.Separator4.setVisibility(View.GONE);
             holder.Distance.setVisibility(View.GONE);
-            holder.Distance.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+            holder.Distance.setLayoutParams(layoutParams);
         }
         if (!mData.get(position).userIsTraining){
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(0,0);
             holder.CheckSentence.setVisibility(View.GONE);
-            holder.CheckSentence.setLayoutParams(new ViewGroup.LayoutParams(0, 0));
+            holder.CheckSentence.setLayoutParams(layoutParams);
+            holder.Separator5.setVisibility(View.GONE);
+            holder.Separator5.setLayoutParams(layoutParams);
         } else {
+            holder.Separator5.setVisibility(View.VISIBLE);
             holder.CheckSentence.setVisibility(View.VISIBLE);
             if (mData.get(position).coloredButton){
                 holder.CheckSentence.setBackgroundColor(Color.RED);
@@ -248,6 +268,11 @@ public class ExerciseDataTableCustomRecyclerViewAdapter extends RecyclerView.Ada
             EditText Time;
             EditText Distance;
             ImageButton CheckSentence;
+            View Separator1;
+            View Separator2;
+            View Separator3;
+            View Separator4;
+            View Separator5;
 
             CustomViewHolder(View itemView) {
                 super(itemView);
@@ -256,6 +281,11 @@ public class ExerciseDataTableCustomRecyclerViewAdapter extends RecyclerView.Ada
                 Time = itemView.findViewById(R.id.editText_Time);
                 Distance = itemView.findViewById(R.id.editText_Distance);
                 CheckSentence = itemView.findViewById(R.id.imageButton_Tick);
+                Separator1 = itemView.findViewById(R.id.view_VerticalSeparator1);
+                Separator2 = itemView.findViewById(R.id.view_VerticalSeparator2);
+                Separator3 = itemView.findViewById(R.id.view_VerticalSeparator3);
+                Separator4 = itemView.findViewById(R.id.view_VerticalSeparator4);
+                Separator5 = itemView.findViewById(R.id.view_VerticalSeparator7);
             }
 
         }
