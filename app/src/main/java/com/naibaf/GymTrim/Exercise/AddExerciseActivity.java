@@ -253,7 +253,7 @@ public class AddExerciseActivity extends AppCompatActivity {
     public void finish() {
         // Added default image if user didn't select one
         if(!userAddedImage){
-            imageOfExercise = CommonFunctions.getBitmapAsArray(BitmapFactory.decodeResource(getResources(), R.drawable.new_icon_no_background_gray));
+            imageOfExercise = CommonFunctions.getBitmapAsArray(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.new_icon_no_background_gray), 195, 195, false));
             DB.updateImage(id, imageOfExercise);
         }
 
