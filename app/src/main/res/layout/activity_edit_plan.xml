@@ -8,97 +8,6 @@
     android:background="?android:attr/colorBackground"
     tools:context=".PlansAndTraining.AddPlanActivity">
 
-    <EditText
-        android:id="@+id/editText_NotesForPlan2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
-        android:hint="@string/edit_notes"
-        android:inputType="text|textMultiLine"
-        android:textAlignment="textStart"
-        android:textColor="?android:attr/textColorHint"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RecyclerView_ExerciseOfPlan2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="List of Exercises"
-        android:scrollbars="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_NotesForPlan2"
-        app:layout_constraintVertical_bias="1.0">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton_SelectExerciseToAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:clickable="true"
-        android:contentDescription="Add"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton_Start_Training"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:maxImageSize="30dp"
-        app:srcCompat="@drawable/add_icon" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton_Start_Training"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:contentDescription="Start"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/start_icon" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
-
-        <EditText
-            android:id="@+id/editText_NameOfPlan2"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="4dp"
-            android:layout_weight="1"
-            android:hint="@string/get_plan_name"
-            android:inputType="text"
-            android:textAlignment="textStart"
-            android:textColor="?android:attr/textColorHint" />
-
-        <EditText
-            android:id="@+id/editTextNumberDecimal_ReminderTime2"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="0"
-            android:hint="@string/get_reminder_time"
-            android:inputType="numberDecimal"
-            android:textColor="?android:attr/textColorHint"
-            android:textSize="18sp" />
-    </LinearLayout>
-
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -161,5 +70,129 @@
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <EditText
+            android:id="@+id/editText_NameOfPlan2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/get_plan_name"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textColor="?android:attr/textColorHint"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="2">
+
+            <EditText
+                android:id="@+id/editText_NotesForPlan2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/edit_notes"
+                android:inputType="text|textMultiLine"
+                android:textAlignment="textStart"
+                android:textColor="?android:attr/textColorHint"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5.85">
+
+            <EditText
+                android:id="@+id/editTextNumberDecimal_ReminderTime2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/get_reminder_time"
+                android:inputType="numberDecimal"
+                android:textColor="?android:attr/textColorHint"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_HorizontalSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="?attr/colorOutlineVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView_ExerciseOfPlan2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="List of Exercises"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_HorizontalSeparator">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton_SelectExerciseToAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:contentDescription="Add"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton_Start_Training"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="30dp"
+        app:srcCompat="@drawable/add_icon" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton_Start_Training"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:contentDescription="Start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/start_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
