@@ -18,6 +18,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
@@ -295,7 +296,6 @@ public class EditExerciseActivity extends AppCompatActivity {
                     }
                 }
             });
-
             ImageOfExercise.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -304,6 +304,18 @@ public class EditExerciseActivity extends AppCompatActivity {
                     imagePath.setAction(Intent.ACTION_GET_CONTENT);
 
                     launchImagePicker.launch(imagePath);
+                }
+            });
+            //Reset image to default
+            ImageOfExercise.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    Bitmap defaultImage = BitmapFactory.decodeResource(getResources(), R.drawable.new_icon_no_background_gray);
+                    ImageOfExercise.setImageBitmap(defaultImage);
+                    imageOfExercise = CommonFunctions.getBitmapAsArray(Bitmap.createScaledBitmap(defaultImage, 195, 195, false));
+                    EDB.updateImage(id, imageOfExercise);
+
+                    return true;
                 }
             });
 
