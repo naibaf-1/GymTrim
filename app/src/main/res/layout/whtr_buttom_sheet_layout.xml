@@ -4,24 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/material_you_bottom_sheet_background"
     android:gravity="end"
     android:orientation="vertical"
     android:scrollIndicators="end"
-    android:background="?android:attr/colorBackground"
     android:scrollbars="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
         android:text="@string/calculate_WHtR"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textSize="25sp"
         android:textStyle="bold" />
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TextInputEditText_age_WHtR"
@@ -40,35 +45,55 @@
             android:id="@+id/TextInputEditText_waist_girth_WHtR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             android:hint="@string/get_waist_girth"
             android:inputType="number|numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/TextInputEditText_height_WHtR"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/get_height"
-            android:inputType="number|numberDecimal" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton_Apply_WHtR"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:contentDescription="Apply"
-        app:srcCompat="@drawable/check_icon" />
+        android:layout_marginStart="4dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditText_height_WHtR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/get_height"
+                android:inputType="number|numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton_Apply_WHtR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:clickable="true"
+            android:contentDescription="Apply"
+            app:srcCompat="@drawable/check_icon" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_HorizontalSeparator5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_margin="2dp"
+        android:background="?attr/colorOutlineVariant" />
 
     <TextView
         android:id="@+id/TextView_WHtRValue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
         android:gravity="center_horizontal"
         android:lineSpacingExtra="8sp"
         android:text="@string/nothing_calculated_yet"
@@ -80,7 +105,9 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp">
 
         <TableRow
             android:layout_width="match_parent"
@@ -187,6 +214,9 @@
         android:id="@+id/textView_warranty_note_WHtR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
         android:drawableLeft="@drawable/info_icon"
         android:drawableTint="#7C7878"
         android:text="@string/no_warranty_note"
