@@ -8,114 +8,29 @@
     android:background="?android:attr/colorBackground"
     tools:context=".Exercise.AddExerciseActivity">
 
-    <EditText
-        android:id="@+id/editText_Name"
+    <View
+        android:id="@+id/view_VerticalSeparator8"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:background="?attr/colorOutlineVariant"
+        app:layout_constraintBottom_toTopOf="@+id/view_HorizontalSeparator3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_AddImage"
+        app:layout_constraintTop_toBottomOf="@+id/view_HorizontalSeparator2" />
+
+    <View
+        android:id="@+id/view_HorizontalSeparator2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="@string/get_exercise_name"
-        android:inputType="text|textNoSuggestions"
-        android:textAlignment="textStart"
-        android:textColor="?android:attr/textColorHint"
-        android:textStyle="bold"
+        android:layout_height="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="?attr/colorOutlineVariant"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
-
-    <CheckBox
-        android:id="@+id/checkBox_NoteWeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/checkBox_note_weight"
-        android:textColor="?android:attr/textColorPrimary"
-        app:layout_constraintEnd_toStartOf="@+id/imageView_AddImage"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Name" />
-
-    <CheckBox
-        android:id="@+id/checkBox_NoteDistance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="@string/checkBox_note_distance"
-        android:textColor="?android:attr/textColorPrimary"
-        app:layout_constraintEnd_toStartOf="@+id/imageView_AddImage"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox_NoteWeight" />
-
-    <CheckBox
-        android:id="@+id/checkBox_NoteTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="@string/checkBox_note_time"
-        android:textColor="?android:attr/textColorPrimary"
-        app:layout_constraintEnd_toStartOf="@+id/imageView_AddImage"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox_NoteDistance" />
-
-    <CheckBox
-        android:id="@+id/checkBox_NoteRepetitions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="@string/checkBox_note_repetitions"
-        android:textColor="?android:attr/textColorPrimary"
-        app:layout_constraintEnd_toStartOf="@+id/imageView_AddImage"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox_NoteTime" />
-
-    <ImageView
-        android:id="@+id/imageView_AddImage"
-        android:layout_width="195dp"
-        android:layout_height="195dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Name"
-        app:srcCompat="@drawable/add_photo_icon" />
-
-    <EditText
-        android:id="@+id/editText_Notes"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:gravity="top|left"
-        android:hint="@string/edit_notes"
-        android:inputType="text|textMultiLine"
-        android:textAlignment="textStart"
-        android:textAllCaps="false"
-        android:textColor="?android:attr/textColorHint"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_AddImage"
-        tools:ignore="RtlCompat" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton_Add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:contentDescription="Save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:maxImageSize="30dp"
-        app:srcCompat="@drawable/save_icon" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -169,5 +84,167 @@
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <EditText
+            android:id="@+id/editText_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="@string/get_exercise_name"
+            android:inputType="text|textNoSuggestions"
+            android:textAlignment="textStart"
+            android:textColor="?android:attr/textColorHint"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox_NoteWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:breakStrategy="simple"
+        android:ellipsize="none"
+        android:inputType="textMultiLine"
+        android:lines="2"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        android:text="@string/checkBox_note_weight"
+        android:textColor="?android:attr/textColorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/view_VerticalSeparator8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_HorizontalSeparator2" />
+
+    <CheckBox
+        android:id="@+id/checkBox_NoteDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:breakStrategy="simple"
+        android:ellipsize="none"
+        android:inputType="textMultiLine"
+        android:lines="2"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        android:text="@string/checkBox_note_distance"
+        android:textColor="?android:attr/textColorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/view_VerticalSeparator8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_NoteWeight" />
+
+    <CheckBox
+        android:id="@+id/checkBox_NoteTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:breakStrategy="simple"
+        android:ellipsize="none"
+        android:inputType="textMultiLine"
+        android:lines="2"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        android:text="@string/checkBox_note_time"
+        android:textColor="?android:attr/textColorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/view_VerticalSeparator8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_NoteDistance" />
+
+    <CheckBox
+        android:id="@+id/checkBox_NoteRepetitions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:breakStrategy="simple"
+        android:ellipsize="none"
+        android:inputType="textMultiLine"
+        android:lines="2"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        android:text="@string/checkBox_note_repetitions"
+        android:textColor="?android:attr/textColorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/view_VerticalSeparator8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_NoteTime" />
+
+    <ImageView
+        android:id="@+id/imageView_AddImage"
+        android:layout_width="195dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_HorizontalSeparator2"
+        app:srcCompat="@drawable/add_photo_icon" />
+
+    <View
+        android:id="@+id/view_HorizontalSeparator3"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="4dp"
+        android:background="?attr/colorOutlineVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_AddImage" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_HorizontalSeparator3">
+
+        <EditText
+            android:id="@+id/editText_Notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="top|left"
+            android:hint="@string/edit_notes"
+            android:inputType="text|textMultiLine"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="?android:attr/textColorHint"
+            android:textSize="14sp"
+            tools:ignore="RtlCompat" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton_Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:contentDescription="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="30dp"
+        app:srcCompat="@drawable/save_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
