@@ -11,14 +11,14 @@ android {
         applicationId = "com.naibaf.GymTrim"
         minSdk = 24
         targetSdk = 34
-        versionCode = 2
+        versionCode = 3
         // How it works:
         // v.MAJOR.MINOR.PATCH[-optionalSuffix]
         // Major: Incompatible with previous version
         // Minor: Compatible with previous version
         // => Both for new features
         // Patch: Bug-fixes, improvements, etc.
-        versionName = "v.2.0.1-beta"
+        versionName = "v.2.0.1-rose-breasted_flycatcher"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
