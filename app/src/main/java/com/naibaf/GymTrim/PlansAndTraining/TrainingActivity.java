@@ -57,7 +57,7 @@ import java.util.Locale;
 public class TrainingActivity extends AppCompatActivity implements ExerciseCustomRecyclerViewAdapter.ItemClickListener {
     //Added stop watch => https://de.acervolima.com/so-erstellen-sie-eine-stoppuhr-app-mit-android-studio/
     //Resets with restart
-    private int seconds = 0;
+    private int seconds;
     // Is the stopwatch running?
     private boolean running;
     private boolean wasRunning;
@@ -135,6 +135,7 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
         @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         currentDate = sdf.format(dateFromCalender);
 
+        // If the user returns to the training at the same day
         if (currentDate.equals(dateOfLastTraining)  && !timerInLastTraining.equals("firstTimeTrained")){
             //Split timerInLastTraining into hours, minutes & seconds
             String[] timeParts = timerInLastTraining.split(":");
@@ -144,6 +145,9 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
             secs = Integer.parseInt(timeParts[2]);
 
             seconds = hours * 3600 + minutes * 60 + secs;
+        } else {
+            // If it's a new training
+            seconds = 0;
         }
 
         //Leave Button
@@ -287,32 +291,10 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
         savedInstanceState.putBoolean("wasRunning", wasRunning);
     }
 
-//        // If the activity is paused,
-//        // stop the stopwatch.
-//        @Override
-//        protected void onPause()
-//        {
-//            super.onPause();
-//            wasRunning = running;
-//            running = false;
-//        }
-//
-//        // If the activity is resumed,
-//        // start the stopwatch
-//        // again if it was running previously.
-//        @Override
-//        protected void onResume()
-//        {
-//            super.onResume();
-//            if (wasRunning) {
-//                running = true;
-//            }
-//        }
-
-        // Sets the Number of seconds on the timer.
-        // The runTimer() method uses a Handler
-        // to increment the seconds and
-        // update the text view.
+    // Sets the Number of seconds on the timer.
+    // The runTimer() method uses a Handler
+    // to increment the seconds and
+    // update the text view.
     private void runTimer() {
 
         // Get the text view.
@@ -396,8 +378,8 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
         }
     }
 
-    //If user has completed an exercise mark its item in the recyclerView as done, otherwise as undone
-    public void markExercise(int positionInRecyclerView, Boolean exerciseCompleted, int volume){
+    //Depending on the user completing an exercise or not mark it as done or not and update the volume
+    public void updateExerciseInRecyclerView(int positionInRecyclerView, Boolean exerciseCompleted, int volume){
         WorkoutListAdapter.getData().get(positionInRecyclerView).exerciseIsDone = exerciseCompleted;
         WorkoutListAdapter.getData().get(positionInRecyclerView).volume = volume;
         WorkoutArrayList = WorkoutListAdapter.getData();
