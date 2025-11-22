@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+
     namespace = "com.naibaf.GymTrim"
     compileSdk = 35
 
@@ -16,8 +17,8 @@ android {
         // Major: Incompatible with previous version
         // Minor: Compatible with previous version
         // => Both for new features
-        // Patch: Bug-fixes, etc.
-        versionName = "v.2.0.0-rose-breasted_flycatcher"
+        // Patch: Bug-fixes, improvements, etc.
+        versionName = "v.2.0.1-beta"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
