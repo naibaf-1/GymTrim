@@ -330,19 +330,22 @@ public class DisplayExerciseValues_BottomSheetDialog extends BottomSheetDialogFr
         if (userIsTraining){
             //Calculate volume
             int position = GlobalVariables.trainingSelectedExercise;
-            int volume = (countOfRows) * sumOfRepetitions;
+            int volume = countOfRows * sumOfRepetitions;
             if (countOfRows == countOfCompletedRows && countOfRows > 0){
-                ((TrainingActivity) getActivity()).markExercise(position, true, volume);
+                ((TrainingActivity) getActivity()).updateExerciseInRecyclerView(position, true, volume);
             } else {
-                ((TrainingActivity) getActivity()).markExercise(position, false, volume);
+                ((TrainingActivity) getActivity()).updateExerciseInRecyclerView(position, false, volume);
             }
+            //Calculate average of weight, time & distance
+            float averageOfWeight = sumOfWeight/(countOfRows);
+            float averageOfDistance = sumOfDistance/(countOfRows);
+            float averageOfTime = sumOfTime/(countOfRows);
+            //Save the calculated trainings data
             if (newTraining){
-                //Calculate average of weight, time & distance
-                float averageOfWeight = sumOfWeight/(countOfRows);
-                float averageOfDistance = sumOfDistance/(countOfRows);
-                float averageOfTime = sumOfTime/(countOfRows);
-
                 EDB.insertNewTrainingsData(PDB.getIdOfExerciseInEDB(exerciseId), volume, averageOfWeight, averageOfTime, averageOfDistance, currentDate);
+            } else {
+                //Just update the DB if it's the same training
+                EDB.updateTrainingsData(PDB.getIdOfExerciseInEDB(exerciseId), volume, averageOfWeight, averageOfTime, averageOfDistance, currentDate);
             }
         }
 

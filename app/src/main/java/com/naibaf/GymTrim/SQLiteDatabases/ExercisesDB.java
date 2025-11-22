@@ -154,6 +154,18 @@ public class ExercisesDB extends SQLiteOpenHelper {
 
         DB.insert("TrainingData", null, contentValues);
     }
+    // Update calculated training data
+    public void updateTrainingsData(int exerciseId, int volume, float averageOfWeight, float averageOfTime, float averageOfDistance, String date){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("Volume", volume);
+        contentValues.put("AverageWeight", averageOfWeight);
+        contentValues.put("AverageTime", averageOfTime);
+        contentValues.put("AverageDistance", averageOfDistance);
+
+        // Update the correct row: Date and ExerciseId need to match
+        DB.update("TrainingData", contentValues, "Date = ? AND ExerciseId = ?", new String[]{date, String.valueOf(exerciseId)});
+    }
+
     //Return all calculated training data => Display in graph
     public Cursor getAllVolumesForExercise(int exerciseId) {
         return DB.rawQuery("SELECT Volume FROM ExerciseDetails e INNER JOIN TrainingData t ON e.Id = t.ExerciseId WHERE t.ExerciseId = ? ORDER BY t.Date", new String[]{String.valueOf(exerciseId)});
