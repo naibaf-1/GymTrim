@@ -1,7 +1,7 @@
 ---
 name: Bug report for GymTrim
 about: Create a report to help us improve GymTrim
-title: 'GymTrim v.1.0 - halcyon: Bug report'
+title: 'GymTrim 2.0.1-rose-breasted flycatcher: Bug report'
 labels: bug
 assignees: naibaf-1
 
@@ -30,7 +30,7 @@ If applicable, add screenshots to help explain your problem more clearly.
  - Device: [e.g. Samsung S23]
  - OS: [e.g. Android 15]
  - Browser [e.g. stock browser, FireFox]
- - GymTrim Version [e.g. 1.0 - halcyon]
+ - GymTrim Version [e.g. 2.0.1-rose-breasted flycatcher]
 
 **Additional context**
 Add any other context about the problem here.
