@@ -125,9 +125,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout_ReminderTime2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="5.85">
+            android:layout_weight="5.85"
+            android:visibility="visible">
 
             <EditText
                 android:id="@+id/editTextNumberDecimal_ReminderTime2"

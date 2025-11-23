@@ -25,6 +25,7 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -44,6 +45,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.textfield.TextInputLayout;
 import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.OtherClasses.GlobalVariables;
 import com.naibaf.GymTrim.OtherClasses.RecyclerViewInflater;
@@ -204,7 +206,7 @@ public class EditPlanActivity extends AppCompatActivity implements ExerciseCusto
         NotesOfPlan.setText(notesOfSelected);
         Header.setTextColor(picked_Color);
 
-        //Notice data changes
+        //Notice data changes and save them
         NameOfPlan.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -243,8 +245,10 @@ public class EditPlanActivity extends AppCompatActivity implements ExerciseCusto
         //Handle reminder TextView
         SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
         VibratorTime = findViewById(R.id.editTextNumberDecimal_ReminderTime2);
+        TextInputLayout VibratorLayout = findViewById(R.id.textInputLayout_ReminderTime2);
+        VibratorLayout.setVisibility(GONE);
         if(sharedPreferences.getBoolean("IsReminderEnabled", false)){
-            VibratorTime.setVisibility(VISIBLE);
+            VibratorLayout.setVisibility(VISIBLE);
             VibratorTime.setText(vibratorOfSelected);
             VibratorTime.addTextChangedListener(new TextWatcher() {
                 @Override
@@ -266,10 +270,7 @@ public class EditPlanActivity extends AppCompatActivity implements ExerciseCusto
                     }
                 }
             });
-        } else {
-            VibratorTime.setVisibility(GONE);
         }
-
 
         //Display all exercises using a recyclerView
         WorkoutList = findViewById(R.id.RecyclerView_ExerciseOfPlan2);

@@ -46,6 +46,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.textfield.TextInputLayout;
 import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.OtherClasses.GlobalVariables;
 import com.naibaf.GymTrim.OtherClasses.SwipeToDeleteCallback;
@@ -206,11 +207,14 @@ public class AddPlanActivity extends AppCompatActivity implements  ExerciseCusto
             }
         });
 
-        //Handle reminder TextView
+        //Handle reminder TextView and its InputLayout
         SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
         EditText VibratorTime = findViewById(R.id.editTextNumberDecimal_ReminderTime);
+        TextInputLayout VibratorLayout = findViewById(R.id.textInputLayout_ReminderTime);
+        VibratorLayout.setVisibility(GONE);
+        DB.editPlanReminder(0, plansId);
         if (sharedPreferences.getBoolean("IsReminderEnabled", false)){
-            VibratorTime.setVisibility(VISIBLE);
+            VibratorLayout.setVisibility(VISIBLE);
             VibratorTime.addTextChangedListener(new TextWatcher() {
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -230,11 +234,7 @@ public class AddPlanActivity extends AppCompatActivity implements  ExerciseCusto
                     }
                 }
             });
-        } else {
-            VibratorTime.setVisibility(GONE);
-            DB.editPlanReminder(0, plansId);
         }
-
 
         //Display RecyclerView of selected Exercises
         //Open Selector for new Exercise
