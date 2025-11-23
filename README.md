@@ -1,4 +1,4 @@
-# GymTrim: Version 1.0 "halcyon" 
+# GymTrim: Version v.2.0.2 "rose-breasted flycatcher"
 <p align="left">
   <img src="assets/app_icon.png" alt="GymTrim Logo" width="100" height="100"/>
 </p>
@@ -149,12 +149,8 @@ This app was developed to improve and simplify my own training data tracking. It
 **No warranty for anything is provided.**
 
 ## Screenshots
-![Plans](assets/Screenshot_GymTrim_Plans.png)
-![Edit a plan](assets/Screenshot_GymTrim_EditPlan.png)
-![Training mode](assets/Screenshot_GymTrim_Training.png)
-![Exercises](assets/Screenshot_GymTrim_Exercises.png)
-![Add an exercise](assets/Screenshot_GymTrim_AddExercise.png)
-![Edit an exercise](assets/Screenshot_GymTrim_EditExercise.png)
-![Data section](assets/Screenshot_GymTrim_Data.png)
+<img src="./assets/Screenshot_GymTrim_Plans.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_EditPlan.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_Training.png" width="270" height="585"/>
+<img src="./assets/Screenshot_GymTrim_Exercises.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_AddExercise.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_EditExercise.png" width="270" height="585"/>
+<img src="./assets/Screenshot_GymTrim_Data.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_Settings.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_About.png" width="270" height="585"/>
 
 *(Not default theme shown)*
