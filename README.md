@@ -149,8 +149,9 @@ This app was developed to improve and simplify my own training data tracking. It
 **No warranty for anything is provided.**
 
 ## Screenshots
-<img src="./assets/Screenshot_GymTrim_Plans.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_EditPlan.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_Training.png" width="270" height="585"/>
-<img src="./assets/Screenshot_GymTrim_Exercises.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_AddExercise.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_EditExercise.png" width="270" height="585"/>
-<img src="./assets/Screenshot_GymTrim_Data.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_Settings.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_About.png" width="270" height="585"/>
+|<img src="./assets/Screenshot_GymTrim_Plans.png" width="270" height="585"/> <br>**List your plans**|<img src="./assets/Screenshot_GymTrim_EditPlan.png" width="270" height="585"/> <br>**Edit a plan**|<img src="./assets/Screenshot_GymTrim_Training.png" width="270" height="585"/> <br>**Train a plan** |
+|-------------------------------------------------------------------------------|-------------------------------------------------------------------|--------------------------------------------------------------------|
+| <img src="./assets/Screenshot_GymTrim_Exercises.png" width="270" height="585"/> <br><div align="center">**See all of your exercises**</div> | <img src="./assets/Screenshot_GymTrim_AddExercise.png" width="270" height="585"/> <br><div align="center">**Add new exercises**</div> | <img src="./assets/Screenshot_GymTrim_EditExercise.png" width="270" height="585"/> <br><div align="center">**Edit your old exercises**</div> |
+| <img src="./assets/Screenshot_GymTrim_Data.png" width="270" height="585"/> <br><div align="center">**See your efforts**</div> | <img src="./assets/Screenshot_GymTrim_Settings.png" width="270" height="585"/> <br><div align="center">**Toggle the settings**</div> | <img src="./assets/Screenshot_GymTrim_About.png" width="270" height="585"/> <br><div align="center">**Find further informations**</div> |
 
 *(Not default theme shown)*
