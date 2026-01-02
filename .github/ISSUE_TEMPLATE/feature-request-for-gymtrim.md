@@ -17,7 +17,7 @@ A clear and concise description of what you want to happen, become improved or a
 A clear and concise description of any alternative solutions or features you've considered.
 
 **Additional context**  
-Add any other context, details, or screenshots about the feature request here. For UI changes, you may also attach mockups or sketches if possible.
+Add any other context, details, or screenshots about the feature request here. For UI changes, you may also attach mock-ups or sketches if possible.
 
 **Acceptance Criteria**
 List clear, specific requirements or conditions for this feature to be considered complete.
