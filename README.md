@@ -58,20 +58,12 @@ GymTrim is a fitness app designed to help you document your training data. While
 ## Installation
 **This app requires Android 7.0+**
 
-### Installation via F-Droid (At the moment not possible)
-1. Install [F-Droid](https://f-droid.org/) on your device.
-2. Search for **GymTrim**.
-3. Tap **Install**.
-
 ### Installation via .apk file
-1. Visit [F-Droid.org](https://f-droid.org/).
-2. Search for **GymTrim**.
-3. Select the app version you want.
-4. Click **Download APK**.
-5. Save the file, then use your file manager to find the `.apk`.
-6. Tap the file and follow the on-screen instructions to install.
-
-_You can also download the latest APK from the [Releases page](../../releases)._
+1. Download the APK from the [Release page](../../releases/)
+2. Select the app version you want.
+3. Download the attached APK
+4. Use your file manager to find the `.apk`.
+5. Tap the file and follow the on-screen instructions to install.
 
 ## Contribution Guidelines
 Everyone is welcome to participate in and adapt this project.  
