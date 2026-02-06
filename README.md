@@ -3,9 +3,6 @@
   <img src="assets/app_icon.png" alt="GymTrim Logo" width="100" height="100"/>
 </p>
 
-[![License](https://img.shields.io/github/license/naibaf-1/GymTrim)](LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/naibaf-1/GymTrim)](https://github.com/naibaf-1/GymTrim/commits)
-
 ## Overview
 - [Purpose & Benefits](#Purpose-&-Benefits)
 - [Features](#Features)
