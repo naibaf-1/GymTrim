@@ -20,9 +20,9 @@ import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 
-import com.naibaf.GymTrim.SettingsAndInformations.InformationsActivity;
+import com.naibaf.GymTrim.SettingsAndInformation.InformationActivity;
 import com.naibaf.GymTrim.R;
-import com.naibaf.GymTrim.SettingsAndInformations.SettingsActivity;
+import com.naibaf.GymTrim.SettingsAndInformation.SettingsActivity;
 
 public class PopUpMenuInflater {
 
@@ -39,7 +39,7 @@ public class PopUpMenuInflater {
                     context.startActivity(goToSettings);
                     return true;
                 } else if (idOfPressed == R.id.menu_item_informations) {
-                    Intent goToInformations = new Intent(context, InformationsActivity.class);
+                    Intent goToInformations = new Intent(context, InformationActivity.class);
                     context.startActivity(goToInformations);
                     return true;
                 } else {

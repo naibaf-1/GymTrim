@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SettingsAndInformations.InformationsActivity"
+            android:name=".SettingsAndInformation.InformationActivity"
             android:exported="false" />
         <activity
             android:name=".PlansAndTraining.EditPlanActivity"
@@ -48,7 +48,7 @@
             android:name=".Exercise.AddExerciseActivity"
             android:exported="false" />
         <activity
-            android:name=".SettingsAndInformations.SettingsActivity"
+            android:name=".SettingsAndInformation.SettingsActivity"
             android:exported="false" />
 
         <service

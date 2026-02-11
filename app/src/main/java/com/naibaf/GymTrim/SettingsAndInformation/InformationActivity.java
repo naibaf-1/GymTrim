@@ -12,7 +12,7 @@
  See the License for the specific language governing permissions and
  limitations under the License. **/
 
-package com.naibaf.GymTrim.SettingsAndInformations;
+package com.naibaf.GymTrim.SettingsAndInformation;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -36,7 +36,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.color.MaterialColors;
 import com.naibaf.GymTrim.R;
 
-public class InformationsActivity extends AppCompatActivity {
+public class InformationActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     @Override
