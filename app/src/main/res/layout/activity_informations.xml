@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?android:attr/colorBackground"
-    tools:context=".SettingsAndInformations.InformationsActivity">
+    tools:context=".SettingsAndInformation.InformationActivity">
 
 
     <View
@@ -30,7 +30,7 @@
         android:layout_marginEnd="4dp"
         android:background="?attr/colorOutline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_CategoryAppInformations"
+        app:layout_constraintStart_toEndOf="@+id/textView_CategoryAppInformation"
         app:layout_constraintTop_toBottomOf="@+id/textView_License" />
 
     <View
@@ -118,7 +118,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
-        android:id="@+id/textView_CategoryAppInformations"
+        android:id="@+id/textView_CategoryAppInformation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -155,6 +155,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/informations_app_version"
+        android:textAlignment="textStart"
         android:textColor="?android:attr/textColorTertiary"
         android:textSize="10sp"
         android:textStyle="italic"
@@ -198,7 +199,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView_Informations"
+                    android:id="@+id/textView_Information"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="8dp"
@@ -263,7 +264,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:contentDescription="App Icon"
-            app:srcCompat="@drawable/ic_launcher_playstore" />
+            app:srcCompat="@drawable/ic_launcher_play_store" />
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -280,7 +281,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_CategoryAppInformations" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_CategoryAppInformation" />
 
     <TextView
         android:id="@+id/textView_FeatureRequest"
