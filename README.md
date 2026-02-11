@@ -3,9 +3,6 @@
   <img src="assets/app_icon.png" alt="GymTrim Logo" width="100" height="100"/>
 </p>
 
-[![License](https://img.shields.io/github/license/naibaf-1/GymTrim)](LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/naibaf-1/GymTrim)](https://github.com/naibaf-1/GymTrim/commits)
-
 ## Overview
 - [Purpose & Benefits](#Purpose-&-Benefits)
 - [Features](#Features)
@@ -58,20 +55,12 @@ GymTrim is a fitness app designed to help you document your training data. While
 ## Installation
 **This app requires Android 7.0+**
 
-### Installation via F-Droid (At the moment not possible)
-1. Install [F-Droid](https://f-droid.org/) on your device.
-2. Search for **GymTrim**.
-3. Tap **Install**.
-
 ### Installation via .apk file
-1. Visit [F-Droid.org](https://f-droid.org/).
-2. Search for **GymTrim**.
-3. Select the app version you want.
-4. Click **Download APK**.
-5. Save the file, then use your file manager to find the `.apk`.
-6. Tap the file and follow the on-screen instructions to install.
-
-_You can also download the latest APK from the [Releases page](../../releases)._
+1. Download the APK from the [Release page](../../releases/)
+2. Select the app version you want.
+3. Download the attached APK
+4. Use your file manager to find the `.apk`.
+5. Tap the file and follow the on-screen instructions to install.
 
 ## Contribution Guidelines
 Everyone is welcome to participate in and adapt this project.  
@@ -149,8 +138,9 @@ This app was developed to improve and simplify my own training data tracking. It
 **No warranty for anything is provided.**
 
 ## Screenshots
-<img src="./assets/Screenshot_GymTrim_Plans.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_EditPlan.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_Training.png" width="270" height="585"/>
-<img src="./assets/Screenshot_GymTrim_Exercises.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_AddExercise.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_EditExercise.png" width="270" height="585"/>
-<img src="./assets/Screenshot_GymTrim_Data.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_Settings.png" width="270" height="585"/> <img src="./assets/Screenshot_GymTrim_About.png" width="270" height="585"/>
+|<img src="./assets/Screenshot_GymTrim_Plans.png" width="270" height="585"/> <br>**List your plans**|<img src="./assets/Screenshot_GymTrim_EditPlan.png" width="270" height="585"/> <br>**Edit a plan**|<img src="./assets/Screenshot_GymTrim_Training.png" width="270" height="585"/> <br>**Train a plan** |
+|-------------------------------------------------------------------------------|-------------------------------------------------------------------|--------------------------------------------------------------------|
+| <img src="./assets/Screenshot_GymTrim_Exercises.png" width="270" height="585"/> <br><div align="center">**See all of your exercises**</div> | <img src="./assets/Screenshot_GymTrim_AddExercise.png" width="270" height="585"/> <br><div align="center">**Add new exercises**</div> | <img src="./assets/Screenshot_GymTrim_EditExercise.png" width="270" height="585"/> <br><div align="center">**Edit your old exercises**</div> |
+| <img src="./assets/Screenshot_GymTrim_Data.png" width="270" height="585"/> <br><div align="center">**See your efforts**</div> | <img src="./assets/Screenshot_GymTrim_Settings.png" width="270" height="585"/> <br><div align="center">**Toggle the settings**</div> | <img src="./assets/Screenshot_GymTrim_About.png" width="270" height="585"/> <br><div align="center">**Find further informations**</div> |
 
 *(Not default theme shown)*
