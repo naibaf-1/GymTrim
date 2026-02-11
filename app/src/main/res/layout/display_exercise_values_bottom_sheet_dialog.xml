@@ -55,7 +55,7 @@
                 android:layout_height="2dp"
                 android:layout_marginStart="2dp"
                 android:layout_marginTop="2dp"
-                android:layout_marginEnd="4dp"
+                android:layout_marginEnd="6dp"
                 android:layout_marginBottom="4dp"
                 android:background="?attr/colorOutlineVariant" />
 
@@ -76,10 +76,10 @@
         android:id="@+id/view_HorizontalSeparator"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="6dp"
         android:layout_marginTop="2dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="2dp"
         android:background="?attr/colorOutlineVariant" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -171,7 +171,7 @@
 
             <Space
                 android:id="@+id/Space_placeholder_for_button"
-                android:layout_width="55dp"
+                android:layout_width="50dp"
                 android:layout_height="match_parent" />
 
             <View
@@ -188,9 +188,9 @@
             android:id="@+id/view_HorizontalSeparator2"
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginEnd="4dp"
+            android:layout_marginEnd="6dp"
             android:background="?attr/colorOutlineVariant"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -18,7 +18,8 @@
             android:id="@+id/view_VerticalSeparator"
             android:layout_width="2dp"
             android:layout_height="match_parent"
-            android:layout_margin="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
             android:background="?attr/colorOutlineVariant" />
 
         <com.google.android.material.textfield.TextInputEditText
@@ -40,7 +41,8 @@
             android:id="@+id/view_VerticalSeparator1"
             android:layout_width="2dp"
             android:layout_height="match_parent"
-            android:layout_margin="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
             android:background="?attr/colorOutlineVariant" />
 
         <com.google.android.material.textfield.TextInputEditText
@@ -62,7 +64,8 @@
             android:id="@+id/view_VerticalSeparator2"
             android:layout_width="2dp"
             android:layout_height="match_parent"
-            android:layout_margin="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
             android:background="?attr/colorOutlineVariant" />
 
         <com.google.android.material.textfield.TextInputEditText
@@ -84,7 +87,8 @@
             android:id="@+id/view_VerticalSeparator3"
             android:layout_width="2dp"
             android:layout_height="match_parent"
-            android:layout_margin="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
             android:background="?attr/colorOutlineVariant" />
 
         <com.google.android.material.textfield.TextInputEditText
@@ -106,13 +110,14 @@
             android:id="@+id/view_VerticalSeparator4"
             android:layout_width="2dp"
             android:layout_height="match_parent"
-            android:layout_margin="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
             android:background="?attr/colorOutlineVariant" />
 
         <ImageButton
             android:id="@+id/imageButton_Tick"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_weight="0"
             android:contentDescription="Tick"
             android:scaleType="centerCrop"
@@ -122,7 +127,8 @@
             android:id="@+id/view_VerticalSeparator7"
             android:layout_width="2dp"
             android:layout_height="match_parent"
-            android:layout_margin="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
             android:background="?attr/colorOutlineVariant" />
     </LinearLayout>
 
@@ -130,8 +136,7 @@
         android:id="@+id/view_HorizontalSeparator3"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="4dp"
+        android:layout_margin="2dp"
         android:layout_weight="1"
         android:background="?attr/colorOutlineVariant" />
 
