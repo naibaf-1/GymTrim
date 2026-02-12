@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.preference.ktx)
     implementation (libs.mpandroidchart.vv310)
     implementation(libs.androidx.work.runtime)
+    implementation(libs.androidx.constraintlayout)
     //noinspection GradlePath
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
