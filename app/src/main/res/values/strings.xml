@@ -17,8 +17,7 @@
     <string name="get_plan_name">Enter name</string>
     <string name="get_reminder_time">Reminder</string>
     <string name="edit_plan_header">Edit plan</string>
-    <!-- EditPlan -->
-    <!-- Training: None -->
+    <string name="error_missing_exercises">Please add some exercises.</string>
     <!-- Exercise selector bottom sheet dialog -->
     <string name="header_exercise_selector">Select Exercise</string>
     <!-- Display exercise values bottom sheet dialog -->
