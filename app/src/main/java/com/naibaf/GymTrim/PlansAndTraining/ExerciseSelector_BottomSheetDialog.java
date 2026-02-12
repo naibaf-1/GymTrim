@@ -132,23 +132,25 @@ public class ExerciseSelector_BottomSheetDialog extends BottomSheetDialogFragmen
     @Override
     public void onItemClick(View view, int position) {
         final ExerciseCustomRecyclerViewAdapter.CustomExerciseList item = selectableExerciseListAdapter.getData().get(position);
-        exerciseData.moveToPosition(position);
 
-        int columnIndexOfRepetitions = exerciseData.getColumnIndex("RecordRepetitions");
-        int columnIndexOfWeight = exerciseData.getColumnIndex("RecordWeight");
-        int columnIndexOfTime = exerciseData.getColumnIndex("RecordTime");
-        int columnIndexOfDistance = exerciseData.getColumnIndex("RecordDistance");
-        int columnIndexOfId = exerciseData.getColumnIndex("Id");
+        // Get the id of the selected exercise
+        int idInEDB = item.idInDatabase;
+        // Request all data for this exercise
+        Cursor data = DB.getExerciseData(idInEDB);
+        data.moveToFirst();
+        // Extract the data
+        int columnIndexOfRepetitions = data.getColumnIndex("RecordRepetitions");
+        int columnIndexOfWeight = data.getColumnIndex("RecordWeight");
+        int columnIndexOfTime = data.getColumnIndex("RecordTime");
+        int columnIndexOfDistance = data.getColumnIndex("RecordDistance");
 
-        int recordRepetitions = exerciseData.getInt(columnIndexOfRepetitions);
-        int recordWeight = exerciseData.getInt(columnIndexOfWeight);
-        int recordTime = exerciseData.getInt(columnIndexOfTime);
-        int recordDistance = exerciseData.getInt(columnIndexOfDistance);
-        int id = exerciseData.getInt(columnIndexOfId);
-
+        int recordRepetitions = data.getInt(columnIndexOfRepetitions);
+        int recordWeight = data.getInt(columnIndexOfWeight);
+        int recordTime = data.getInt(columnIndexOfTime);
+        int recordDistance = data.getInt(columnIndexOfDistance);
 
         //Sent data to previous activity
-        GlobalVariables.getInstance().setSelected(item, recordRepetitions, recordWeight, recordDistance, recordTime, id);
+        GlobalVariables.getInstance().setSelected(item, recordRepetitions, recordWeight, recordDistance, recordTime, idInEDB);
 
         //Update correct RecyclerView
         String Sender = GlobalVariables.senderActivity;
