@@ -15,4 +15,5 @@
 .cxx
 local.properties
 app/release/
+/releases/
 com.naibaf.GymTrim.yml
