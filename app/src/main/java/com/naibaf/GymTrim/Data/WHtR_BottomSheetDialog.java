@@ -64,12 +64,12 @@ public class WHtR_BottomSheetDialog extends BottomSheetDialogFragment {
             @Override
             public void onClick(View v) {
                 //Check data, if everything is set apply it to the graph
-                waist_girth = Float.parseFloat(WaistGirth.getText().toString());
-                height = Float.parseFloat(Height.getText().toString());
-                age = Integer.valueOf(Age.getText().toString());
+                if(!WaistGirth.getText().toString().trim().isEmpty() && !Height.getText().toString().trim().isEmpty() && !Age.getText().toString().trim().isEmpty()){
+                    // Get the data
+                    waist_girth = Float.parseFloat(WaistGirth.getText().toString());
+                    height = Float.parseFloat(Height.getText().toString());
+                    age = Integer.parseInt(Age.getText().toString());
 
-                //Calculate & display BMI
-                if(waist_girth >= 0 && height >= 0 && age >= 0){
                     //Calculate WHR
                     whtr = waist_girth/height;
                     //Fill table per age group
@@ -79,7 +79,7 @@ public class WHtR_BottomSheetDialog extends BottomSheetDialogFragment {
                         Overweight.setText("0.46 - 0.51");
                         Adiposity.setText("0.52 - 0.63");
                         SevereAdiposity.setText("0.64 - ...");
-                    } else if (age > 15 && age <= 40) {
+                    } else if (age <= 40) {
                         Underweight.setText("... - 0.40");
                         NormalWeight.setText("0.41 - 0.50");
                         Overweight.setText("0.51 - 0.56");
