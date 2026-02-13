@@ -95,4 +95,5 @@ public class WHR_BottomSheetDialog extends BottomSheetDialogFragment {
 
 }
 
+//https://www.geeksforgeeks.org/implement-radiobutton-with-custom-layout-in-android/
 // Sources: https://www.bmi3d.com/whr-waisthipratio.html

@@ -17,7 +17,6 @@ package com.naibaf.GymTrim.Data;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -144,7 +143,7 @@ public class DataFragment extends Fragment implements ExerciseCustomRecyclerView
 
         //Add Data/Exercises to list => https://www.geeksforgeeks.org/how-to-dynamically-add-elements-to-a-listview-in-android/
         //!Add an own List with more Informations, e.g.: images: https://abhiandroid.com/ui/listview
-        RecyclerView TrainingDataList  = v.findViewById(R.id.recyclerView_TrainingdataForExercises);
+        RecyclerView TrainingDataList  = v.findViewById(R.id.recyclerView_TrainingDataForExercises);
 
         //Create a Arraylist from ExerciseCustomRecyclerViewAdapter
         ArrayList ArrayListOfTrainingData = new ArrayList<>();
@@ -202,16 +201,4 @@ public class DataFragment extends Fragment implements ExerciseCustomRecyclerView
 
 }
 
-//Draw Diagrams of the Using Data
-
-//Add Graph: - https://www.infoworld.com/article/2256745/graphlib-an-open-source-android-library-for-graphs.html
-//                 - https://medium.com/@mayurjajoomj/custom-graphs-custom-view-android-862e16813cc
-//                 - https://www.geeksforgeeks.org/line-graph-view-in-android-with-example/
-//                 - https://www.scichart.com/example/android-chart/android-line-chart-example/
-
-//Implement Calculators: - https://www.bmi3d.de/kind.html
-//                             - https://www.bmi3d.de/alternativen.html
-//                             - https://www.aok.de/pk/magazin/ernaehrung/abnehmen/bmi-rechner-body-mass-index-berechnen/
-
-//https://www.geeksforgeeks.org/implement-radiobutton-with-custom-layout-in-android/
 //https://www.geeksforgeeks.org/modal-bottom-sheet-in-android-with-examples

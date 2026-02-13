@@ -198,12 +198,4 @@ public class InformationActivity extends AppCompatActivity {
         openLink.setData(Uri.parse(url));
         startActivity(openLink);
     }
-
-    //Todo: Upload to F-Droid
-    //For searching exercise: Make one global function & use this instead
-    //Add Link to latest release
-    //One function for opening links
-    //UI improvements
-    //Make TextView in data_fragment clickable too
-    //Fix the issue of the plans not being sorted as expected
 }

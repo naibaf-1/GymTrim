@@ -283,4 +283,5 @@ public class PlansExercisesDataActivity extends AppCompatActivity {
 
 }
 
+// Todo: Upload to F-Droid
 // Todo: If user adds square image display it as is
