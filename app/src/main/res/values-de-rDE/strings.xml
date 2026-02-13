@@ -44,7 +44,7 @@
     <string name="calculate_WHR">Taille-Hüft-Verhältnis (THV) berechnen</string>
     <string name="data_section_training_data">Trainingsdaten:</string>
     <string name="nothing_calculated_yet">Bisher noch nichts berechnet.</string>
-    <string name="no_warranty_note">Diese Werte dienen nur zu Zwecken der Orientierung. Es gibt keinen Gewär für ihre Korrektheit.</string>
+    <string name="no_warranty_note">Diese Werte dienen nur zu Zwecken der Orientierung. Es gibt keinen Gewähr für ihre Korrektheit.</string>
     <string name="get_waist_girth">Taillienumfang in cm</string>
     <string name="error_missing_data">Bitte geben Sie alle erforderten Daten an.</string>
     <!-- BMI -->
