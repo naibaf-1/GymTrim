@@ -230,10 +230,6 @@ public class ExercisesFragment extends Fragment implements ExerciseCustomRecycle
                     exerciseListAdapter.notifyItemChanged(position);
                 }
             }
-//            Cursor newExercisesValues = DB.getAllExerciseData();
-//            exerciseListAdapter = RecyclerViewInflater.buildExerciseRecyclerView(context, v, exerciseList, this, exerciseListAdapter, newExercisesValues, false, columnIndexOfId);
-//            ArrayListOfExercises = RecyclerViewInflater.ExerciseArrayList;
-//            exerciseListAdapter.notifyDataSetChanged();
         }
     }
 
