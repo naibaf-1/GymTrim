@@ -165,10 +165,10 @@ public class AddExerciseActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                name = Name.getText().toString();
                 DB.updateName(id, name);
                 if (!name.isEmpty()){
                     nameIsEmpty = false;
+                    name = Name.getText().toString();
                 }
             }
         });
@@ -203,49 +203,49 @@ public class AddExerciseActivity extends AppCompatActivity {
 
         //Get a image => https://www.geeksforgeeks.org/how-to-select-an-image-from-gallery-in-android/
         ActivityResultLauncher<Intent> launchImagePicker = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
-                if (result.getResultCode() == Activity.RESULT_OK) {
-                    Intent data = result.getData();
-                    // do your operation from here....
-                    if (data != null && data.getData() != null) {
-                        Uri selectedImageUri = data.getData();
-                        Bitmap selectedImageBitmap = null;
-                        try {
-                            selectedImageBitmap = Bitmap.createScaledBitmap(MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri), 195, 195, false);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-
-                        ImageOfExercise.setImageBitmap(selectedImageBitmap);
-
-                        //Get image as ByteArray => Store it in Database (vgl. https://stackoverflow.com/questions/9357668/how-to-store-image-in-sqlite-database)
-                        if (selectedImageBitmap != null) {
-                            imageOfExercise = CommonFunctions.getBitmapAsArray(selectedImageBitmap);
-                            DB.updateImage(id, imageOfExercise);
-                        }
-
+            if (result.getResultCode() == Activity.RESULT_OK) {
+                Intent data = result.getData();
+                // do your operation from here....
+                if (data != null && data.getData() != null) {
+                    Uri selectedImageUri = data.getData();
+                    Bitmap selectedImageBitmap = null;
+                    try {
+                        selectedImageBitmap = Bitmap.createScaledBitmap(MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri), 195, 195, false);
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
+
+                    ImageOfExercise.setImageBitmap(selectedImageBitmap);
+
+                    //Get image as ByteArray => Store it in Database (vgl. https://stackoverflow.com/questions/9357668/how-to-store-image-in-sqlite-database)
+                    if (selectedImageBitmap != null) {
+                        imageOfExercise = CommonFunctions.getBitmapAsArray(selectedImageBitmap);
+                        DB.updateImage(id, imageOfExercise);
+                    }
+
                 }
-            });
+            }
+        });
 
         ImageOfExercise.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent imagePath = new Intent();
-                    imagePath.setType("image/*");
-                    imagePath.setAction(Intent.ACTION_GET_CONTENT);
+            @Override
+            public void onClick(View v) {
+                Intent imagePath = new Intent();
+                imagePath.setType("image/*");
+                imagePath.setAction(Intent.ACTION_GET_CONTENT);
 
-                    launchImagePicker.launch(imagePath);
-                    userAddedImage = true;
-                }
-            });
+                launchImagePicker.launch(imagePath);
+                userAddedImage = true;
+            }
+        });
 
         FloatingActionButton Add = findViewById(R.id.floatingActionButton_Add);
         Add.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    finish();
-                }
-            });
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     //Notify Fragment to update its recyclerView => vgl.: https://stackoverflow.com/questions/30502515/refresh-recyclerview-from-another-activity

@@ -271,7 +271,6 @@ public class PlansDB extends SQLiteOpenHelper {
         ContentValues  contentValues = new ContentValues();
         contentValues.put("RecordTime", CommonFunctions.getIntegerValueOfBoolean(isTimeAllowed));
         DB.update("Exercise", contentValues, "ExerciseIdInEDB = ?", new String[]{String.valueOf(idOfEditedInEDB)});
-        DB.close();
     }
     public void updateDistanceAllowedOfEditedExercise(int idOfEditedInEDB, Boolean isDistanceAllowed){
         ContentValues  contentValues = new ContentValues();

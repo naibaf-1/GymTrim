@@ -16,6 +16,7 @@ package com.naibaf.GymTrim.Data;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,16 +55,20 @@ public class BMI_BottomSheetDialog extends BottomSheetDialogFragment {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                //Check data, if everything is set apply it to the graph
-                size = Float.parseFloat(Objects.requireNonNull(Size.getText()).toString());
-                weight = Float.parseFloat(Objects.requireNonNull(Weight.getText()).toString());
+                // Check data, if everything is set apply it to the graph
+                if (!Size.getText().toString().trim().isEmpty() && !Weight.getText().toString().trim().isEmpty()){
+                    size = Float.parseFloat(Objects.requireNonNull(Size.getText()).toString());
+                    weight = Float.parseFloat(Objects.requireNonNull(Weight.getText()).toString());
 
-                //Calculate & display BMI
-                if(size >= 0 && weight >= 0){
-                    bmi = weight /(size * size);
-                    getResources();
-                    String calculatedBMI = getString(R.string.calculated_BMI);
-                    BMITextView.setText(calculatedBMI + " " + new DecimalFormat("##.##").format(bmi));
+                    // Calculate & display BMI
+                    if(size >= 0 && weight >= 0){
+                        bmi = weight /(size * size);
+                        getResources();
+                        String calculatedBMI = getString(R.string.calculated_BMI);
+                        BMITextView.setText(calculatedBMI + " " + new DecimalFormat("##.##").format(bmi));
+                    } else {
+                        Toast.makeText(getContext(), R.string.error_missing_data, Toast.LENGTH_LONG).show();
+                    }
                 } else {
                     Toast.makeText(getContext(), R.string.error_missing_data, Toast.LENGTH_LONG).show();
                 }
@@ -74,4 +79,4 @@ public class BMI_BottomSheetDialog extends BottomSheetDialogFragment {
 
 }
 
-//Sources: https://www.bmi3d.com/formula.html and others
+// Sources: https://www.bmi3d.com/formula.html and others

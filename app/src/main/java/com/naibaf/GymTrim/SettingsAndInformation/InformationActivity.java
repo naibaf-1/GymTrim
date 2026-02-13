@@ -99,14 +99,14 @@ public class InformationActivity extends AppCompatActivity {
         RepositoryLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openLinkInBrowser("https://github.com/naibaf-1/GymTrim");
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim#readme");
             }
         });
         ImageView LinkToRepository = findViewById(R.id.imageView_OpenLinkSource);
         LinkToRepository.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openLinkInBrowser("https://github.com/naibaf-1/GymTrim");
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim#readme");
             }
         });
 
@@ -147,14 +147,14 @@ public class InformationActivity extends AppCompatActivity {
         LicenseLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openLinkInBrowser("https://github.com/naibaf-1/GymTrim?tab=License-1-ov-file");
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim?tab=License-1-ov-file#readme");
             }
         });
         ImageView LinkToLicense = findViewById(R.id.imageView_OpenLinkLicense);
         LinkToLicense.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openLinkInBrowser("https://github.com/naibaf-1/GymTrim?tab=License-1-ov-file");
+                openLinkInBrowser("https://github.com/naibaf-1/GymTrim?tab=License-1-ov-file#readme");
             }
         });
 

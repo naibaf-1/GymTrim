@@ -50,7 +50,7 @@ public class WHR_BottomSheetDialog extends BottomSheetDialogFragment {
         TextInputEditText WaistGirth = v.findViewById(R.id.TextInputEditText_waist_girth_WHR);
         TextInputEditText HipGirth = v.findViewById(R.id.TextInputEditText_hip_girth_WHR);
         WHRTextView = v.findViewById(R.id.TextView_WHRValue);
-        TextView WHRInformations = v.findViewById(R.id.textView_Informations_WHR);
+        TextView WHRInformation = v.findViewById(R.id.textView_Informations_WHR);
 
         Genus.clearCheck();
 
@@ -58,28 +58,28 @@ public class WHR_BottomSheetDialog extends BottomSheetDialogFragment {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                //Check data, if everything is set apply it to the graph
-                waist_girth = Float.parseFloat(WaistGirth.getText().toString());
-                hip_girth = Float.parseFloat(HipGirth.getText().toString());
-
-                //Get genus
-                // get started radio button id
+                // Get genus get started radio button id
                 int id = Genus.getCheckedRadioButtonId();
-                if (id == R.id.radioButton_female_WHR){
+                if (id == R.id.radioButton_female_WHR) {
                     genus = "female";
                 } else if (id == R.id.radioButton_male_WHR) {
                     genus = "male";
-                }else {
+                } else {
                     genus = null;
                 }
-                //Calculate & display BMI
-                if(waist_girth >= 0 && hip_girth >= 0 && genus != null){
-                    //Calculate WHR
-                    whr = waist_girth/hip_girth;
-                    if (genus.equals("female")){
-                        WHRInformations.setText(R.string.WHR_informations_female);
+
+                // Calculate & display WHR
+                if (!WaistGirth.getText().toString().trim().isEmpty() && !HipGirth.getText().toString().trim().isEmpty() && genus != null) {
+                    // Check data, if everything is set apply it to the graph
+                    waist_girth = Float.parseFloat(WaistGirth.getText().toString());
+                    hip_girth = Float.parseFloat(HipGirth.getText().toString());
+
+                    // Calculate WHR
+                    whr = waist_girth / hip_girth;
+                    if (genus.equals("female")) {
+                        WHRInformation.setText(R.string.WHR_informations_female);
                     } else if (genus.equals("male")) {
-                        WHRInformations.setText(R.string.WHR_informations_male);
+                        WHRInformation.setText(R.string.WHR_informations_male);
                     }
 
                     String calculatedWHR = getString(R.string.calculated_WHR);
@@ -95,4 +95,4 @@ public class WHR_BottomSheetDialog extends BottomSheetDialogFragment {
 
 }
 
-//Sources: https://www.bmi3d.com/whr-waisthipratio.html
+// Sources: https://www.bmi3d.com/whr-waisthipratio.html
