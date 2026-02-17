@@ -7,7 +7,11 @@
 - [Purpose & Benefits](#Purpose-&-Benefits)
 - [Features](#Features)
 - [Installation](#Installation)
-- [Contribution-Guidlines](#Contribution-Guidelines)
+- [Contribution Guidlines](#Contribution-Guidelines)
+  - *[Open Tasks](#Open-Tasks)*
+  - *[Getting Started](#Getting-Started)*
+  - *[Code of Conduct](#Code-of-Conduct)*
+  - *[Attribution](#Attribution)*
 - [Contact](#Contact)
 - [Legal & Privacy](#Legal-&-Privacy)
   - *[License](#License)*
@@ -63,9 +67,18 @@ GymTrim is a fitness app designed to help you document your training data. While
 5. Tap the file and follow the on-screen instructions to install.
 
 ## Contribution Guidelines
-Everyone is welcome to participate in and adapt this project.  
+**Everyone is welcome** to participate in and adapt this project — whether you want to fix a typo, add a translation, or build a new feature.
 All contributions and usage are governed by the [Apache 2.0 License](LICENSE).
-Please see also [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Please see the full [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+If you need help getting started, feel free to open an ISSUE — I’m happy to support you.
+
+### Open Tasks
+Here are the some easy ways to contribute:
+- Add translations: *Spanish, French, Italian, Portuguese, Turkish, Polish, Dutch, Russian — or any language you speak*
+- Improve the app icon (new design ideas are welcome)
+- Report bugs you encounter
+- Suggest new features you’d like to see
+- Pick any open [ISSUE](https://github.com/naibaf-1/GymTrim/issues) and work on it
 
 ### Getting Started
 
