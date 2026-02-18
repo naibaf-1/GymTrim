@@ -158,7 +158,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_SelectLanguage" />
 
-    <Switch
+    <com.google.android.material.materialswitch.MaterialSwitch
         android:id="@+id/switch_ToggleReminderOnOff"
         android:layout_width="0dp"
         android:layout_height="48dp"
@@ -173,7 +173,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_Experience"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-    <Switch
+    <com.google.android.material.materialswitch.MaterialSwitch
         android:id="@+id/switch_ToggleLightDarkMode"
         android:layout_width="0dp"
         android:layout_height="48dp"
@@ -353,7 +353,7 @@
         app:srcCompat="@drawable/delete_icon"
         app:tint="?android:attr/textColorPrimary" />
 
-    <Switch
+    <com.google.android.material.materialswitch.MaterialSwitch
         android:id="@+id/switch_ToggleVibratorOnOff"
         android:layout_width="0dp"
         android:layout_height="48dp"
