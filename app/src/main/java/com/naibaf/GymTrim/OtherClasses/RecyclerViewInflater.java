@@ -115,6 +115,7 @@ public class RecyclerViewInflater {
         int columnIndexOfColor = data2.getColumnIndex("ColorOfPlan");
         int columnIndexOfId = data2.getColumnIndex("plansId");
         int columnIndexOfDate = data2.getColumnIndex("DateOfLastTraining");
+        int columnIndexOfDuration = data2.getColumnIndex("TimerDurationWhenTrainingLeft");
 
         int countOfPlans = data2.getCount();
 
@@ -125,8 +126,9 @@ public class RecyclerViewInflater {
                 int color = data2.getInt(columnIndexOfColor);
                 int id = data2.getInt(columnIndexOfId);
                 String date = data2.getString(columnIndexOfDate);
+                String duration = data2.getString(columnIndexOfDuration);
 
-                PlanArrayList.add(new PlansCustomRecyclerViewAdapter.CustomList(name, color, date, id));
+                PlanArrayList.add(new PlansCustomRecyclerViewAdapter.CustomList(name, color, date, id, duration));
 
                 data2.moveToNext();
             }
