@@ -30,6 +30,7 @@
         <item>@string/array_translated_error_call_to_attention</item>
         <item>@string/array_translated_new_message_31</item>
         <item>@string/array_translated_notification_4</item>
+        <item>@string/array_translated_silent</item>
     </string-array>
 
     <string-array name="selectableSoundsForReminderValues">
@@ -40,6 +41,7 @@
         <item>error_call_to_attention</item>
         <item>new_message_31</item>
         <item>notification_4</item>
+        <item>silent</item>
     </string-array>
 
     <attr name="iconColor" format="color" />

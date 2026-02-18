@@ -12,6 +12,8 @@
     <!-- Plan -->
     <string name="fragment_plans_header">Plans</string>
     <string name="search_plans">Search for a plan</string>
+    <string name="last_training_date">Training date:</string>
+    <string name="last_training_duration">Training duration:</string>
     <!-- AddPlan & EditPlan -->
     <string name="add_plan_header">Add a new plan</string>
     <string name="get_plan_name">Enter name</string>
@@ -102,6 +104,7 @@
     <string name="alertdialog_import_header">What do you want to import?</string>
     <string name="settings_exporting_successful">Successful exported</string>
     <string name="settings_importing_successful">Successful imported</string>
+    <string name="settings_reminder_vibrate">Vibrate</string>
     <!-- Arrays -->
     <string name="settings_language_selector_default_language">System language</string>
     <string name="settings_language_selector_english">english</string>
@@ -113,6 +116,7 @@
     <string name="array_translated_error_call_to_attention">error call to attention by Universfield</string>
     <string name="array_translated_new_message_31">New Message 31 by Tuomas_Data</string>
     <string name="array_translated_notification_4">notification #4 by Universfield</string>
+    <string name="array_translated_silent">Silent</string>
 
     <!-- Information -->
     <string name="informations_header">About</string>

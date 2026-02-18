@@ -19,6 +19,9 @@ import android.content.DialogInterface;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.text.TextUtils;
 import android.widget.Toast;
 
@@ -129,6 +132,19 @@ public class CommonFunctions {
             Adapter.getFilter().filter("");
         } else {
             Adapter.getFilter().filter(text);
+        }
+    }
+
+    // Vibrate 3 times
+    public static void reminderVibrate(Vibrator v){
+        long[] pattern = {0, 500, 300, 500, 300, 500};
+        if (v != null && v.hasVibrator()) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                VibrationEffect effect = VibrationEffect.createWaveform(pattern, -1);
+                v.vibrate(effect);
+            } else {
+                v.vibrate(pattern, -1);
+            }
         }
     }
 }

@@ -28,67 +28,72 @@ public class AudioServiceForBackgroundProcess extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        createNotification(); // Foreground-Service
-        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
-        // Listener for the audio focus
-        focusChangeListener = focusChange -> {
-            if (mediaPlayer == null) return;
+        // If the user selected silent don't play a sound
+        SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
+        int preferredSound = sharedPreferences.getInt("SoundForReminder", R.raw.message);
+        if (preferredSound != -1) {
+            createNotification(); // Foreground-Service
+            audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
-            switch (focusChange) {
-                case AudioManager.AUDIOFOCUS_LOSS:
+            // Listener for the audio focus
+            focusChangeListener = focusChange -> {
+                if (mediaPlayer == null) return;
 
-                case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
-                    mediaPlayer.pause();
-                    break;
+                switch (focusChange) {
+                    case AudioManager.AUDIOFOCUS_LOSS:
 
-                case AudioManager.AUDIOFOCUS_GAIN:
-                    mediaPlayer.start();
-                    break;
-                // Android reduces the audio automatically
-                case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK:
-                    break;
+                    case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
+                        mediaPlayer.pause();
+                        break;
+
+                    case AudioManager.AUDIOFOCUS_GAIN:
+                        mediaPlayer.start();
+                        break;
+                    // Android reduces the audio automatically
+                    case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK:
+                        break;
+                }
+            };
+
+            int focusResult;
+
+            // Use a modern API for 8+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                audioFocusRequest = new AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK)
+                        .setAudioAttributes(new AudioAttributes.Builder()
+                                .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
+                                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                                .build())
+                        .setOnAudioFocusChangeListener(focusChangeListener)
+                        .build();
+                focusResult = audioManager.requestAudioFocus(audioFocusRequest);
+            } else {
+                // Legacy API
+                focusResult = audioManager.requestAudioFocus(
+                        focusChangeListener,
+                        AudioManager.STREAM_MUSIC,
+                        AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK
+                );
             }
-        };
 
-        int focusResult;
+            // Play the preferred sound
+            if (focusResult == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+                mediaPlayer = MediaPlayer.create(this, preferredSound);
 
-        // Use a modern API for 8+
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            audioFocusRequest = new AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK)
-                .setAudioAttributes(new AudioAttributes.Builder()
+                mediaPlayer.setAudioAttributes(new AudioAttributes.Builder()
                         .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
                         .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                        .build())
-                .setOnAudioFocusChangeListener(focusChangeListener)
-                .build();
-            focusResult = audioManager.requestAudioFocus(audioFocusRequest);
-        } else {
-            // Legacy API
-            focusResult = audioManager.requestAudioFocus(
-                focusChangeListener,
-                AudioManager.STREAM_MUSIC,
-                AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK
-            );
-        }
+                        .build());
 
-        // Play the preferred sound
-        if (focusResult == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-            SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
-            int preferredSound = sharedPreferences.getInt("SoundForReminder", R.raw.message);
-            mediaPlayer = MediaPlayer.create(this, preferredSound);
+                mediaPlayer.setOnCompletionListener(mp -> {
+                    releaseAudioFocus();
+                    mp.release();
+                });
 
-            mediaPlayer.setAudioAttributes(new AudioAttributes.Builder()
-                .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
-                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                .build());
+                mediaPlayer.start();
+            }
 
-            mediaPlayer.setOnCompletionListener(mp -> {
-                releaseAudioFocus();
-                mp.release();
-            });
-
-            mediaPlayer.start();
         }
         return START_STICKY;
     }

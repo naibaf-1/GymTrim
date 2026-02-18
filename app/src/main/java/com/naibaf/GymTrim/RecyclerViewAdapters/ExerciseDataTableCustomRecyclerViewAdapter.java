@@ -23,6 +23,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Handler;
+import android.os.Vibrator;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -36,6 +37,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.naibaf.GymTrim.OtherClasses.AudioServiceForBackgroundProcess;
+import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.PlansAndTraining.TrainingActivity;
 import com.naibaf.GymTrim.R;
 
@@ -207,12 +209,8 @@ public class ExerciseDataTableCustomRecyclerViewAdapter extends RecyclerView.Ada
                         holder.CheckSentence.setBackgroundColor(Color.RED);
                         ButtonColor = "red";
                         mData.get(position).coloredButton = true;
-
-                        SharedPreferences sharedPreferences = context.getSharedPreferences("sharedPrefs", MODE_PRIVATE);
-                        Boolean reminderEnabled = sharedPreferences.getBoolean("IsReminderEnabled", false);
-                        if (reminderEnabled){
-                            notifyByDuration(mData.get(position).duration);
-                        }
+                        // If necessary start the reminder
+                        notifyByDuration(mData.get(position).duration);
                     } else {
                         holder.CheckSentence.setBackgroundColor(Color.GRAY);
                         ButtonColor = "gray";
@@ -303,16 +301,25 @@ public class ExerciseDataTableCustomRecyclerViewAdapter extends RecyclerView.Ada
     }
 
     private void notifyByDuration(double duration){
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    context.startForegroundService(new Intent(context, AudioServiceForBackgroundProcess.class));
-                } else {
-                    context.startService(new Intent(context, AudioServiceForBackgroundProcess.class));
+        SharedPreferences sharedPreferences = context.getSharedPreferences("sharedPrefs", MODE_PRIVATE);
+
+        // If the reminder is enabled play the selected sound
+        if (sharedPreferences.getBoolean("IsReminderEnabled", false)){
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        context.startForegroundService(new Intent(context, AudioServiceForBackgroundProcess.class));
+                    } else {
+                        context.startService(new Intent(context, AudioServiceForBackgroundProcess.class));
+                    }
+                    // If enabled vibrate
+                    if (sharedPreferences.getBoolean("isVibratorEnabled", false)) {
+                        CommonFunctions.reminderVibrate((Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE));
+                    }
                 }
-            }
-        }, (long) (duration * 1000 * 60)); // 5000 milliseconds = 5 seconds => Convert into minutes
+            }, (long) (duration * 1000 * 60)); // 5000 milliseconds = 5 seconds => Convert into minutes
+        }
     }
 
 }
