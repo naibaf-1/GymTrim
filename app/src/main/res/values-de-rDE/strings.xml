@@ -103,6 +103,7 @@
     <string name="alertdialog_import_header">Was wollen sie importieren?</string>
     <string name="settings_exporting_successful">Erfolgrecih exportiert</string>
     <string name="settings_importing_successful">Erfolgreich importiert</string>
+    <string name="settings_reminder_vibrate">Vibrieren</string>
     <!-- Arrays -->
     <string name="settings_language_selector_default_language">System Sprache</string>
     <string name="settings_language_selector_english">Englisch</string>
@@ -114,6 +115,7 @@
     <string name="array_translated_error_call_to_attention">error call to attention von Universfield</string>
     <string name="array_translated_new_message_31">New Message 31 von Tuomas_Data</string>
     <string name="array_translated_notification_4">notification #4 von Universfield</string>
+    <string name="array_translated_silent">Lautlos</string>
 
     <!-- Information -->
     <string name="informations_header">Über</string>
