@@ -231,7 +231,7 @@ public class SettingsActivity extends AppCompatActivity {
         //Get arrays of options from arrays.xml
         String[] choosableSoundsForReminder = getResources().getStringArray(R.array.selectableSoundsForReminder);
         //Create the Adapter for the spinner
-        ArrayAdapter AdapterForChoosingSound = new ArrayAdapter<>(SettingsActivity.this, android.R.layout.simple_spinner_dropdown_item, choosableSoundsForReminder);
+        ArrayAdapter<String> AdapterForChoosingSound = new ArrayAdapter<>(SettingsActivity.this, android.R.layout.simple_spinner_dropdown_item, choosableSoundsForReminder);
         AdapterForChoosingSound.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         isFirstSelection = true;
         //Apply the Adapter to the Spinner
@@ -247,10 +247,20 @@ public class SettingsActivity extends AppCompatActivity {
                 } else {
                     //Get values
                     String[] valuesForReminder = getResources().getStringArray(R.array.selectableSoundsForReminderValues);
-                    int idOfChoosedFile = getResources().getIdentifier(valuesForReminder[position], "raw", getPackageName());
+                    int idOfChosenFile;
+                    // If silent is selected don't try to make a sound
+                    if (valuesForReminder[position].equals("silent")){
+                        // -1 stands for silent
+                        idOfChosenFile = -1;
+                    } else {
+                        idOfChosenFile = getResources().getIdentifier(valuesForReminder[position], "raw", getPackageName());
+                    }
+
                     //Save selected value
-                    editor.putInt("SoundForReminder", idOfChoosedFile);
+                    editor.putInt("SoundForReminder", idOfChosenFile);
                     editor.apply();
+
+                    // Play a sound
                     if (!isFirstSelection) {
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                             SettingsActivity.this.startForegroundService(new Intent(SettingsActivity.this, AudioServiceForBackgroundProcess.class));
