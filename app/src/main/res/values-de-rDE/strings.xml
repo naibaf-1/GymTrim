@@ -10,14 +10,15 @@
     <!-- Plan -->
     <string name="fragment_plans_header">Trainingspläne</string>
     <string name="search_plans">Nach einem Plan suchen</string>
-    <string name="last_training_date">Trainingsdatum:</string>
-    <string name="last_training_duration">Trainingsdauer:</string>
+    <string name="new_plan">Neuer Trainingsplan</string>
     <!-- AddPlan & EditPlan-->
     <string name="add_plan_header">Neuen Plan erstellen</string>
     <string name="get_plan_name">Namen eingeben</string>
     <string name="get_reminder_time">Erinnerung</string>
     <string name="edit_plan_header">Trainingsplan bearbeiten</string>
     <string name="error_missing_exercises">Bitte fügen sie Übungen hinzu.</string>
+    <string name="add_exercise">Übung hinzufügen</string>
+    <string name="new_training">Neues Training</string>
     <!-- Training: None -->
     <!-- Exercise selector bottom sheet dialog -->
     <string name="header_exercise_selector">Übung auswählen</string>
@@ -28,9 +29,13 @@
     <string name="table_distance_title">Distanz:</string>
     <string name="add_another_repetition">Satz hinzufügen</string>
 
+    <!-- Training -->
+    <string name="finish_training">Beended</string>
+
     <!-- Exercise -->
     <string name="error_missing_name">Bitte geben Sie einen Namen ein.</string>
     <string name="fragment_exercises_header">Übungen</string>
+    <string name="new_exercise">Neue Übung</string>
     <!-- AddExercise & EditExercise -->
     <string name="add_new_exercise_header">Neue Übung hinzufügen</string>
     <string name="get_exercise_name">Gib einen Namen mit Zahl ein</string>
@@ -131,7 +136,9 @@
     <string name="informations_category_releases">Versionen</string>
     <string name="informations_link_to_release_page">Alle Versionen</string>
 
-    <!-- PlansRecyclerView: None -->
+    <!-- PlansRecyclerView -->
+    <string name="last_training_date">Trainingsdatum:</string>
+    <string name="last_training_duration">Trainingsdauer:</string>
     <!-- ExerciseRecyclerView -->
     <string name="placeholder_missing_note">Keine Notizen.</string>
     <string name="display_volume_of_exercise">Volumen:</string>
@@ -154,6 +161,7 @@
     <string name="button_apply">Ja</string>
     <string name="button_cancel">Abbruch</string>
     <string name="notification_empty">Bisher noch keine Einträge.</string>
+    <string name="button_save">Speichern</string>
 
     <!-- Error messages -->
     <string name="error_notification_not_inserted">Eintrag konnte nicht hinzugefügt werden (Code: 1)</string>
