@@ -52,13 +52,16 @@ public class PlansCustomRecyclerViewAdapter extends RecyclerView.Adapter<PlansCu
         return new CustomViewHolder(view);
     }
 
+    // Fill one item
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         holder.NameView.setText(mData.get(position).name);
         holder.ColorView.setBackgroundColor(mData.get(position).color);
         holder.DateView.setText(mData.get(position).date);
+        holder.DurationView.setText(mData.get(position).duration);
     }
 
+    // Search for an item
     @Override
     public Filter getFilter() {
         Filter filter = new Filter() {
@@ -99,17 +102,20 @@ public class PlansCustomRecyclerViewAdapter extends RecyclerView.Adapter<PlansCu
         return filter;
     }
 
+    // Define the data of an item
     public static class CustomList {
         public String name;
         public int color;
         public int idOfItemInDatabase;
         public String date;
+        public String duration;
 
-        public CustomList(String Name, int Color, String dateOfLastTraining, int idOfItemInDatabase) {
+        public CustomList(String Name, int Color, String dateOfLastTraining, int idOfItemInDatabase, String durationOfLastTraining) {
             name = Name;
             color = Color;
             this.idOfItemInDatabase = idOfItemInDatabase;
             date = dateOfLastTraining;
+            duration = durationOfLastTraining;
         }
     }
 
@@ -118,16 +124,19 @@ public class PlansCustomRecyclerViewAdapter extends RecyclerView.Adapter<PlansCu
         return mData.size();
     }
 
+    // Apply the UI of an item
     public class CustomViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView NameView;
         View ColorView;
         TextView DateView;
+        TextView DurationView;
 
         CustomViewHolder(View itemView) {
             super(itemView);
             NameView = itemView.findViewById(R.id.textView_Name);
             ColorView = itemView.findViewById(R.id.view_Color);
             DateView = itemView.findViewById(R.id.textView_DateOfLastTraining);
+            DurationView = itemView.findViewById(R.id.textView_DurationOfLastTraining);
             itemView.setOnClickListener(this);
         }
 
