@@ -1,6 +1,5 @@
 <resources>
     <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
-
         <item name="colorPrimary">@color/md_theme_primary</item>
         <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_primaryContainer</item>
@@ -51,11 +50,5 @@
         <item name="colorOnDelete">@color/colorOnDelete</item>
         <item name="colorDeleteContainer">@color/colorDeleteContainer</item>
         <item name="colorOnDeleteContainer">@color/colorOnDeleteContainer</item>
-    </style>
-
-    <!-- Base application theme. -->
-    <style name="Base.Theme.MyFitness" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 </resources>
