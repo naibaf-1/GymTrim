@@ -26,6 +26,7 @@ import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -43,6 +44,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.color.MaterialColors;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.R;
@@ -92,6 +94,15 @@ public class AddExerciseActivity extends AppCompatActivity {
                     view.getPaddingRight(),
                     view.getPaddingBottom()
             );
+            return insets;
+        });
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.floatingActionButton_Add), (v, insets) -> {
+            int bottomInset = insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom;
+
+            ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+            lp.bottomMargin = bottomInset + Math.round(8 * getResources().getDisplayMetrics().density);
+            v.setLayoutParams(lp);
+
             return insets;
         });
 
@@ -239,7 +250,7 @@ public class AddExerciseActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton Add = findViewById(R.id.floatingActionButton_Add);
+        ExtendedFloatingActionButton Add = findViewById(R.id.floatingActionButton_Add);
         Add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -28,6 +28,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -45,6 +46,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.color.MaterialColors;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
@@ -90,6 +92,15 @@ public class AddPlanActivity extends AppCompatActivity implements  ExerciseCusto
                     view.getPaddingRight(),
                     view.getPaddingBottom()
             );
+            return insets;
+        });
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.floatingActionButton_AddPlan2), (v, insets) -> {
+            int bottomInset = insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom;
+
+            ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+            lp.bottomMargin = bottomInset + Math.round(8 * getResources().getDisplayMetrics().density);
+            v.setLayoutParams(lp);
+
             return insets;
         });
 
@@ -238,7 +249,7 @@ public class AddPlanActivity extends AppCompatActivity implements  ExerciseCusto
 
         //Display RecyclerView of selected Exercises
         //Open Selector for new Exercise
-        FloatingActionButton SelectToAdd = findViewById(R.id.floatingActionButton_SelectExerciseToAdd2);
+        ExtendedFloatingActionButton SelectToAdd = findViewById(R.id.floatingActionButton_SelectExerciseToAdd2);
         SelectToAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -260,7 +271,7 @@ public class AddPlanActivity extends AppCompatActivity implements  ExerciseCusto
         WorkoutListAdapter.setClickListener(AddPlanActivity.this);
 
         //Get Data & save them
-        FloatingActionButton Add = findViewById(R.id.floatingActionButton_AddPlan2);
+        ExtendedFloatingActionButton Add = findViewById(R.id.floatingActionButton_AddPlan2);
         Add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -344,3 +355,6 @@ public class AddPlanActivity extends AppCompatActivity implements  ExerciseCusto
 
 }
 //Todo: Make items Sortable: https://medium.com/@Codeible/swipe-or-slide-and-drag-and-drop-items-in-recyclerview-6dbe4871f87
+// TODO: Switch to the MaterialColorPickerView
+// TODO: Add heartbeat monitor
+// TODO: Move the calculators so they are accessible during the training

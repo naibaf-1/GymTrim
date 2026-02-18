@@ -12,14 +12,15 @@
     <!-- Plan -->
     <string name="fragment_plans_header">Plans</string>
     <string name="search_plans">Search for a plan</string>
-    <string name="last_training_date">Training date:</string>
-    <string name="last_training_duration">Training duration:</string>
+    <string name="new_plan">New plan</string>
     <!-- AddPlan & EditPlan -->
     <string name="add_plan_header">Add a new plan</string>
     <string name="get_plan_name">Enter name</string>
     <string name="get_reminder_time">Reminder</string>
     <string name="edit_plan_header">Edit plan</string>
     <string name="error_missing_exercises">Please add some exercises.</string>
+    <string name="add_exercise">Add an exercise</string>
+    <string name="new_training">New Training</string>
     <!-- Exercise selector bottom sheet dialog -->
     <string name="header_exercise_selector">Select Exercise</string>
     <!-- Display exercise values bottom sheet dialog -->
@@ -29,9 +30,13 @@
     <string name="table_distance_title">Distance:</string>
     <string name="add_another_repetition">Add repetition</string>
 
+    <!-- Training -->
+    <string name="finish_training">Finish</string>
+
     <!-- Exercise -->
     <string name="fragment_exercises_header">Exercises</string>
     <string name="error_missing_name">Please enter a name.</string>
+    <string name="new_exercise">New exercise</string>
     <!-- AddExercise & EditExercise -->
     <string name="add_new_exercise_header">Add new Exercise</string>
     <string name="get_exercise_name">Enter name</string>
@@ -132,7 +137,9 @@
     <string name="informations_category_releases">Releases</string>
     <string name="informations_link_to_release_page">All releases</string>
 
-    <!-- PlansRecyclerView: None -->
+    <!-- PlansRecyclerView -->
+    <string name="last_training_date">Training date:</string>
+    <string name="last_training_duration">Training duration:</string>
     <!-- ExerciseRecyclerView -->
     <string name="placeholder_missing_note">No notes.</string>
     <string name="display_volume_of_exercise">Volume:</string>
@@ -155,6 +162,7 @@
     <string name="button_apply">Yes</string>
     <string name="button_cancel">Cancel</string>
     <string name="notification_empty">Nothing added yet.</string>
+    <string name="button_save">Save</string>
 
     <!-- Error messages -->
     <string name="error_notification_not_inserted">New Entry not inserted (Code: 1)</string>

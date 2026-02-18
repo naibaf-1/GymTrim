@@ -37,6 +37,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.naibaf.GymTrim.OtherClasses.RecyclerViewInflater;
 import com.naibaf.GymTrim.OtherClasses.SwipeToDeleteCallback;
 import com.naibaf.GymTrim.R;
@@ -109,7 +110,7 @@ public class PlansFragment extends Fragment implements PlansCustomRecyclerViewAd
         planValues = DB.getAllPlans();
 
         //Add a New Plan
-        ImageButton AddPlan = v.findViewById(R.id.floatingActionButton_AddPlan4);
+        ExtendedFloatingActionButton AddPlan = v.findViewById(R.id.floatingActionButton_AddPlan4);
         AddPlan.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

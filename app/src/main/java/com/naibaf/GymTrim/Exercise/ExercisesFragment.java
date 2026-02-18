@@ -38,6 +38,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.OtherClasses.RecyclerViewInflater;
 import com.naibaf.GymTrim.OtherClasses.SwipeToDeleteCallback;
@@ -112,7 +113,7 @@ public class ExercisesFragment extends Fragment implements ExerciseCustomRecycle
         DB = new ExercisesDB(getContext());
 
         //Add a New Exercise
-        ImageButton AddExercise = v.findViewById(R.id.floatingActionButton_AddExercise4);
+        ExtendedFloatingActionButton AddExercise = v.findViewById(R.id.floatingActionButton_AddExercise4);
         AddExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
