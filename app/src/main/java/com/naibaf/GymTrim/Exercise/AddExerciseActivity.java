@@ -26,6 +26,7 @@ import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -93,6 +94,15 @@ public class AddExerciseActivity extends AppCompatActivity {
                     view.getPaddingRight(),
                     view.getPaddingBottom()
             );
+            return insets;
+        });
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.floatingActionButton_Add), (v, insets) -> {
+            int bottomInset = insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom;
+
+            ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+            lp.bottomMargin = bottomInset + Math.round(8 * getResources().getDisplayMetrics().density);
+            v.setLayoutParams(lp);
+
             return insets;
         });
 

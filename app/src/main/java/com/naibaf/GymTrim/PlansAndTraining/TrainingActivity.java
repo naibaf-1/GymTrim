@@ -23,6 +23,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -101,6 +102,15 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
                     view.getPaddingRight(),
                     view.getPaddingBottom()
             );
+            return insets;
+        });
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.floatingActionButton_FinishTraining), (v, insets) -> {
+            int bottomInset = insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom;
+
+            ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+            lp.bottomMargin = bottomInset + Math.round(8 * getResources().getDisplayMetrics().density);
+            v.setLayoutParams(lp);
+
             return insets;
         });
 
