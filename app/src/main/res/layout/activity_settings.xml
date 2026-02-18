@@ -73,12 +73,14 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:dropDownWidth="match_parent"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch_ToggleReminderOnOff" />
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -303,7 +305,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="4dp"
         android:contentDescription="Toggle reminder on/off icon"
-        app:layout_constraintBottom_toTopOf="@+id/spinner_ChooseReminderSound"
+        app:layout_constraintBottom_toBottomOf="@+id/switch_ToggleReminderOnOff"
         app:layout_constraintEnd_toStartOf="@+id/switch_ToggleReminderOnOff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/switch_ToggleReminderOnOff"
@@ -350,5 +352,19 @@
         app:layout_constraintTop_toTopOf="@+id/textView_DeleteTrainingData"
         app:srcCompat="@drawable/delete_icon"
         app:tint="?android:attr/textColorPrimary" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/settings_reminder_vibrate"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_ToggleReminderOnOff" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
