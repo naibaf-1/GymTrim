@@ -9,174 +9,6 @@
     tools:context=".SettingsAndInformation.InformationActivity">
 
 
-    <View
-        android:id="@+id/view4"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="4dp"
-        android:background="?attr/colorOutline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_CategoryContributing"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
-
-    <View
-        android:id="@+id/view3"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="4dp"
-        android:background="?attr/colorOutline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_CategoryAppInformation"
-        app:layout_constraintTop_toBottomOf="@+id/textView_License" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="4dp"
-        android:background="?attr/colorOutline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_CategoryReleases"
-        app:layout_constraintTop_toBottomOf="@+id/textView_FeatureRequest" />
-
-    <ImageView
-        android:id="@+id/imageView_OpenLinkToReleasePage"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="Open link"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_LinkToReleasePage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_LinkToReleasePage"
-        app:layout_constraintTop_toTopOf="@+id/textView_LinkToReleasePage"
-        app:srcCompat="@drawable/icon_open_link"
-        app:tint="?android:attr/textColorPrimary" />
-
-    <TextView
-        android:id="@+id/textView_LinkToReleasePage"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="40dp"
-        android:gravity="center_vertical"
-        android:text="@string/informations_link_to_release_page"
-        android:textColor="?android:attr/textColorPrimary"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_LinkToLatestRelease" />
-
-    <TextView
-        android:id="@+id/textView_CategoryReleases"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/informations_category_releases"
-        android:textColor="?attr/colorOutline"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_FeatureRequest" />
-
-    <ImageView
-        android:id="@+id/imageView_OpenLinkToLatestRelease"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="Open link"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_LinkToLatestRelease"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_LinkToLatestRelease"
-        app:layout_constraintTop_toTopOf="@+id/textView_LinkToLatestRelease"
-        app:srcCompat="@drawable/icon_open_link"
-        app:tint="?android:attr/textColorPrimary" />
-
-    <TextView
-        android:id="@+id/textView_CategoryContributing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/informations_category_app_informations"
-        android:textColor="?attr/colorOutline"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
-
-    <TextView
-        android:id="@+id/textView_CategoryAppInformation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/informations_category_contributing"
-        android:textColor="?attr/colorOutline"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_License" />
-
-    <TextView
-        android:id="@+id/textView_LinkToSourceCode"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="40dp"
-        android:gravity="center_vertical"
-        android:text="@string/informations_link_to_source_code"
-        android:textColor="?android:attr/textColorPrimary"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_CategoryContributing" />
-
-    <TextView
-        android:id="@+id/textView_Version"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/informations_app_version"
-        android:textAlignment="textStart"
-        android:textColor="?android:attr/textColorTertiary"
-        android:textSize="10sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/cardView"
-        app:layout_constraintTop_toBottomOf="@+id/textView_DeveloperName" />
-
-    <TextView
-        android:id="@+id/textView_DeveloperName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="@string/developer_name"
-        android:textAlignment="textStart"
-        android:textColor="?android:attr/textColorTertiary"
-        android:textSize="12sp"
-        android:textStyle="italic"
-        app:layout_constraintStart_toEndOf="@+id/cardView"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -247,6 +79,35 @@
         app:layout_constraintStart_toEndOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
+    <TextView
+        android:id="@+id/textView_DeveloperName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/developer_name"
+        android:textAlignment="textStart"
+        android:textColor="?android:attr/textColorTertiary"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView_Version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/informations_app_version"
+        android:textAlignment="textStart"
+        android:textColor="?android:attr/textColorTertiary"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/textView_DeveloperName" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="wrap_content"
@@ -267,125 +128,6 @@
             app:srcCompat="@drawable/ic_launcher_play_store" />
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/textView_ReportABug"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="40dp"
-        android:gravity="center_vertical"
-        android:text="@string/informations_link_to_bug_report"
-        android:textColor="?android:attr/textColorPrimary"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_CategoryAppInformation" />
-
-    <TextView
-        android:id="@+id/textView_FeatureRequest"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="40dp"
-        android:gravity="center_vertical"
-        android:text="@string/informations_link_to_feature_request"
-        android:textColor="?android:attr/textColorPrimary"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_ReportABug" />
-
-    <TextView
-        android:id="@+id/textView_License"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="40dp"
-        android:gravity="center_vertical"
-        android:text="@string/informations_link_to_license"
-        android:textColor="?android:attr/textColorPrimary"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_LinkToSourceCode" />
-
-    <ImageView
-        android:id="@+id/imageView_OpenLinkSource"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="Open link"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_LinkToSourceCode"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@+id/textView_LinkToSourceCode"
-        app:layout_constraintTop_toTopOf="@+id/textView_LinkToSourceCode"
-        app:srcCompat="@drawable/icon_open_link"
-        app:tint="?android:attr/textColorPrimary" />
-
-    <ImageView
-        android:id="@+id/imageView_OpenLinkBugReport"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="Open link"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_ReportABug"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_ReportABug"
-        app:layout_constraintTop_toTopOf="@+id/textView_ReportABug"
-        app:srcCompat="@drawable/icon_open_link"
-        app:tint="?android:attr/textColorPrimary" />
-
-    <ImageView
-        android:id="@+id/imageView_OpenLinkFeatureRequest"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="Open link"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_FeatureRequest"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_FeatureRequest"
-        app:layout_constraintTop_toTopOf="@+id/textView_FeatureRequest"
-        app:srcCompat="@drawable/icon_open_link"
-        app:tint="?android:attr/textColorPrimary" />
-
-    <ImageView
-        android:id="@+id/imageView_OpenLinkLicense"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="Open link"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_License"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_License"
-        app:layout_constraintTop_toTopOf="@+id/textView_License"
-        app:srcCompat="@drawable/icon_open_link"
-        app:tint="?android:attr/textColorPrimary" />
-
-    <TextView
-        android:id="@+id/textView_LinkToLatestRelease"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="40dp"
-        android:gravity="center_vertical"
-        android:text="@string/informations_link_to_latest_release"
-        android:textColor="?android:attr/textColorPrimary"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_CategoryReleases" />
-
     <View
         android:id="@+id/view2"
         android:layout_width="0dp"
@@ -397,5 +139,190 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/textView_Version" />
+
+    <TextView
+        android:id="@+id/textView_CategoryContributing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/informations_category_app_informations"
+        android:textColor="?attr/colorOutline"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="4dp"
+        android:background="?attr/colorOutline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_CategoryContributing"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/textView_LinkToSourceCode"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/informations_link_to_source_code"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="17sp"
+        app:drawableEndCompat="@drawable/icon_open_link"
+        app:drawableTint="?android:attr/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_CategoryContributing" />
+
+    <TextView
+        android:id="@+id/textView_License"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/informations_link_to_license"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="17sp"
+        app:drawableEndCompat="@drawable/icon_open_link"
+        app:drawableTint="?android:attr/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_LinkToSourceCode" />
+
+    <TextView
+        android:id="@+id/textView_CategoryAppInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/informations_category_contributing"
+        android:textColor="?attr/colorOutline"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_License" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="4dp"
+        android:background="?attr/colorOutline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_CategoryAppInformation"
+        app:layout_constraintTop_toBottomOf="@+id/textView_License" />
+
+    <TextView
+        android:id="@+id/textView_ReportABug"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/informations_link_to_bug_report"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="17sp"
+        app:drawableEndCompat="@drawable/icon_open_link"
+        app:drawableTint="?android:attr/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_CategoryAppInformation" />
+
+    <TextView
+        android:id="@+id/textView_FeatureRequest"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/informations_link_to_feature_request"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="17sp"
+        app:drawableEndCompat="@drawable/icon_open_link"
+        app:drawableTint="?android:attr/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ReportABug" />
+
+    <TextView
+        android:id="@+id/textView_CategoryReleases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/informations_category_releases"
+        android:textColor="?attr/colorOutline"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_FeatureRequest" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="4dp"
+        android:background="?attr/colorOutline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_CategoryReleases"
+        app:layout_constraintTop_toBottomOf="@+id/textView_FeatureRequest" />
+
+    <TextView
+        android:id="@+id/textView_LinkToLatestRelease"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/informations_link_to_latest_release"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="17sp"
+        app:drawableEndCompat="@drawable/icon_open_link"
+        app:drawableTint="?android:attr/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_CategoryReleases" />
+
+    <TextView
+        android:id="@+id/textView_LinkToReleasePage"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/informations_link_to_release_page"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="17sp"
+        app:drawableEndCompat="@drawable/icon_open_link"
+        app:drawableTint="?android:attr/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_LinkToLatestRelease" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
