@@ -35,7 +35,7 @@
             android:contentDescription="Calculate now"
             app:fabCustomSize="55dp"
             app:maxImageSize="30dp"
-            app:srcCompat="@drawable/bmi_icon" />
+            app:srcCompat="@drawable/calculator_icon" />
 
     </LinearLayout>
 
@@ -65,7 +65,7 @@
             android:layout_height="55dp"
             android:contentDescription="Calculate WHR"
             app:maxImageSize="30dp"
-            app:srcCompat="@drawable/bmi_icon" />
+            app:srcCompat="@drawable/calculator_icon" />
 
     </LinearLayout>
 
@@ -95,7 +95,7 @@
             android:layout_height="55dp"
             android:contentDescription="Calculate WHtR"
             app:maxImageSize="30dp"
-            app:srcCompat="@drawable/bmi_icon" />
+            app:srcCompat="@drawable/calculator_icon" />
 
     </LinearLayout>
 
