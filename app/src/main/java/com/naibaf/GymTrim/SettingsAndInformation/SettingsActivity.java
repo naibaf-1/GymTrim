@@ -15,6 +15,7 @@
 package com.naibaf.GymTrim.SettingsAndInformation;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -23,6 +24,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -50,6 +53,7 @@ import androidx.documentfile.provider.DocumentFile;
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.naibaf.GymTrim.OtherClasses.AudioServiceForBackgroundProcess;
+import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.PlansExercisesDataActivity;
 import com.naibaf.GymTrim.R;
 import com.naibaf.GymTrim.SQLiteDatabases.ExercisesDB;
@@ -224,6 +228,24 @@ public class SettingsActivity extends AppCompatActivity {
             ToggleReminderOnOff.setChecked(true);
         }
 
+        // Switch to toggle the vibrator on or off
+        Switch ToggleVibratorOnOff = findViewById(R.id.switch_ToggleVibratorOnOff);
+        ToggleVibratorOnOff.setEnabled(reminderIsEnabled);
+
+        // Activate the vibrator
+        ToggleVibratorOnOff.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                // Save changes
+                editor.putBoolean("isVibratorEnabled", isChecked);
+                editor.apply();
+                // If it's toggled on vibrate 3 times
+                if (isChecked) {
+                    CommonFunctions.reminderVibrate((Vibrator) getSystemService(Context.VIBRATOR_SERVICE));
+                }
+            }
+        });
+
         //Spinner for selecting the sound of the reminder
         ChooseReminderSound = findViewById(R.id.spinner_ChooseReminderSound);
         ChooseReminderSound.setEnabled(reminderIsEnabled);
@@ -279,17 +301,12 @@ public class SettingsActivity extends AppCompatActivity {
         ToggleReminderOnOff.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    editor.putBoolean("IsReminderEnabled", true);
-                    editor.apply();
-                    //Enable Spinner
-                    ChooseReminderSound.setEnabled(true);
-                } else {
-                    editor.putBoolean("IsReminderEnabled", false);
-                    editor.apply();
-                    //Disable Spinner
-                    ChooseReminderSound.setEnabled(false);
-                }
+                // Apply the configuration
+                editor.putBoolean("isReminderEnabled", isChecked);
+                editor.apply();
+                // Enable or disable Spinner and Switch
+                ChooseReminderSound.setEnabled(isChecked);
+                ToggleVibratorOnOff.setEnabled(isChecked);
             }
         });
 
