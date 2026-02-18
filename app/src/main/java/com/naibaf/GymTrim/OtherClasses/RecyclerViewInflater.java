@@ -127,8 +127,10 @@ public class RecyclerViewInflater {
                 int id = data2.getInt(columnIndexOfId);
                 String date = data2.getString(columnIndexOfDate);
                 String duration = data2.getString(columnIndexOfDuration);
+                String dateTitle = context.getString(R.string.last_training_date);
+                String durationTitle = context.getString(R.string.last_training_duration);
 
-                PlanArrayList.add(new PlansCustomRecyclerViewAdapter.CustomList(name, color, date, id, duration));
+                PlanArrayList.add(new PlansCustomRecyclerViewAdapter.CustomList(name, color, dateTitle + " " + date, id, durationTitle + " " + duration));
 
                 data2.moveToNext();
             }
