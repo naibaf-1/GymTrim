@@ -52,6 +52,7 @@ import androidx.documentfile.provider.DocumentFile;
 
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.materialswitch.MaterialSwitch;
 import com.naibaf.GymTrim.OtherClasses.AudioServiceForBackgroundProcess;
 import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.PlansExercisesDataActivity;
@@ -136,7 +137,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         //Surface & appearance section
         //Toggle between light and dark mode
-        Switch ToggleLightDarkMode = findViewById(R.id.switch_ToggleLightDarkMode);
+        MaterialSwitch ToggleLightDarkMode = findViewById(R.id.switch_ToggleLightDarkMode);
         // Display correct value when launched
         String mode = sharedPreferences.getString("getMode", "system");
         if (mode.equals("system")){
@@ -222,14 +223,14 @@ public class SettingsActivity extends AppCompatActivity {
 
         //Experience section
         //Option to disable the reminder
-        Switch ToggleReminderOnOff = findViewById(R.id.switch_ToggleReminderOnOff);
-        Boolean reminderIsEnabled = sharedPreferences.getBoolean("IsReminderEnabled", false);
+        MaterialSwitch ToggleReminderOnOff = findViewById(R.id.switch_ToggleReminderOnOff);
+        boolean reminderIsEnabled = sharedPreferences.getBoolean("IsReminderEnabled", false);
         if (reminderIsEnabled){
             ToggleReminderOnOff.setChecked(true);
         }
 
         // Switch to toggle the vibrator on or off
-        Switch ToggleVibratorOnOff = findViewById(R.id.switch_ToggleVibratorOnOff);
+        MaterialSwitch ToggleVibratorOnOff = findViewById(R.id.switch_ToggleVibratorOnOff);
         ToggleVibratorOnOff.setEnabled(reminderIsEnabled);
 
         // Activate the vibrator
