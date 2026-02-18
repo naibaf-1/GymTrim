@@ -172,29 +172,28 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/floatingActionButton_SelectExerciseToAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:clickable="true"
-        android:contentDescription="Add"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton_Start_Training"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:maxImageSize="30dp"
-        app:srcCompat="@drawable/add_icon" />
+        android:contentDescription="@string/add_exercise"
+        android:text="@string/add_exercise"
+        app:icon="@drawable/add_icon"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton_StartTraining"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton_Start_Training"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/floatingActionButton_StartTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:contentDescription="Start"
+        android:contentDescription="@string/new_training"
+        android:text="@string/new_training"
+        app:icon="@drawable/start_icon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/start_icon" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
