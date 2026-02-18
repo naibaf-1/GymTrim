@@ -43,6 +43,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.color.MaterialColors;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.R;
@@ -239,7 +240,7 @@ public class AddExerciseActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton Add = findViewById(R.id.floatingActionButton_Add);
+        ExtendedFloatingActionButton Add = findViewById(R.id.floatingActionButton_Add);
         Add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

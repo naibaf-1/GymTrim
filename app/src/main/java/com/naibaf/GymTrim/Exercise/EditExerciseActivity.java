@@ -41,9 +41,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.color.MaterialColors;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.R;
@@ -215,7 +217,7 @@ public class EditExerciseActivity extends AppCompatActivity {
 
         //Get ImageView
         ImageView ImageOfExercise = findViewById(R.id.imageView_EditImage);
-        FloatingActionButton Save = findViewById(R.id.floatingActionButton_Save);
+        ExtendedFloatingActionButton Save = findViewById(R.id.floatingActionButton_Save);
 
         //Close & return
         ImageButton Close = findViewById(R.id.imageButton_close);

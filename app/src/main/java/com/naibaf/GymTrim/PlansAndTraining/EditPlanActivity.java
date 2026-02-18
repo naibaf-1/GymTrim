@@ -25,7 +25,6 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -45,9 +44,9 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.color.MaterialColors;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
-import com.naibaf.GymTrim.Exercise.EditExerciseActivity;
 import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.OtherClasses.GlobalVariables;
 import com.naibaf.GymTrim.OtherClasses.RecyclerViewInflater;
@@ -175,7 +174,7 @@ public class EditPlanActivity extends AppCompatActivity implements ExerciseCusto
         });
 
         //Open Selector for new Exercise
-        FloatingActionButton SelectToAdd = findViewById(R.id.floatingActionButton_SelectExerciseToAdd);
+        ExtendedFloatingActionButton SelectToAdd = findViewById(R.id.floatingActionButton_SelectExerciseToAdd);
         SelectToAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -295,7 +294,7 @@ public class EditPlanActivity extends AppCompatActivity implements ExerciseCusto
         itemTouchhelper.attachToRecyclerView(WorkoutList);
 
         //Start Training
-        FloatingActionButton StartTraining = findViewById(R.id.floatingActionButton_Start_Training);
+        ExtendedFloatingActionButton StartTraining = findViewById(R.id.floatingActionButton_StartTraining);
         StartTraining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

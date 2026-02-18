@@ -38,6 +38,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.color.MaterialColors;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.OtherClasses.GlobalVariables;
@@ -160,7 +161,7 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
         });
         
         //Open Selector for new Exercise
-        FloatingActionButton SelectToAdd = findViewById(R.id.floatingActionButton_AddExerciseForTraining);
+        ExtendedFloatingActionButton SelectToAdd = findViewById(R.id.floatingActionButton_AddExerciseForTraining);
         SelectToAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -239,7 +240,7 @@ public class TrainingActivity extends AppCompatActivity implements ExerciseCusto
             wasRunning = savedInstanceState.getBoolean("wasRunning");
         }
 
-        FloatingActionButton Finish = findViewById(R.id.floatingActionButton_FinishTraining);
+        ExtendedFloatingActionButton Finish = findViewById(R.id.floatingActionButton_FinishTraining);
         Finish.setOnClickListener(new View.OnClickListener(){
 
             @Override
