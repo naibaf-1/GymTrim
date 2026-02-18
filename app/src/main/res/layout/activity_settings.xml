@@ -80,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+        app:layout_constraintTop_toBottomOf="@+id/switch_ToggleVibratorOnOff" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -354,7 +354,7 @@
         app:tint="?android:attr/textColorPrimary" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/switch_ToggleVibratorOnOff"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
