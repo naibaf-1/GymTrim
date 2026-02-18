@@ -355,3 +355,6 @@ public class AddPlanActivity extends AppCompatActivity implements  ExerciseCusto
 
 }
 //Todo: Make items Sortable: https://medium.com/@Codeible/swipe-or-slide-and-drag-and-drop-items-in-recyclerview-6dbe4871f87
+// TODO: Switch to the MaterialColorPickerView
+// TODO: Add heartbeat monitor
+// TODO: Move the calculators so they are accessible during the training
