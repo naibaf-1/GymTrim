@@ -10,6 +10,8 @@
     <!-- Plan -->
     <string name="fragment_plans_header">Trainingspläne</string>
     <string name="search_plans">Nach einem Plan suchen</string>
+    <string name="last_training_date">Trainingsdatum:</string>
+    <string name="last_training_duration">Trainingsdauer:</string>
     <!-- AddPlan & EditPlan-->
     <string name="add_plan_header">Neuen Plan erstellen</string>
     <string name="get_plan_name">Namen eingeben</string>

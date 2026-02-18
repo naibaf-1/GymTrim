@@ -12,6 +12,8 @@
     <!-- Plan -->
     <string name="fragment_plans_header">Plans</string>
     <string name="search_plans">Search for a plan</string>
+    <string name="last_training_date">Training date:</string>
+    <string name="last_training_duration">Training duration:</string>
     <!-- AddPlan & EditPlan -->
     <string name="add_plan_header">Add a new plan</string>
     <string name="get_plan_name">Enter name</string>
