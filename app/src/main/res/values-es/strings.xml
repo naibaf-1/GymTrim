@@ -1,0 +1,183 @@
+<resources>
+    <string name="action_settings">Ajustes</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Primer fragmento</string>
+    <string name="second_fragment_label">Segundo fragmento</string>
+    <string name="next">Siguiente</string>
+    <string name="previous">Anterior</string>
+
+    <!-- Plan -->
+    <string name="fragment_plans_header">Planes</string>
+    <string name="search_plans">Buscar un plan</string>
+    <string name="new_plan">Nuevo plan</string>
+    <!-- AddPlan & EditPlan -->
+    <string name="add_plan_header">Agregar un nuevo plan</string>
+    <string name="get_plan_name">Ingresa el nombre</string>
+    <string name="get_reminder_time">Recordatorio</string>
+    <string name="edit_plan_header">Editar plan</string>
+    <string name="error_missing_exercises">Por favor agrega algunos ejercicios.</string>
+    <string name="add_exercise">Agregar un ejercicio</string>
+    <string name="new_training">Nuevo entrenamiento</string>
+    <!-- Exercise selector bottom sheet dialog -->
+    <string name="header_exercise_selector">Seleccionar ejercicio</string>
+    <!-- Display exercise values bottom sheet dialog -->
+    <string name="table_repetitions_title">Repeticiones:</string>
+    <string name="table_weight_title">Peso:</string>
+    <string name="table_time_title">Tiempo:</string>
+    <string name="table_distance_title">Distancia:</string>
+    <string name="add_another_repetition">Agregar repetición</string>
+
+    <!-- Training -->
+    <string name="finish_training">Finalizar</string>
+
+    <!-- Exercise -->
+    <string name="fragment_exercises_header">Ejercicios</string>
+    <string name="error_missing_name">Por favor ingresa un nombre.</string>
+    <string name="new_exercise">Nuevo ejercicio</string>
+    <!-- AddExercise & EditExercise -->
+    <string name="add_new_exercise_header">Agregar nuevo ejercicio</string>
+    <string name="get_exercise_name">Ingresa el nombre</string>
+    <string name="checkBox_note_weight">Registrar peso</string>
+    <string name="checkBox_note_distance">Registrar distancia</string>
+    <string name="checkBox_note_time">Registrar tiempo</string>
+    <string name="checkBox_note_repetitions">Registrar repeticiones</string>
+    <string name="edit_exercise_header">Editar ejercicio</string>
+
+    <!-- Data -->
+    <string name="calculate_BMI">Calcular índice de masa corporal (IMC)</string>
+    <string name="calculate_WHtR">Calcular relación cintura-estatura (WHtR)</string>
+    <string name="calculate_WHR">Calcular relación cintura-cadera (WHR)</string>
+    <string name="data_section_training_data">Datos de entrenamiento</string>
+    <string name="nothing_calculated_yet">Nada calculado aún.</string>
+    <string name="no_warranty_note">Estos valores son solo orientativos. No se garantiza su exactitud.</string>
+    <string name="get_waist_girth">Circunferencia de cintura en cm</string>
+    <string name="error_missing_data">Por favor ingresa todos los datos.</string>
+    <!-- BMI -->
+    <string name="get_size">Estatura en m:</string>
+    <string name="get_weight">Peso en kg:</string>
+    <string name="calculated_BMI">Tu IMC:</string>
+    <!-- WHtR -->
+    <string name="get_age">Edad:</string>
+    <string name="get_height">Altura en cm:</string>
+    <string name="table_underweight">Bajo peso:</string>
+    <string name="table_normal_weigt">Peso normal:</string>
+    <string name="table_overweight">Sobrepeso:</string>
+    <string name="table_adiposity">Obesidad:</string>
+    <string name="table_heavy_adiposity">Obesidad severa:</string>
+    <string name="calculated_WHtR">Tu WHtR:</string>
+    <!-- WHR -->
+    <string name="gender_male">Masculino</string>
+    <string name="gender_female">Femenino</string>
+    <string name="get_hip_girth">Circunferencia de cadera en cm</string>
+    <string name="WHR_informations_female">Para mujeres: el WHR debería ser inferior a 0,85</string>
+    <string name="WHR_informations_male">Para hombres: el WHR debería ser inferior a 1,0</string>
+    <string name="calculated_WHR">Tu WHR:</string>
+    <!-- Training data -->
+    <string name="training_data_last_trained">Último entrenamiento:</string>
+    <string name="training_data_label_weight_average">Peso promedio por entrenamiento</string>
+    <string name="training_data_average_weight_header">Peso promedio:</string>
+    <string name="training_data_average_time_header">Tiempo promedio:</string>
+    <string name="training_data_average_distance_header">Distancia promedio:</string>
+    <string name="training_data_volume_header">Volumen:</string>
+    <string name="training_data_label_time_average">Tiempo promedio por entrenamiento</string>
+    <string name="training_data_label_distance_average">Distancia promedio por entrenamiento</string>
+    <string name="training_data_label_volume">Volumen promedio por entrenamiento</string>
+
+    <!-- Navigation bar -->
+    <string name="navigationButton_plans">Planes</string>
+    <string name="navigationButton_exercises">Ejercicios</string>
+    <string name="navigationButton_data">Datos de entrenamiento</string>
+
+    <!-- Settings -->
+    <string name="settings_header">Ajustes</string>
+    <string name="settings_category_surface_and_appearance">Apariencia</string>
+    <string name="settings_category_experience">Experiencia</string>
+    <string name="settings_category_experience_enable_reminder">Activar/desactivar recordatorio</string>
+    <string name="settings_toggle_light_dark_mode">Alternar modo claro/oscuro</string>
+    <string name="settings_category_data">Datos</string>
+    <string name="settings_export_data">Exportar datos de entrenamiento</string>
+    <string name="settings_import_data">Importar datos de entrenamiento</string>
+    <string name="settings_delete_data">Eliminar datos</string>
+    <string name="reset_all_settings_callback">¿Estás seguro de que quieres restablecer todos los ajustes?</string>
+    <string name="delete_all_data_callback">¿Realmente quieres eliminar todos los datos?</string>
+    <string name="alertdialog_export_header">¿Qué deseas exportar?</string>
+    <string name="alertdialog_import_header">¿Qué deseas importar?</string>
+    <string name="settings_exporting_successful">Exportación exitosa</string>
+    <string name="settings_importing_successful">Importación exitosa</string>
+    <string name="settings_reminder_vibrate">Vibrar</string>
+    <!-- Arrays -->
+    <string name="settings_language_selector_default_language">Idioma del sistema</string>
+    <string name="settings_language_selector_english">Inglés</string>
+    <string name="settings_language_selector_german">Alemán</string>
+    <string name="array_translated_notification_beep">sonido de notificación por Universfield</string>
+    <string name="array_translated_message">mensaje por supremetylewiss</string>
+    <string name="array_translated_confirm_notification_choice_or_pop_up_sound_effect">Confirmación, Notificación, Selección o Efecto de sonido emergente por Lesiakower</string>
+    <string name="array_translated_notification_sound_3">Sonido de notificación 3 por BenKirb</string>
+    <string name="array_translated_error_call_to_attention">alerta de error por Universfield</string>
+    <string name="array_translated_new_message_31">Nuevo mensaje 31 por Tuomas_Data</string>
+    <string name="array_translated_notification_4">notificación #4 por Universfield</string>
+    <string name="array_translated_silent">Silencio</string>
+
+    <!-- Information -->
+    <string name="informations_header">Acerca de</string>
+    <string name="developer_name">por Fabian Roland</string>
+    <string name="informations_app_version">Versión:</string>
+    <string name="informations_link_to_source_code">Código fuente y README</string>
+    <string name="informations_link_to_bug_report">Reportar un error</string>
+    <string name="informations_link_to_license">Licencia</string>
+    <string name="informations_link_to_feature_request">Solicitar una función</string>
+    <string name="informations_category_app_informations">Información de la aplicación</string>
+    <string name="informations_category_contributing">Contribuir</string>
+    <string name="informations_link_to_latest_release">Última versión</string>
+    <string name="informations_category_releases">Versiones</string>
+    <string name="informations_link_to_release_page">Todas las versiones</string>
+
+    <!-- PlansRecyclerView -->
+    <string name="last_training_date">Fecha del entrenamiento:</string>
+    <string name="last_training_duration">Duración del entrenamiento:</string>
+    <!-- ExerciseRecyclerView -->
+    <string name="placeholder_missing_note">Sin notas.</string>
+    <string name="display_volume_of_exercise">Volumen:</string>
+    <!-- ExerciseTableRecyclerView -->
+    <string name="column_repetition">Repeticiones:</string>
+    <string name="column_weight">Peso:</string>
+    <string name="column_time">Tiempo:</string>
+    <string name="column_distance">Distancia:</string>
+
+    <!-- Custom alert dialogs -->
+    <string name="alertdialog_export_plans">Exportar planes</string>
+    <string name="alertdialog_export_exercises">Exportar ejercicios</string>
+    <string name="alertdialog_import_plans">Importar planes</string>
+    <string name="alertdialog_import_exercises">Importar ejercicios</string>
+
+    <!-- Often used -->
+    <string name="edit_notes">Editar notas...</string>
+    <string name="search_exercises">Buscar un ejercicio</string>
+    <string name="delete_item_callback">¿Quieres eliminar este elemento?</string>
+    <string name="button_apply">Sí</string>
+    <string name="button_cancel">Cancelar</string>
+    <string name="notification_empty">Nada agregado aún.</string>
+    <string name="button_save">Guardar</string>
+
+    <!-- Error messages -->
+    <string name="error_notification_not_inserted">Nueva entrada no insertada (Código: 1)</string>
+    <string name="error_missing_column">Error: Columna faltante (Código: -1)</string>
+    <string name="error_updating_entry">Entrada no actualizada (Código: 2)</string>
+    <string name="error_exercise_not_found">Ejercicio no encontrado (Código: -2)</string>
+    <string name="error_no_write_permission">Error: Sin permisos de escritura (Código: 3)</string>
+    <string name="error_missing_plan">No se pudo cargar los datos del plan (Código: -3)</string>
+    <string name="error_exporting_failed">Error: Falló la exportación (Código: 4)</string>
+    <string name="error_importing_failed">Error: Falló la importación (Código: -4)</string>
+
+    <!-- Other -->
+    <string name="setting_style">Estilo:</string>
+    <string name="notification_succesful_inserted">Nueva entrada insertada.</string>
+    <string name="notification_position">¡Ya estás ahí!</string>
+    <string name="notification_succesful_updated">Entrada actualizada</string>
+    <string name="error_no_valid_data">Por favor ingresa todos los datos correctamente.</string>
+    <string name="preferences_language_selector">Seleccionar idioma</string>
+    <string name="preferences_language_selector_summary">Selecciona tu idioma preferido</string>
+    <string name="notification_reminder_for_training">No olvides seguir entrenando.</string>
+    <string name="update_available_notification">¡Hay una nueva versión de GymTrim disponible!</string>
+    <string name="notification_exercise_added_to_plan">Agregado.</string>
+</resources>
