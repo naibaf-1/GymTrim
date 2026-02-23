@@ -174,16 +174,11 @@
     <string name="error_exporting_failed">Fehler: Exportieren fehlgeeschlagen (Code: 4)</string>
     <string name="error_importing_failed">Fehler: Importieren fehlgeschlagen (Code: -4)</string>
 
-    <!-- Todo: Filter strings -->
+    <!-- Other -->
     <string name="setting_style">Stil:</string>
     <string name="notification_succesful_inserted">Eintrag hinzugefügt.</string>
     <string name="notification_position">Sie sind bereits hier!</string>
     <string name="notification_succesful_updated">Eintrag aktualisiert</string>
-<!--    <string name="leave_editor_callback">Sind sie sicher das Sie gehen wollen? - Alle Veränderunge gehen dadurch verloren.</string>-->
-<!--    <string name="confirm_to_leave_bottom_save">Speichern und verlassen</string>-->
-<!--    <string name="confirm_to_leave_bottom_ignore">Verwerfe diese Veränderungen</string>-->
-<!--    <string name="leave_training_callback">Wollen sie wirklich gehen? - Alle Trainingsdaten gehen so verloren.</string>-->
-<!--    <string name="header_history">Historie:</string>-->
     <string name="error_no_valid_data">Bitte tragen sie alle Daten korrekt ein.</string>
     <string name="preferences_language_selector">Sprache auswählen</string>
     <string name="preferences_language_selector_summary">Bevorzugte Sprache auswählen</string>

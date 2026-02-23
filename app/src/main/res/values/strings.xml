@@ -175,17 +175,13 @@
     <string name="error_exporting_failed">Error: Exporting failed (Code: 4)</string>
     <string name="error_importing_failed">Error: Importing failed (Code -4)</string>
 
-    <!-- Todo: Filter strings -->
+    <!-- Other -->
     <string name="setting_style">Style:</string>
     <string name="notification_succesful_inserted">New entry inserted.</string>
 
     <string name="notification_position">You are already there!</string>
     <string name="notification_succesful_updated">Entry updated</string>
     <string name="error_index_out_of_bounds_exception" translatable="false">IndexOutOfBoundsException</string>
-<!--    <string name="leave_editor_callback">Do you really want to leave? - Every changes will be lost.</string>-->
-<!--    <string name="confirm_to_leave_bottom_save">Save and leave</string>-->
-<!--    <string name="confirm_to_leave_bottom_ignore">Ignore these changes</string>-->
-<!--    <string name="leave_training_callback">Do you really want to leave? - All trainings data will be deleted.</string>-->
     <string name="error_no_valid_data">Please enter all data correctly.</string>
     <string name="preferences_language_selector">Select language</string>
     <string name="preferences_language_selector_summary">Select your preferred language</string>
