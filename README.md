@@ -157,3 +157,7 @@ This app was developed to improve and simplify my own training data tracking. It
 | <img src="./assets/Screenshot_GymTrim_Data.png" width="270" height="585"/> <br><div align="center">**See your efforts**</div> | <img src="./assets/Screenshot_GymTrim_Settings.png" width="270" height="585"/> <br><div align="center">**Toggle the settings**</div> | <img src="./assets/Screenshot_GymTrim_About.png" width="270" height="585"/> <br><div align="center">**Find further informations**</div> |
 
 *(Not default theme shown)*
+
+## Contributors
+- Fabian Roland (naibaf-1)
+- slegarraga
