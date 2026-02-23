@@ -113,6 +113,7 @@
     <string name="settings_language_selector_default_language">System Sprache</string>
     <string name="settings_language_selector_english">Englisch</string>
     <string name="settings_language_selector_german">Deutsch</string>
+    <string name="settings_language_selector_spanish">Spanisch</string>
     <string name="array_translated_notification_beep">notification beep von Universfield</string>
     <string name="array_translated_message">message von supremetylewiss</string>
     <string name="array_translated_confirm_notification_choice_or_pop_up_sound_effect">Confirm, Notification, Choice or Pop-up Sound Effect von Lesiakower</string>

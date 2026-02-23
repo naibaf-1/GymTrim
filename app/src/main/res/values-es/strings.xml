@@ -125,6 +125,7 @@ limitations under the License.
     <string name="settings_language_selector_default_language">Idioma del sistema</string>
     <string name="settings_language_selector_english">Inglés</string>
     <string name="settings_language_selector_german">Alemán</string>
+    <string name="settings_language_selector_spanish">Español</string>
     <string name="array_translated_notification_beep">sonido de notificación por Universfield</string>
     <string name="array_translated_message">mensaje por supremetylewiss</string>
     <string name="array_translated_confirm_notification_choice_or_pop_up_sound_effect">Confirmación, Notificación, Selección o Efecto de sonido emergente por Lesiakower</string>
