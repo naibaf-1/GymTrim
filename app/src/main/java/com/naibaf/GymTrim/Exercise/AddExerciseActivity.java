@@ -176,10 +176,10 @@ public class AddExerciseActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                name = Name.getText().toString();
                 DB.updateName(id, name);
                 if (!name.isEmpty()){
                     nameIsEmpty = false;
-                    name = Name.getText().toString();
                 }
             }
         });
