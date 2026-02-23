@@ -225,9 +225,7 @@ public class SettingsActivity extends AppCompatActivity {
         //Option to disable the reminder
         MaterialSwitch ToggleReminderOnOff = findViewById(R.id.switch_ToggleReminderOnOff);
         boolean reminderIsEnabled = sharedPreferences.getBoolean("IsReminderEnabled", false);
-        if (reminderIsEnabled){
-            ToggleReminderOnOff.setChecked(true);
-        }
+        ToggleReminderOnOff.setChecked(reminderIsEnabled);
 
         // Switch to toggle the vibrator on or off
         MaterialSwitch ToggleVibratorOnOff = findViewById(R.id.switch_ToggleVibratorOnOff);
@@ -303,7 +301,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // Apply the configuration
-                editor.putBoolean("isReminderEnabled", isChecked);
+                editor.putBoolean("IsReminderEnabled", isChecked);
                 editor.apply();
                 // Enable or disable Spinner and Switch
                 ChooseReminderSound.setEnabled(isChecked);
