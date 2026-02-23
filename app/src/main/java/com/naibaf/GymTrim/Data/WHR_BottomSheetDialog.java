@@ -77,9 +77,9 @@ public class WHR_BottomSheetDialog extends BottomSheetDialogFragment {
                     // Calculate WHR
                     whr = waist_girth / hip_girth;
                     if (genus.equals("female")) {
-                        WHRInformation.setText(R.string.WHR_informations_female);
+                        WHRInformation.setText(R.string.WHR_information_female);
                     } else if (genus.equals("male")) {
-                        WHRInformation.setText(R.string.WHR_informations_male);
+                        WHRInformation.setText(R.string.WHR_information_male);
                     }
 
                     String calculatedWHR = getString(R.string.calculated_WHR);
