@@ -71,8 +71,8 @@
     <string name="gender_male">Männlich</string>
     <string name="gender_female">Weiblich</string>
     <string name="get_hip_girth">Hüftumfang in cm</string>
-    <string name="WHR_informations_female">Bei Frauen: Der THV sollte kleinergleich 0,85 sein</string>
-    <string name="WHR_informations_male">Bei Männern: Der THV sollte kleiner gleich 1,0 sein</string>
+    <string name="WHR_information_female">Bei Frauen: Der THV sollte kleinergleich 0,85 sein</string>
+    <string name="WHR_information_male">Bei Männern: Der THV sollte kleiner gleich 1,0 sein</string>
     <string name="calculated_WHR">"Ihr WHR: "</string>
     <!-- Training data -->
     <string name="training_data_last_trained">Zuletzt trainiert:</string>
@@ -125,7 +125,7 @@
 
     <!-- Information -->
     <string name="informations_header">Über</string>
-    <string name="developer_name">von Fabian Roland</string>
+    <string name="developer_name">von Fabian Roland und slegarraga</string>
     <string name="informations_app_version">Version:</string>
     <string name="informations_link_to_source_code">Quellcode und README</string>
     <string name="informations_link_to_bug_report">Einen Bug melden</string>

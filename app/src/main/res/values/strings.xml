@@ -72,8 +72,8 @@
     <string name="gender_male">Male</string>
     <string name="gender_female">Female</string>
     <string name="get_hip_girth">Hip circumference in cm</string>
-    <string name="WHR_informations_female">For woman: WHR should be primorial to 0.85</string>
-    <string name="WHR_informations_male">For man: WHR should be primorial to 1.0</string>
+    <string name="WHR_information_female">For woman: WHR should be primorial to 0.85</string>
+    <string name="WHR_information_male">For man: WHR should be primorial to 1.0</string>
     <string name="calculated_WHR">Your WHR:</string>
     <!-- Training data -->
     <string name="training_data_last_trained">Last time trained:</string>
@@ -126,13 +126,13 @@
 
     <!-- Information -->
     <string name="informations_header">About</string>
-    <string name="developer_name">by Fabian Roland</string>
+    <string name="developer_name">by Fabian Roland and slegarraga</string>
     <string name="informations_app_version">Version:</string>
     <string name="informations_link_to_source_code">Source code and README</string>
     <string name="informations_link_to_bug_report">Report a bug</string>
     <string name="informations_link_to_license">License</string>
     <string name="informations_link_to_feature_request">Request a feature</string>
-    <string name="informations_category_app_informations">App informations</string>
+    <string name="informations_category_app_informations">App information</string>
     <string name="informations_category_contributing">Contributing</string>
     <string name="informations_link_to_latest_release">Latest release</string>
     <string name="informations_category_releases">Releases</string>

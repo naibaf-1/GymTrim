@@ -85,8 +85,8 @@ limitations under the License.
     <string name="gender_male">Masculino</string>
     <string name="gender_female">Femenino</string>
     <string name="get_hip_girth">Circunferencia de cadera en cm</string>
-    <string name="WHR_informations_female">Para mujeres: el WHR debería ser inferior a 0,85</string>
-    <string name="WHR_informations_male">Para hombres: el WHR debería ser inferior a 1,0</string>
+    <string name="WHR_information_female">Para mujeres: el WHR debería ser inferior a 0,85</string>
+    <string name="WHR_information_male">Para hombres: el WHR debería ser inferior a 1,0</string>
     <string name="calculated_WHR">Tu WHR:</string>
     <!-- Training data -->
     <string name="training_data_last_trained">Último entrenamiento:</string>
@@ -137,7 +137,7 @@ limitations under the License.
 
     <!-- Information -->
     <string name="informations_header">Acerca de</string>
-    <string name="developer_name">por Fabian Roland</string>
+    <string name="developer_name">por Fabian Roland y slegarraga</string>
     <string name="informations_app_version">Versión:</string>
     <string name="informations_link_to_source_code">Código fuente y README</string>
     <string name="informations_link_to_bug_report">Reportar un error</string>
