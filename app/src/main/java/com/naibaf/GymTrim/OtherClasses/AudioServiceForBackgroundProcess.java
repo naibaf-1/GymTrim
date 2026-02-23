@@ -140,7 +140,7 @@ public class AudioServiceForBackgroundProcess extends Service {
         String notificationText = getString(R.string.notification_reminder_for_training);
         Notification notification = new NotificationCompat.Builder(this, "AudioServiceChannel")
             .setContentTitle(notificationText)
-            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setSmallIcon(R.mipmap.ic_launcher_foreground)
             .build();
 
         startForeground(1, notification);
