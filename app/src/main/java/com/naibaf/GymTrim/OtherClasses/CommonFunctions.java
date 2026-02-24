@@ -14,11 +14,15 @@
 
 package com.naibaf.GymTrim.OtherClasses;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Build;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
@@ -146,5 +150,12 @@ public class CommonFunctions {
                 v.vibrate(pattern, -1);
             }
         }
+    }
+
+    //Function to open a Link
+    public static void openLinkInBrowser(Context context, String url){
+        Intent openLink = new Intent(Intent.ACTION_VIEW);
+        openLink.setData(Uri.parse(url));
+        startActivity(context, openLink, null);
     }
 }
