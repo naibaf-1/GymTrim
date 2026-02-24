@@ -66,5 +66,5 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation (libs.material.v190) // Update if necessary
     implementation (libs.picasso)
-
+    implementation("com.github.woheller69:FreeDroidWarn:V1.+")
 }
