@@ -16,6 +16,8 @@ package com.naibaf.GymTrim;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Build;
@@ -45,6 +47,8 @@ import com.naibaf.GymTrim.OtherClasses.PopUpMenuInflater;
 import com.naibaf.GymTrim.PlansAndTraining.PlansFragment;
 
 import org.json.JSONObject;
+import org.woheller69.freeDroidWarn.BuildConfig;
+import org.woheller69.freeDroidWarn.FreeDroidWarn;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -146,6 +150,14 @@ public class PlansExercisesDataActivity extends AppCompatActivity {
         getWindow().setNavigationBarColor(Color.TRANSPARENT);
 
         //Start Here
+        // Display FreeDroidWarn
+        try {
+            int versionCode = getApplicationContext().getPackageManager().getPackageInfo(getApplicationContext().getPackageName(), 0).versionCode;
+            FreeDroidWarn.showWarningOnUpgrade(PlansExercisesDataActivity.this, versionCode);
+        } catch (PackageManager.NameNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
         // Check for updates
         instance = this;
 
