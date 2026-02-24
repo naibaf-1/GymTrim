@@ -24,7 +24,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,8 +37,10 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.color.DynamicColors;
 import com.google.android.material.color.MaterialColors;
+import com.google.android.material.snackbar.Snackbar;
 import com.naibaf.GymTrim.Data.DataFragment;
 import com.naibaf.GymTrim.Exercise.ExercisesFragment;
+import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.OtherClasses.PopUpMenuInflater;
 import com.naibaf.GymTrim.PlansAndTraining.PlansFragment;
 
@@ -195,8 +196,8 @@ public class PlansExercisesDataActivity extends AppCompatActivity {
             return true;
         });
 
+        // Look for updates
         checkForUpdatesAtGithubReleasePage();
-
     }
 
     public void setCurrentFragment(Fragment fragment) {
@@ -243,11 +244,11 @@ public class PlansExercisesDataActivity extends AppCompatActivity {
 
                     if (isNewerVersion(latestVersion, currentVersion)) {
                         runOnUiThread(() ->
-                                Toast.makeText(
-                                        PlansExercisesDataActivity.this,
-                                        R.string.update_available_notification,
-                                        Toast.LENGTH_LONG
-                                ).show()
+                                Snackbar.make(findViewById(R.id.main), R.string.update_available_notification, Snackbar.LENGTH_LONG)
+                                        .setAction(R.string.update_available_notification_open, v -> {
+                                            CommonFunctions.openLinkInBrowser(PlansExercisesDataActivity.this, "https://github.com/naibaf-1/GymTrim/releases/latest");
+                                        })
+                                        .show()
                         );
                     }
                 } catch (Exception e) {
