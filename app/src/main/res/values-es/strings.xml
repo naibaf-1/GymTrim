@@ -196,5 +196,6 @@ limitations under the License.
     <string name="preferences_language_selector_summary">Selecciona tu idioma preferido</string>
     <string name="notification_reminder_for_training">No olvides seguir entrenando.</string>
     <string name="update_available_notification">¡Hay una nueva versión de GymTrim disponible!</string>
+    <string name="update_available_notification_open">Abierto</string>
     <string name="notification_exercise_added_to_plan">Agregado.</string>
 </resources>
