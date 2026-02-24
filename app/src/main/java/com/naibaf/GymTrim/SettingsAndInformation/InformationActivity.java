@@ -34,6 +34,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.color.MaterialColors;
+import com.naibaf.GymTrim.OtherClasses.CommonFunctions;
 import com.naibaf.GymTrim.R;
 
 public class InformationActivity extends AppCompatActivity {
@@ -99,7 +100,7 @@ public class InformationActivity extends AppCompatActivity {
         RepositoryLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openLinkInBrowser("https://github.com/naibaf-1/GymTrim#readme");
+                CommonFunctions.openLinkInBrowser(InformationActivity.this, "https://github.com/naibaf-1/GymTrim#readme");
             }
         });
 
@@ -108,7 +109,7 @@ public class InformationActivity extends AppCompatActivity {
         BugReportLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openLinkInBrowser("https://github.com/naibaf-1/GymTrim/issues/new?template=bug-report-for-gymtrim.md");
+                CommonFunctions.openLinkInBrowser(InformationActivity.this, "https://github.com/naibaf-1/GymTrim/issues/new?template=bug-report-for-gymtrim.md");
             }
         });
 
@@ -117,7 +118,7 @@ public class InformationActivity extends AppCompatActivity {
         FeatureRequestLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openLinkInBrowser("https://github.com/naibaf-1/GymTrim/issues/new?template=feature-request-for-gymtrim.md");
+                CommonFunctions.openLinkInBrowser(InformationActivity.this, "https://github.com/naibaf-1/GymTrim/issues/new?template=feature-request-for-gymtrim.md");
             }
         });
 
@@ -126,7 +127,7 @@ public class InformationActivity extends AppCompatActivity {
         LicenseLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openLinkInBrowser("https://github.com/naibaf-1/GymTrim?tab=License-1-ov-file#readme");
+                CommonFunctions.openLinkInBrowser(InformationActivity.this, "https://github.com/naibaf-1/GymTrim?tab=License-1-ov-file#readme");
             }
         });
 
@@ -135,7 +136,7 @@ public class InformationActivity extends AppCompatActivity {
         LatestRelease.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openLinkInBrowser("https://github.com/naibaf-1/GymTrim/releases/latest");
+                CommonFunctions.openLinkInBrowser(InformationActivity.this, "https://github.com/naibaf-1/GymTrim/releases/latest");
             }
         });
 
@@ -144,16 +145,9 @@ public class InformationActivity extends AppCompatActivity {
         ReleasePage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openLinkInBrowser("https://github.com/naibaf-1/GymTrim/releases");
+                CommonFunctions.openLinkInBrowser(InformationActivity.this, "https://github.com/naibaf-1/GymTrim/releases");
             }
         });
 
-    }
-
-    //Function to open a Link
-    public void openLinkInBrowser(String url){
-        Intent openLink = new Intent(Intent.ACTION_VIEW);
-        openLink.setData(Uri.parse(url));
-        startActivity(openLink);
     }
 }
