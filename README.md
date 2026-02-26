@@ -1,4 +1,4 @@
-# GymTrim: Version v.2.0.2 "rose-breasted flycatcher"
+# GymTrim: Version v.2.1.1 "rose-breasted flycatcher"
 <p align="left">
   <img src="assets/app_icon.png" alt="GymTrim Logo" width="100" height="100"/>
 </p>
@@ -74,7 +74,7 @@ If you need help getting started, feel free to open an ISSUE — I’m happy to 
 
 ### Open Tasks
 Here are the some easy ways to contribute:
-- Add translations: *Spanish, French, Italian, Portuguese, Turkish, Polish, Dutch, Russian — or any language you speak*
+- Add translations: *French, Italian, Portuguese, Turkish, Polish, Dutch, Russian — or any language you speak*
 - Improve the app icon (new design ideas are welcome)
 - Report bugs you encounter
 - Suggest new features you’d like to see
@@ -96,7 +96,7 @@ By participating, you are expected to uphold this code.
 
 If you fork and redistribute GymTrim, please include the following attribution in your documentation:
 
-> Based on GymTrim by Fabian Roland (naibaf-1)
+> Based on GymTrim by Fabian Roland (naibaf-1) and slegarraga
 
 ## Contact
 You can contact me through GitHub—open an [issue](../../issues) or submit a pull request.
