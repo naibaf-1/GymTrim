@@ -118,6 +118,7 @@ This app uses the following open-source libraries:
 - [AmbilWarna](https://github.com/yukuku/ambilwarna) by yukuku – [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 - [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart) by PhilJay – [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 - [Picasso](https://github.com/square/picasso) by Square – [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [FreeDroidWarn](https://github.com/woheller69/FreeDroidWarn) by woheller69, marcprux, sevmonster and  Fjuro - [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) 
 
 This app also uses standard AndroidX and Google libraries as provided by the Android SDK.
 
