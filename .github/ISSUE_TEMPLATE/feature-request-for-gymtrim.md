@@ -1,8 +1,8 @@
 ---
 name: Feature request for GymTrim
 about: Suggest an idea for GymTrim
-title: 'GymTrim v.2.0.2-rose-breasted flycatcher: Feature request'
-labels: enhancement, latest-version
+title: 'GymTrim: Feature request'
+labels: enhancement
 assignees: naibaf-1
 
 ---
